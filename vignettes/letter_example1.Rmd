@@ -1,0 +1,59 @@
+---
+author: Max Mustermann
+return-address: 
+  - Musterstr. 12
+  - 34567 Musterstadt
+return-phone: +49-511-21311212
+return-email: max@musterman.tld
+
+address:
+  - Dirk Eddelbuettel
+  - 123 Street Rd
+  - Chicago, IL
+  - USA
+
+lco: "`r system.file('rmarkdown', 'templates', 'pdf', 'resources', 'maintainers_delight', package='komaletter')`"
+colorlinks: true
+
+date: 2020-12-31
+place: Hanover
+
+subject: Some Customizations
+opening: Hi Dirk,
+closing: Cheers,
+signature: "\\includegraphics{examples/signature}"
+signature-before: "0.5\\baselineskip"
+cc: Aaron Wolen
+ps: P.S. Beware of the copy editor!
+
+output: komaletter::komaletter
+
+vignette: >
+  %\VignetteIndexEntry{komaletter example letter 1}
+  %\VignetteKeywords{komaletter,vignette}
+  %\VignettePackage{komaletter}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+far far away, behind the word mountains, far from the countries 
+Vokalia and Consonantia, there live the blind texts. Separated they 
+live in Bookmarksgrove right at the coast of the Semantics, a large 
+language ocean. A small river named Duden flows by their place and 
+supplies it with the necessary regelialia. It is a paradisematic 
+country, in which roasted parts of sentences [fly into your mouth](www.example.tld).
+
+Even the all-powerful Pointing has no control about the blind texts it
+is an almost unorthographic life One day however a small line of blind
+text by the name of Lorem Ipsum decided to leave for the far World of
+Grammar. The Big Oxmox advised her not to do so, because there were
+thousands of bad Commas, wild Question Marks and devious Semikoli, but
+the Little Blind Text didn???t listen.
+
+She packed her seven versalia, put her initial into the belt and made
+herself on the way. When she reached the first hills of the Italic
+Mountains, she had a last view back on the skyline of her hometown
+Bookmarksgrove, the headline of Alphabet Village and the subline of
+her own road, the Line Lane. Pityful a rethoric question ran over her
+cheek, then she continued her way. On her way she met a copy. The copy
+warned the Little Blind Text, that where it came from it would have
+been rewritten a thousand times.

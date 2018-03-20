@@ -1,0 +1,42 @@
+---
+author: Max Mustermann
+return-address: 
+  - Musterstr. 12
+  - 34567 Musterstadt
+address:
+  - Dirk Eddelbuettel
+  - 123 Street Rd
+  - Chicago, IL
+  
+subject: Letter in KOMA-Script's US Style
+opening: Dear Dirk,
+closing: Best regards,
+signature: Max Mustermann
+
+lco: UScommercial9
+papersize: letter 
+
+output: komaletter::komaletter
+
+vignette: >
+  %\VignetteIndexEntry{komaletter example letter 2}
+  %\VignetteKeywords{komaletter,vignette}
+  %\VignettePackage{komaletter}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+Perhaps a re-engineering of your current world view will re-energize
+your online nomenclature to enable a new holistic interactive
+enterprise internet communication solution. Upscaling the resurgent
+networking exchange solutions, achieving a breakaway systemic
+electronic data interchange system synchronization, thereby exploiting
+technical environments for mission critical broad based capacity
+constrained systems. 
+
+Fundamentally transforming well designed actionable information whose
+semantic content is virtually null. To more fully clarify the current
+exchange, a few aggregate issues will require addressing to facilitate
+this distributed communication venue. In integrating non-aligned
+structures into existing legacy systems, a holistic gateway blueprint
+is a backward compatible packaging tangible of immeasurable strategic
+value in right-sizing conceptual frameworks when thinking outside the 
+box.

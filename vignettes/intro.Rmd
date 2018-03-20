@@ -1,0 +1,141 @@
+---
+title: "Introduction to komaletter"
+author: "Robert Nuske"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to komaletter}
+  %\VignetteKeywords{komaletter,vignette}
+  %\VignettePackage{komaletter}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Letters are fairly standardized products and as such lend themselves to be 
+written in Markdown. This package is heavily based on [linl](https://CRAN.R-project.org/package=linl)
+but it wraps the very configurable KOMA-Script class *scrlttr2* instead of the
+standard document class *letter*.
+ 
+*komaletter* strives to turn a simple R Markdown document together with a layout
+definition into a beautiful letter (PDF). Layout definitions can be one of 
+KOMA-Script's standard styles, the package default style or a user defined style. For more details refer to [Letter Layouts](#letter-layouts). 
+
+Various aspects of the letter can be determined via variables in the R Markdown
+document metadata (aka YAML frontmatter), cf. [Letter settings](#letter-settings).
+
+
+## Usage
+An easy way to start a komaletter is to ask for the skeleton document in RStudio 
+via *New File > R Markdown > From Template > komaletter* or 
+`rmarkdown::draft("myletter.Rmd", template="pdf", package="komaletter")`. 
+After the letter is written `rmarkdown::render("myletter.Rmd")` creates the 
+final PDF.
+
+The skeleton creates a very simple letter.  This shows the (complete) source 
+on the left and the rendered pdf on the right:
+
+![](examples/skeleton.png)
+
+
+## Letter settings
+Various aspects of the letter can be customized by setting the following
+variables in the R Markdown document metadata (aka YAML frontmatter).
+
+Variable         | Description
+---------------- | ------------------------------------------------------------
+author           | Writer of the letter
+return-address   | Address of the sender; takes a list for a multi-line address.
+address          | Name and address of the recipient; takes a list.
+date             | Custom date; if not specified, current date will be inserted.
+subject          | Subject line.
+opening          | Text for the salutation.
+closing          | Text for the complementary close.
+signature        | Typed signature or image placed below closing.
+signature-before | Allows adjustment of vertical space before signature.
+
+Table: Most commonly used variables.
+
+
+All variables understood by the rmarkdown pdf format may be used in addition 
+to the komaletter variables defined in the following table to further customize
+letters. These variables do not change the placement of the elements of the 
+letter (address, letter head, text). For those aspects refer to 
+[Letter Layouts](#letter-layouts).
+
+Variable     | Description
+------------ | ----------------------------------------------------------------
+lco          | Letter Class Option File (cf. [Letter Layouts](#letter-layouts)).
+lang         | Language code according to [BCP 47](https://tools.ietf.org/html/bcp47) (e.g. `en` or `en-GB`).
+papersize    | Size of paper eg. `a4`, `letter`.
+return-phone | Phone number of sender used in letter head.
+return-email | Email address of sender used in letter head.
+return-url   | Website of sender used in letter head.
+place        | Sender’s place used near date.
+yourref      | Addressee’s reference as part of reference line.
+yourmail     | Date of addressee’s referenced mail as part of reference line.
+myref        | Sender’s reference as part of reference line.
+customer     | Customer number as part of reference line.
+invoice      | Invoice number as part of reference line.
+cc           | Recipients to be carbon-copied; can take a list.
+encl         | List of enclosures.
+ps           | Text to be added at the end of the letter as a postscript.
+komaoption   | Specify further KOMA options; takes a list (see [KOMA-Script documentation](https://komascript.de/~mkohm/scrguien.pdf)).
+parskip      | Defines how to mark new paragraphs, e.g. full, half, off (see [KOMA-Script documentation](https://komascript.de/~mkohm/scrguien.pdf)).
+
+Table: Further komaletter variables.
+
+## Letter Layouts
+The layout of letters is usually defined in so-called **Letter Class Option** 
+files. KOMA-Script provides a number of standard styles, cf. following table.
+Useres may define there own style and the package comes with a default style 
+defined in *maintainers_delight.lco*.
+
+Styles can be selected via the variable `lco` in the YAML header of the
+rmarkdown document. Provide either the name of one of the standard styles 
+listed below or the path to a self defined styles without file extension. 
+If LaTeX can not find the *lco*, it uses KOMA-Script's default: DIN. 
+Common errors besides typos are paths *with* extension, underscores in paths
+mangeled by pandoc.
+
+Custom *lco's* may be constructed either based on one of the standard lco-files
+or by defining all aspects such as position of the recpients address, 
+foldmarks etc.. For a comprehensive description refer to the 
+[KOMA-Script Guide](https://komascript.de/~mkohm/scrguien.pdf).
+
+
++---------------+-------------+------------------+------------+-----------------+
+| Country       | Standard    | Window Envelopes | Paper Size | lco             |
++:==============+:============+:=================+:===========+:================+
+| Germany       | DIN 676     | DIN lang, C4, C5 | A4         | DIN\            |
+|               |             |                  |            | DINmtext        |
++---------------+-------------+------------------+------------+-----------------+
+| France        | NF Z 11-001 | DL               | A4         | NF              |
++---------------+-------------+------------------+------------+-----------------+
+| Switzerland   | SN 010 130  | DIN lang, C4, C5 | A4         | SN, SNleft      |
++---------------+-----------------+-------------+------------------+------------+
+| United States |             | commercial #9    | Letter     | UScommercial9\  |
+|               |             |                  |            | UScommercial9DW |
++---------------+-------------+------------------+------------+-----------------+
+| Japan         |             | Chou/You 3 & 4   | A4         | NipponEL, ...   |
++---------------+-------------+------------------+------------+-----------------+
+
+Table: Some of KOMA-Script's standard LCOs. The number of available LCOs depends on the installed version of KOMA-Script.
+
+
+## Hints
+* The default papersize of KOMA-Script class *scrlttr2* is DIN A4. If you want to create an US style letter eg. using `lco: UScommercial9`, remember to set the papersize to `letter`.
+* Since the figure environment is not defined in the classes `letter` and `scrlltr2`, pandoc has to be told not wrap the image into `\begin{figure}...\end{figure}`. Which can be achieved by ending the line with a backslash:
+```
+![Alt text](image.png)\ 
+```
+If you just want a regular inline image, just make sure it is not the only thing in  the  paragraph. One way to do this is to insert a nonbreaking space after the image:
+```
+![This image won't be a figure](/url/of/image.png)\
+```

@@ -1,0 +1,4 @@
+name: komaletter (PDF)
+description: >
+  A wrapper for the letter class scrlttr2 of the KOMA Script LaTeX bundle
+create_dir: false
