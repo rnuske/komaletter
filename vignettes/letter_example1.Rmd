@@ -21,7 +21,7 @@ place: Hanover
 subject: Some Customizations
 opening: Hi Dirk,
 closing: Cheers,
-signature: "\\includegraphics{examples/signature}"
+signature: "\\includegraphics{signature}"
 signature-before: "0.5\\baselineskip"
 cc: Aaron Wolen
 ps: P.S. Beware of the copy editor!

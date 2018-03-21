@@ -41,7 +41,7 @@ final PDF.
 The skeleton creates a very simple letter.  This shows the (complete) source 
 on the left and the rendered pdf on the right:
 
-![](examples/skeleton.png)
+![](../man/figures/skeleton.png)
 
 
 ## Letter settings

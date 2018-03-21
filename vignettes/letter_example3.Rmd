@@ -11,7 +11,7 @@ address:
 subject: Brief an eine Verwaltung
 opening: Sehr geehrte Damen und Herren,
 closing: Mit freundlichen Grüßen,
-signature: "\\includegraphics{examples/signature}"
+signature: "\\includegraphics{signature}"
 signature-before: 2mm
 
 yourref: IK 08/15 - 2

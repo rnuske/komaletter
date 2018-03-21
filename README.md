@@ -26,7 +26,7 @@ repository, and extends it for use from R via the
 The skeleton creates a very simple letter.  This shows the (complete) source 
 on the left and the rendered pdf on the right:
 
-![](./docs/skeleton.png)
+![](./man/figures/skeleton.png)
 
 Several formatting defaults for font, fontsize, indentation are in use. See 
 `help(komaletter)` for a complete list and default values.
@@ -36,7 +36,7 @@ The vignette example is a little more featureful and shows how to include a
 signature and a few formatting settings. All of these are driven by simple 
 YAML headers as seen on the left:
 
-![](./docs/letter_example1.png)
+![](./man/figures/letter_example1.png)
 
 The vignette also contains a few lines of vignette metadata one would be 
 excluded from a normal letter.
