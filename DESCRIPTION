@@ -1,6 +1,6 @@
 Package: komaletter
 Version: 0.0.1
-Title: Simple yet flexible Letters via the KOMA-Script LaTeX Bundle
+Title: Simple yet Flexible Letters via the KOMA-Script LaTeX Bundle
 Author: Robert Nuske [aut, cre], Dirk Eddelbuettel [aut] and Aaron Wolen [aut]
 Maintainer: Robert Nuske <robert.nuske@mailbox.org>
 Description: An R Markdown template for writing simply beautiful yet versatile 
