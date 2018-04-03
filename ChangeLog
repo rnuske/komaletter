@@ -1,12 +1,12 @@
 ChangeLog for package komaletter
 
-changes in version 0.1.0 (2018-03-20)
+changes in version 0.1.0 (2018-04-03)
  - intial version based on linl version 0.0.2
- - changed template.tex to support my variables
- - introduced letter class option file my_treat.lco
+ - changed template.tex to support KOMA-Script variables
+ - introduced letter class option file maintaiers_delight.lco
  - adapted the skeleton.Rmd
- - switch of autolink_bare_uris in R/komaletter.R
+ - switch off autolink_bare_uris in R/komaletter.R
  - feed lco_default to pandoc via command line arguments in R/komaletter.R
- -created some example-letter-vignettes
+ - added three example-letter-vignettes
  - added intro vignette
  - adapted roxygen documentation
