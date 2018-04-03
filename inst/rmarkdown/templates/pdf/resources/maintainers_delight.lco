@@ -1,4 +1,4 @@
-\ProvidesFile{my_treat.lco}[letter class options to maintainers delight] % loosely follows DIN 5008B
+\ProvidesFile{maintainers_delight.lco}[letter class options to maintainers delight] % loosely follows DIN 5008B
 
 \LoadLetterOption{DIN} % the default but let's be explicit about our foundation
 

@@ -1,8 +1,8 @@
 #' KOMA-Script LaTeX Letter Format
 #'
-#' A format for LaTeX letters via R Markdown using the KOMA-Script class 'scrlttr2'.
-#' It provides layouts for many different window envelope types (German, US,
-#' French, Japanese, ...) and the possibility to define your own.
+#' A format for LaTeX letters via R Markdown using the KOMA-Script class
+#' 'scrlttr2'. It provides layouts for many different window envelope types
+#' (German, US, French, Japanese, ...) and the possibility to define your own.
 #'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Additional arguments to \code{\link[rmarkdown:pdf_document]{pdf_document}}
@@ -18,7 +18,7 @@
 #' }
 #'
 #' @section Letter features:
-#' Various aspects of the letter can be customized by setting the following
+#' Various aspects of the letter can be customized via the following
 #' variables in the R Markdown document metadata (aka YAML frontmatter).
 #'
 #' Most commonly used variables:
@@ -58,7 +58,7 @@
 #' }
 #'
 #'
-#' The vignette source shows several of these options in use.
+#' The source of example letter vignettes show several of these options in use.
 #'
 #' @seealso
 #' \code{\link[linl]{linl}}
