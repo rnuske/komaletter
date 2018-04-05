@@ -67,10 +67,6 @@ The source of example letter vignettes show several of these options in use.
 }
 
 \examples{
-\dontshow{
-rmarkdown::draft(file.path(tempdir(), "test.Rmd"), template="pdf", package="komaletter", edit=FALSE)
-rmarkdown::render(file.path(tempdir(), "test.Rmd"))
-}
 \dontrun{
 rmarkdown::draft("MyLetter.Rmd", template="pdf", package="komaletter")
 rmarkdown::render("MyLetter.Rmd")

@@ -1,5 +1,8 @@
 ChangeLog for package komaletter
 
+changes in versiom 0.1.3 (2018-04-05)
+ - removed dontshow-examples because they take more than 10s on windows
+
 changes in version 0.1.1 (2018-04-05)
  - roxygen -> Rd
 
