@@ -1,5 +1,9 @@
 ChangeLog for package komaletter
 
+changes in version 0.1.1 (2018-04-05)
+ - changed wording in DESCRIPTION
+ - added dontshow example which writes to tempdir
+
 changes in version 0.1.0 (2018-04-03)
  - intial version based on linl version 0.0.2
  - changed template.tex to support KOMA-Script variables

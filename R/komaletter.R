@@ -12,6 +12,10 @@
 #' \code{\link[rmarkdown:render]{render}}
 #'
 #' @examples
+#' \dontshow{
+#' rmarkdown::draft(file.path(tempdir(), "test.Rmd"), template="pdf", package="komaletter", edit=FALSE)
+#' rmarkdown::render(file.path(tempdir(), "test.Rmd"))
+#' }
 #' \dontrun{
 #' rmarkdown::draft("MyLetter.Rmd", template="pdf", package="komaletter")
 #' rmarkdown::render("MyLetter.Rmd")

@@ -1,15 +1,15 @@
 Package: komaletter
 Type: Package
-Title: Simple yet Flexible Letters via the KOMA-Script LaTeX Bundle
-Version: 0.1.0
+Title: Simple yet Flexible Letters via the 'KOMA-Script LaTeX Bundle'
+Version: 0.1.1
 Authors@R: c(
     person("Robert", "Nuske", role=c("aut", "cre"), email="robert.nuske@mailbox.org", comment=c(ORCID="0000-0001-9773-2061")),
     person("Dirk", "Eddelbuettel", role="aut"),
     person("Aaron", "Wolen", role="aut"))
 Maintainer: Robert Nuske <robert.nuske@mailbox.org>
-Description: An R Markdown template for writing simply beautiful yet versatile 
-  letters, using the KOMA-Script letter class 'scrlttr2' and an adaptation of 
-  the 'pandoc-letter' template. scrlttr2 provides layouts for many different 
+Description: An R Markdown template for writing beautiful yet versatile letters,
+  using the 'KOMA-Script' letter class 'scrlttr2' and an adaptation of the
+  'pandoc-letter' template. 'scrlttr2' provides layouts for many different
   window envelope types and the possibility to define your own.
 Depends: R (>= 3.0)
 Imports: rmarkdown (>= 0.6)
