@@ -1,6 +1,9 @@
 ChangeLog for package komaletter
 
 changes in version 0.1.1 (2018-04-05)
+ - roxygen -> Rd
+
+changes in version 0.1.1 (2018-04-05)
  - changed wording in DESCRIPTION
  - added dontshow example which writes to tempdir
 
