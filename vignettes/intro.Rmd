@@ -110,21 +110,14 @@ foldmarks etc.. For a comprehensive description refer to the
 [KOMA-Script Guide](https://komascript.de/~mkohm/scrguien.pdf).
 
 
-+---------------+-------------+------------------+------------+-----------------+
-| Country       | Standard    | Window Envelope  | Paper Size | lco             |
-+:==============+:============+:=================+:===========+:================+
-| Germany       | DIN 676     | DIN lang, C4, C5 | A4         | DIN\            |
-|               |             |                  |            | DINmtext        |
-+---------------+-------------+------------------+------------+-----------------+
-| France        | NF Z 11-001 | DL               | A4         | NF              |
-+---------------+-------------+------------------+------------+-----------------+
-| Switzerland   | SN 010 130  | DIN lang, C4, C5 | A4         | SN, SNleft      |
-+---------------+-----------------+-------------+------------------+------------+
-| United States |             | commercial #9    | Letter     | UScommercial9\  |
-|               |             |                  |            | UScommercial9DW |
-+---------------+-------------+------------------+------------+-----------------+
-| Japan         |             | Chou/You 3 & 4   | A4         | NipponEL, ...   |
-+---------------+-------------+------------------+------------+-----------------+
+
+Country       | Standard     | Window Envelope  | Paper Size | lco
+------------- | ------------ | ---------------- | ---------- | ----------------
+Germany       | DIN 676      | DIN lang, C4, C5 | A4         | DIN, DINmtext
+France        | NF Z 11-001  | DL               | A4         | NF
+Switzerland   | SN 010 130   | DIN lang, C4, C5 | A4         | SN, SNleft
+United States |              | commercial #9    | Letter     | UScommercial9, UScommercial9DW
+Japan         |              | Chou/You 3 & 4   | A4         | NipponEL, ...
 
 Table: Some of KOMA-Script's standard LCOs.
 
