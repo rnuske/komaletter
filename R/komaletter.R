@@ -86,14 +86,15 @@ komaletter <- function(..., keep_tex=FALSE){
 
   template <- system.file("rmarkdown", "templates", "pdf", "resources",
                           "template.tex", package="komaletter")
-  path_to_default <- system.file("rmarkdown", "templates", "pdf", "resources",
-                                 "maintainers_delight.lco", package="komaletter")
-  path_to_default <- sub("\\.[^.]*$", "", path_to_default)
+  default_lco <- system.file("rmarkdown", "templates", "pdf", "resources",
+                             "maintainers_delight.lco", package="komaletter")
+  # {"..."} protects path with spaces in LaTeX files on Windows
+  default_lco <- paste0('{"', sub("\\.[^.]*$", "", default_lco), '"}')
 
   base <- inherit_pdf_document(..., template=template, keep_tex=keep_tex,
                                md_extensions=c("-autolink_bare_uris"),
                                pandoc_args=c(paste0("--variable=lco_default:",
-                                                  path_to_default)))
+                                                    default_lco)))
 
   base$knitr$opts_chunk$prompt    <- FALSE  # changed from TRUE
   base$knitr$opts_chunk$comment   <- '# '   # default to one hashmark
