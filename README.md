@@ -41,18 +41,35 @@ excluded from a normal letter.
 ![](./man/figures/letter_example1.png)
 
 
-### Usage 
-The package can be installed from github
+### Installation
+As the package is on CRAN, you can use the standard incantation to install the
+released version. A development version of komaletter can be installed from 
+Github using the package devtools.
 
 ```r
+# the easiest way is to install from CRAN
+install_packages("komaletter")
+
+# or get the development version from Github
+# install.packages("devtools")
 devtools::install_github("rnuske/komaletter")
 ```
 
-To start a new letter one can call the skeleton using the `rmarkdown::draft` or the RStudio menu: New File > R markdown... The document can be compiled tp PDF via `rmarkdown::render` or the RStudio Knit button.
+
+### Usage
+To start a new letter one can call the skeleton using the `rmarkdown::draft` or the RStudio menu: New File > R markdown... The document can be compiled to PDF via `rmarkdown::render` or the RStudio Knit button.
 
 ```r
+# load rmarkdown
+# komaletter enhances rmarkdown and doesn't need to be loaded
 library(rmarkdown)
+
+# start a new letter using the provided skeleton
 draft("myletter.Rmd", template="pdf", package="komaletter", edit=FALSE)
+
+# change myletter.Rmd to your liking
+
+# turn Rmd into a beautiful PDF
 render("myletter.Rmd")
 ```
 
