@@ -88,8 +88,7 @@ komaletter <- function(..., keep_tex=FALSE){
                           "template.tex", package="komaletter")
   default_lco <- system.file("rmarkdown", "templates", "pdf", "resources",
                              "maintainersDelight.lco", package="komaletter")
-  # {"..."} protects path with spaces in LaTeX files on Windows
-  default_lco <- paste0('{"', sub("\\.[^.]*$", "", default_lco), '"}')
+  default_lco <- sub("\\.[^.]*$", "", default_lco)
 
   base <- inherit_pdf_document(..., template=template, keep_tex=keep_tex,
                                md_extensions=c("-autolink_bare_uris"),
