@@ -12,7 +12,7 @@ address:
   - Chicago, IL
   - USA
 
-lco: "`r system.file('rmarkdown', 'templates', 'pdf', 'resources', 'maintainers_delight', package='komaletter')`"
+lco: "`r system.file('rmarkdown', 'templates', 'pdf', 'resources', 'maintainersDelight', package='komaletter')`"
 colorlinks: true
 
 date: 2020-12-31

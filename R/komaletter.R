@@ -38,7 +38,7 @@
 #' Further variables defined by komaletter:
 #' \tabular{ll}{
 #'   \strong{Variable} \tab \strong{Description}\cr
-#'   lco          \tab Letter Class Option File. Either name of a standard KOMA-Script LCO (e.g. DIN, SN, ) or path to custom LCO. If not specified, the \code{maintainers_delight.lco} will be used.\cr
+#'   lco          \tab Letter Class Option File. Either name of a standard KOMA-Script LCO (e.g. DIN, SN, ) or path to custom LCO. If not specified, the \code{maintainersDelight.lco} will be used.\cr
 #'   lang         \tab Language code according to \href{https://tools.ietf.org/html/bcp47}{BCP 47} (e.g. \code{en} or \code{en-GB}).\cr
 #'   papersize    \tab Size of paper eg. `a4`, `letter`.\cr
 #'   return-phone \tab Phone number of sender used in letter head.\cr
@@ -87,7 +87,7 @@ komaletter <- function(..., keep_tex=FALSE){
   template <- system.file("rmarkdown", "templates", "pdf", "resources",
                           "template.tex", package="komaletter")
   default_lco <- system.file("rmarkdown", "templates", "pdf", "resources",
-                             "maintainers_delight.lco", package="komaletter")
+                             "maintainersDelight.lco", package="komaletter")
   # {"..."} protects path with spaces in LaTeX files on Windows
   default_lco <- paste0('{"', sub("\\.[^.]*$", "", default_lco), '"}')
 

@@ -94,7 +94,7 @@ Table: Further komaletter variables.
 
 ## Letter Layouts
 The layout of letters is defined in so-called **Letter Class Option** files.
-KOMA-Script provides a number of standard styles (see following table). The package comes with a default style defined in *maintainers_delight.lco*. Users
+KOMA-Script provides a number of standard styles (see following table). The package comes with a default style defined in *maintainersDelight.lco*. Users
 may as well define there own layout.
 
 Styles can be selected via the variable `lco` in the YAML header of the
