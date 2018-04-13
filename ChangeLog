@@ -1,14 +1,19 @@
 ChangeLog for package komaletter
 
-changes in versiom 0.1.3 (2018-04-05)
- - removed dontshow-examples because they take more than 10s on windows
+changes in version 0.2.0 (2018-04-13)
+ - protect path to default lco in LaTeX file against breaking at whitespace on windows
+ - renamed maintainers_delight.lco to avoid pandoc problems with underscores in paths
+ - fixed letter layout table in intro vignette
+
+changes in version 0.1.3 (2018-04-05)
+ - removed dontshow-example because it takes more than 10s on windows
+
+changes in version 0.1.2 (2018-04-05)
+ - recreated help page from roxygen comments
 
 changes in version 0.1.1 (2018-04-05)
- - roxygen -> Rd
-
-changes in version 0.1.1 (2018-04-05)
- - changed wording in DESCRIPTION
  - added dontshow example which writes to tempdir
+ - changed wording in DESCRIPTION
 
 changes in version 0.1.0 (2018-04-03)
  - intial version based on linl version 0.0.2
