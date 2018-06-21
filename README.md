@@ -48,7 +48,7 @@ Github using the package devtools.
 
 ```r
 # the easiest way is to install from CRAN
-install_packages("komaletter")
+install.packages("komaletter")
 
 # or get the development version from Github
 # install.packages("devtools")
