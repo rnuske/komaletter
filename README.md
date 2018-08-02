@@ -1,5 +1,6 @@
 ## komaletter: Simple yet flexible Letters via the KOMA-Script LaTeX Bundle 
 
+[![Travis build status](https://travis-ci.org/rnuske/komaletter.svg?branch=master)](https://travis-ci.org/rnuske/komaletter) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN](http://www.r-pkg.org/badges/version/komaletter)](https://cran.r-project.org/package=komaletter)
 
 ### Motivation
 Simple letters tend to look very much alike. They are either determined by a 
