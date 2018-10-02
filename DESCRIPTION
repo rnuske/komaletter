@@ -13,7 +13,7 @@ Description: An R Markdown template for writing beautiful yet versatile letters,
   window envelope types and the possibility to define your own.
 Depends: R (>= 3.0)
 Imports: rmarkdown (>= 0.6)
-Suggests: knitr
+Suggests: knitr (>= 1.8)
 License: GPL-3
 URL: https://github.com/rnuske/komaletter
 BugReports: https://github.com/rnuske/komaletter/issues

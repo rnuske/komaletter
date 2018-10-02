@@ -1,0 +1,174 @@
+---
+title: "Parameterized Letters for Mass Mailings"
+author: "Robert Nuske"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Parameterized Letters for Mass Mailings}
+  %\VignetteKeywords{komaletter, vignette, parameter, mass mailing, mail merge}
+  %\VignettePackage{komaletter}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+Mail merge is just a variant of R Markdown's parametrized reports when using `komaletter`. The process is similar to mail merge in traditional word processing applications:
+
+  * compile information of recipients
+  * write template letter with corresponding parameters
+  * merge template letter and recipient's information
+  
+
+## Basics of Mail Merge with `komaletter`
+To personalize letters for mass mailings, you can include one or more parameters in a `komaletter`. These parameters need to be declared and put to use later in the document. You can assign various values to the parameters when you render the report.
+
+
+### Declaring Parameters
+Parameters are declared using the `params` field within the YAML metadata header. You can specify one or more parameters with each item on a new line.
+```{r eval=FALSE}
+---
+author: Max Mustermann
+
+params:
+  name: John
+  gift: candlestick
+---
+```
+
+
+### Using Parameters
+The declared parameters are automatically made available within the knit environment as components of the read-only list `params`. For example, the values of the above parameters can be accessed with the following R Code:
+```{r eval=FALSE}
+params$name
+params$gift
+```
+
+If the value of a parameter shall be used in the YAML metadata header, the Parameter must be declared previously. Since the backtick \` is a reserved character in YAML, the inline R Code snippet has to be wrapped in quotes.
+```{r eval=FALSE}
+---
+author: Max Mustermann
+
+params:
+  name: John
+  gift: candlestick
+  
+title: "`r params$gift`"
+---
+```
+
+
+### Setting Parameter values
+To set the parameter values, you can add the `params` argument to `rmarkdown::render`. If a parameter does not get a value, the default defined during parameter declaration is used (eg. `John`, `candlestick`).
+```{r eval=FALSE}
+rmarkdown::render("example.Rmd", params=list(name="Jane"))
+```
+
+
+## Challenges of Mail Merge with `komaletter`
+R Markdown and thus `komaletter` combines R Code, YAML and Markdown. R Markdown documents are processed by `knitr` to pure YAML and Markdown which in turn is send to pandoc for conversion to the final document type (pdf in this case). A parametrized letter has to obey the restrictions of all parts involved.
+
+The most common personalization are the address of the recipient and the salutation or opening. `komaletter` expects the address to be a YAML sequence within the YAML metadata header. YAML sequences can be written in flow or block style. Both need quotation marks to protect the square brackets or to enable the escape code `\n` during parameter declaration in the YAML metadata.
+
+```{r eval=FALSE}
+---
+params:
+  # scalar
+  name: John Doe
+  # flow style sequence
+  address_flow: "[FirstName LastName, 123 Main St, Anytown]"
+  # block style sequence
+  address_block: "\n  - FirstName LastName\n  - 123 Main St\n  - Anytown"
+---
+```
+
+Since the address and the letter opening are defined in the YAML metadata. The corresponding parameters must be declared and after that put to use within the YAML metadata. Parameter values are accessed in R Code. In the YAML metadata header this means inline code snippets `` `r knitr::inline_expr("expression")` ``. Since backticks `` ` `` are 'reserved indicators' in YAML, the code snippet usually needs to be wrapped in quotes. 
+
+```{r eval=FALSE}
+---
+params:
+  name: John Doe
+  
+opening: "`r paste0('Dear ', params$name, ',')`"
+---
+```
+
+The result of the quoted R expression `` "`r knitr::inline_expr("expression")`" `` is a value enclosed in double quotes, i.e. `"value"`, which is not harmful if the result is of R type character corresponding to a YAML scalar. YAML scalars can be enclosed in single or double quotes or not wrapped at all. But everything in quotes is a scalar to YAML.
+
+Consequently this means that expressions that are supposed to supply an address and thus a YAML sequence, must not be enclosed in quotes! Which poses a main problem since we learned above inline code snippets need to be enclosed in quotes in the main YAML metadata header.
+
+
+## Solution
+Or rather a **hack** found as bycatch at [stackoverflow](https://stackoverflow.com/a/31862074) circumventing the issue at the moment.
+
+As explained above, the address is a YAML sequence and sequences can not be enclosed in quotes. To access the parameter in the main YAML metadata header the inline R Code snippet has to be wrapped in quotes and R expressions wrapped in quotes evaluates to a value enclosed in quotes.
+
+Mysteriously, the rule that backticks must be enclosed in quotes is not enforced in a second YAML metadata block. You can use two metadata blocks because Pandoc combines YAML metadata blocks while converting the .md file to the final document. So in a second metadata block the inline R Code snippet can be written without quotes resulting in a correctly formatted YAML sequence.
+
+```{r eval=FALSE}
+---
+author: Max Mustermann
+return-address: [Musterstr. 12, 34567 Musterstadt]
+
+params: 
+  name: John
+  address: "[John Doe, 123 Main St, Anytown]"
+  gift: candlestick
+
+output: komaletter::komaletter
+---
+---
+address: `r params$address`
+opening: `r paste0('Dear ', params$name, ',')`
+closing: "Yours truly,"
+---
+
+thank you very much for the beautiful `r params$gift`. It was a pleasure to have you.
+```
+
+
+The template letter above can then be called with various values
+
+```{r eval=FALSE}
+recipients <- data.frame(name=c("Megan", "Bob"),
+                         gift=c("candlestick", "flowers"),
+                         address=c("[Megan Smith, 4156 Tincidunt Ave, Green Bay Indiana 19759]",
+                                   "[Robert Pitts, 5543 Aliquet St, Fort Dodge GA 20783]"),
+                         stringsAsFactors=FALSE)
+
+for(i in 1:nrow(recipients)){
+  rmarkdown::render("template_letter.Rmd", 
+                    params=list(name=recipients[i, "name"], 
+                                gift=recipients[i, "gift"], 
+                                address=recipients[i, "address"]),
+                    output_file=paste0("letter_", recipients[i, 'name'], ".pdf"))
+}
+
+```
+
+
+## Further Information
+  * R Markdown
+    * [Article 'Parametrized Reports' on RStudio's R Markdown website](https://rmarkdown.rstudio.com/developer_parameterized_reports)
+    * [Chapter 'Parametrized Reports' in the book 'R Markdown: The Definitive Guide'](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html)
+    * [Lesson 6 'Parameters' in 'Get Started'-Course on RStudio's R Markdown website](https://rmarkdown.rstudio.com/lesson-6.html)
+    
+  * YAML 
+    * [YAML Reference card](http://yaml.org/refcard.html) (Scalar indicators, Escape codes, Misc. Indicators for reserved indicators)
+    * [YAML Specification](http://yaml.org/spec/current.html)(Syntax, Indicator Characters: reserved characters, Escape Sequences, Scalar Styles, Sequence Styles)
+    * [YAML block sequence](http://yaml.org/spec/current.html#id2543032)
+    * [YAML flow sequence](http://yaml.org/spec/current.html#id2542413)
+
+
+## Hints
+Since parameters are evaluated roughly speaking during document knitting (conversion from .Rmd to .md), it is helpful to look at the intermediate .md files to hunt down issues in parameterized letters.
+
+`komaletter` is based on the R Markdown output format `pdf_document` which in contrast to other formats (html_document, word_document, odt_document) has no argument to keep the intermediate .md files created by `knitr`.
+
+But `rmarkdown::render(..., clean=FALSE)` causes the intermediate .md files to remain available.
