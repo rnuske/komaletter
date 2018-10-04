@@ -58,10 +58,7 @@
 \setkomavar{firsthead}{%
   \parbox{\useplength{firstheadwidth}}{%
     \raggedleft%
-    {%
-      \fontsize{24pt}{24pt}\bfseries\color[gray]{0.50}%
-      \ifkomavarempty{fromname}{}{\usekomavar{fromname}}%
-    }\\\vspace{2mm}%
+    \ifkomavarempty{fromname}{}{{\fontsize{24pt}{24pt}\bfseries\color[gray]{0.50}\usekomavar{fromname}}\\\vspace{2mm}}
     {%
       \fontsize{10pt}{12pt}\selectfont\color[gray]{0.33}%
       \ifkomavarempty{fromaddress}{}{{\def\\{,\nobreakspace\@ogobble}\usekomavar{fromaddress}}~\Letter\\}%
