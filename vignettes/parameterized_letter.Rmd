@@ -34,11 +34,11 @@ To personalize letters for mass mailings, you can include one or more parameters
 Parameters are declared using the `params` field within the YAML metadata header. You can specify one or more parameters with each item on a new line.
 ```{r eval=FALSE}
 ---
-author: Max Mustermann
-
 params:
   name: John
   gift: candlestick
+
+output: komaletter::komaletter
 ---
 ```
 
@@ -53,13 +53,13 @@ params$gift
 If the value of a parameter shall be used in the YAML metadata header, the Parameter must be declared previously. Since the backtick \` is a reserved character in YAML, the inline R Code snippet has to be wrapped in quotes.
 ```{r eval=FALSE}
 ---
-author: Max Mustermann
-
 params:
   name: John
   gift: candlestick
   
-title: "`r params$gift`"
+subject: "`r params$gift`"
+
+output: komaletter::komaletter
 ---
 ```
 
@@ -79,11 +79,11 @@ The most common personalization are the address of the recipient and the salutat
 ```{r eval=FALSE}
 ---
 params:
-  # scalar
+  # scalar:
   name: John Doe
-  # flow style sequence
+  # flow style sequence:
   address_flow: "[FirstName LastName, 123 Main St, Anytown]"
-  # block style sequence
+  # block style sequence:
   address_block: "\n  - FirstName LastName\n  - 123 Main St\n  - Anytown"
 ---
 ```
@@ -96,6 +96,8 @@ params:
   name: John Doe
   
 opening: "`r paste0('Dear ', params$name, ',')`"
+
+output: komaletter::komaletter
 ---
 ```
 
@@ -155,20 +157,20 @@ for(i in 1:nrow(recipients)){
 
 ## Further Information
   * R Markdown
-    * [Article 'Parametrized Reports' on RStudio's R Markdown website](https://rmarkdown.rstudio.com/developer_parameterized_reports)
-    * [Chapter 'Parametrized Reports' in the book 'R Markdown: The Definitive Guide'](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html)
-    * [Lesson 6 'Parameters' in 'Get Started'-Course on RStudio's R Markdown website](https://rmarkdown.rstudio.com/lesson-6.html)
+    * [Article "Parametrized Reports"](https://rmarkdown.rstudio.com/developer_parameterized_reports) on RStudio's R Markdown website
+    * [Chapter "Parametrized Reports"](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html) in the book "R Markdown: The Definitive Guide"
+    * [Lesson 6 "Parameters"](https://rmarkdown.rstudio.com/lesson-6.html) in "Get Started"-Course on RStudio's R Markdown website
     
   * YAML 
     * [YAML Reference card](http://yaml.org/refcard.html) (Scalar indicators, Escape codes, Misc. Indicators for reserved indicators)
-    * [YAML Specification](http://yaml.org/spec/current.html)(Syntax, Indicator Characters: reserved characters, Escape Sequences, Scalar Styles, Sequence Styles)
+    * [YAML Specification](http://yaml.org/spec/current.html) (Syntax, Indicator Characters: reserved characters, Escape Sequences, Scalar Styles, Sequence Styles)
     * [YAML block sequence](http://yaml.org/spec/current.html#id2543032)
     * [YAML flow sequence](http://yaml.org/spec/current.html#id2542413)
 
 
 ## Hints
-Since parameters are evaluated roughly speaking during document knitting (conversion from .Rmd to .md), it is helpful to look at the intermediate .md files to hunt down issues in parameterized letters.
+Since parameters are evaluated roughly speaking during document knitting (conversion from `.Rmd` to `.md`), it is helpful to look at the intermediate `.md` files to hunt down issues in parameterized letters.
 
-`komaletter` is based on the R Markdown output format `pdf_document` which in contrast to other formats (html_document, word_document, odt_document) has no argument to keep the intermediate .md files created by `knitr`.
+`komaletter` is based on the R Markdown output format `pdf_document` which in contrast to other formats (html_document, word_document, odt_document) has no argument to keep the intermediate `.md` files created by `knitr`.
 
 But `rmarkdown::render(..., clean=FALSE)` causes the intermediate .md files to remain available.
