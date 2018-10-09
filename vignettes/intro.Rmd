@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 Letters are fairly standardized products and as such lend themselves to be 
 written in Markdown. This package is heavily based on [linl](https://CRAN.R-project.org/package=linl)
 but it wraps the very configurable KOMA-Script class *scrlttr2* instead of the
-standard document class *letter*.
+standard LaTeX document class *letter*.
  
 *komaletter* strives to turn a simple R Markdown document together with a layout
 definition into a beautiful letter (PDF). Layout definitions can be one of 
@@ -124,9 +124,8 @@ Table: Some of KOMA-Script's standard LCOs.
 
 ## Hints
 * The default papersize of KOMA-Script class *scrlttr2* is DIN A4. If you want to create an US style letter eg. using `lco: UScommercial9`, remember to set the papersize to `letter`.
-* Id you plan on writing non-english letters, , make sure you have the necessary 
-language packs, _i.e_ `texlive-lang-german`.
-* Since the figure environment is not defined in the classes `letter` and `scrlltr2`, pandoc has to be told not wrap the image into `\begin{figure}...\end{figure}`. Which can be achieved by ending the line with a backslash:
+* If you plan on writing non-english letters using _i.e._ `lang: de`, make sure you have the necessary LaTeX language packs, _i.e._ `texlive-lang-german`.
+* Since the figure environment is not defined in the classes `letter` and `scrlltr2`, pandoc has to be told not to wrap the image into `\begin{figure}...\end{figure}`. Which can be achieved by ending the line with a backslash:
 ```
 ![Alt text](image.png)\ 
 ```
