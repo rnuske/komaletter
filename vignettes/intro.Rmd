@@ -28,7 +28,7 @@ definition into a beautiful letter (PDF). Layout definitions can be one of
 KOMA-Script's standard styles, the package default style or a user defined style. For more details refer to the section [Letter Layouts](#letter-layouts). 
 
 Various aspects of the letter can be determined via variables in the R Markdown
-document metadata (aka YAML frontmatter), see [Letter settings](#letter-settings).
+document metadata (aka YAML header), see [Letter settings](#letter-settings).
 
 
 ## Usage
@@ -47,7 +47,12 @@ on the right.
 
 ## Letter Settings
 Various aspects of the letter can be customized via the following
-variables in the R Markdown document metadata (aka YAML frontmatter).
+variables in the R Markdown document metadata (aka YAML header).
+
+Although it rarely makes sense to write a letter without sender and recipient,
+a komaletter can be constructed by merely specifying the output format.
+All other variables are optional.
+
 
 Variable         | Description
 ---------------- | ------------------------------------------------------------
@@ -64,11 +69,11 @@ signature-before | Allows adjustment of vertical space before signature.
 Table: Most commonly used variables.
 
 
-All variables understood by the rmarkdown pdf format may be used in addition
-to the komaletter variables defined in the following table to further customize
-your letter. These variables do not change the placement of the elements of the
-letter (address, letter head, text). For those aspects refer to 
-[Letter Layouts](#letter-layouts).
+All variables understood by `rmarkdown`'s `pdf_document` format may be used 
+in addition to the `komaletter` variables defined in the following table 
+to further customize your letter. These variables do not change the placement
+of elements of the letter (address, letter head, text). For those aspects 
+refer to [Letter Layouts](#letter-layouts).
 
 Variable     | Description
 ------------ | ----------------------------------------------------------------
@@ -94,8 +99,9 @@ Table: Further komaletter variables.
 
 ## Letter Layouts
 The layout of letters is defined in so-called **Letter Class Option** files.
-KOMA-Script provides a number of standard styles (see following table). The package comes with a default style defined in *maintainersDelight.lco*. Users
-may as well define there own layout.
+KOMA-Script provides a number of standard styles (see following table). 
+The package comes with a default style defined in *maintainersDelight.lco*. 
+Users may as well define there own layout.
 
 Styles can be selected via the variable `lco` in the YAML header of the
 rmarkdown document. Provide either the name of one of the standard styles 

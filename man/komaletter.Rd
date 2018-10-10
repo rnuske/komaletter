@@ -23,15 +23,21 @@ A format for LaTeX letters via R Markdown using the KOMA-Script class
 }
 \section{Letter features}{
 
+
 Various aspects of the letter can be customized via the following
-variables in the R Markdown document metadata (aka YAML frontmatter).
+variables in the R Markdown document metadata (aka YAML header).
+
+Although it rarely makes sense to write a letter without sender and recipient,
+a komaletter can be constructed by merely specifying the output format.
+All other variables are optional.
+
 
 Most commonly used variables:
 \tabular{ll}{
   \strong{Variable} \tab \strong{Description}\cr
-  author            \tab Writer of the letter\cr
-  return-address    \tab Address of the sender; takes a list for a multi-line address.\cr
-  address           \tab Name and address of the recipient; takes a list.\cr
+  author            \tab Writer of the letter.\cr
+  return-address    \tab Address of the sender; takes a YAML sequence for a multi-line address.\cr
+  address           \tab Name and address of the recipient; takes a YAML sequence.\cr
   date              \tab Custom date; if not specified, current date will be inserted.\cr
   subject           \tab Subject line.\cr
   opening           \tab Text for the salutation.\cr
@@ -39,6 +45,12 @@ Most commonly used variables:
   signature         \tab Typed signature or image placed below closing.\cr
   signature-before  \tab Allows adjustment of vertical space before signature.
 }
+
+
+All variables understood by `rmarkdown`'s `pdf_document` format may be used
+in addition to the `komaletter` variables defined in the following table
+to further customize your letter. For modifications of the layout please
+refer to the vignette 'Introduction to komaletter'.
 
 Further variables defined by komaletter:
 \tabular{ll}{
@@ -63,7 +75,7 @@ Further variables defined by komaletter:
 }
 
 
-The source of example letter vignettes show several of these options in use.
+The source of the example letter vignettes show several of these options in use.
 }
 
 \examples{
