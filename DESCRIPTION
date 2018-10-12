@@ -1,7 +1,7 @@
 Package: komaletter
 Type: Package
 Title: Simple yet Flexible Letters via the 'KOMA-Script LaTeX Bundle'
-Version: 0.2.900
+Version: 0.3.0
 Authors@R: c(
     person("Robert", "Nuske", role=c("aut", "cre"), email="robert.nuske@mailbox.org", comment=c(ORCID="0000-0001-9773-2061")),
     person("Dirk", "Eddelbuettel", role="aut"),

@@ -1,14 +1,14 @@
 ChangeLog for package komaletter
 
-changes in version 0.3.0 (2018-10-xx)
+changes in version 0.3.0 (2018-10-12)
  - added vignette describing parameterized letters for mass mailings
  -  reduced mandatory YAML metadata header items to 'output'
-   - set empty opening in template.tex if no 'opening' provided in YAML metadata (#0e3ea94)
-   - addressfield surppressed in template.tex for letters w/o 'address' (#f6dee20)
-   - changed letter head of the default letter style to allow letters w/o 'author' (#8be156b))
- - added funny little badges to README.md (#00d53db, #b208eac)
- - started to use continuous integration service Travis CI (#df9fb26)
- - fixed typo in README.md (@Shaurita #ea0d3da)
+   - set empty opening in template.tex if no 'opening' provided in YAML metadata
+   - addressfield surppressed in template.tex for letters w/o 'address'
+   - changed letter head of the default letter style to allow letters w/o 'author'
+ - added funny little badges to README.md
+ - started to use continuous integration service Travis CI
+ - fixed typo in README.md (Thanks @sdhutchins)
 
 changes in version 0.2.0 (2018-04-13)
  - protect path to default lco in LaTeX file against breaking at whitespace on windows
