@@ -2,8 +2,8 @@
 
 [![Travis build status](https://travis-ci.org/rnuske/komaletter.svg?branch=master)](https://travis-ci.org/rnuske/komaletter) 
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/rnuske/komaletter?branch=master&svg=true)](https://ci.appveyor.com/project/rnuske/komaletter) 
-[![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) 
-[![CRAN](http://www.r-pkg.org/badges/version/komaletter)](https://cran.r-project.org/package=komaletter) 
+[![Package-License](https://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html) 
+[![CRAN](https://www.r-pkg.org/badges/version/komaletter)](https://cran.r-project.org/package=komaletter) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1221316.svg)](https://doi.org/10.5281/zenodo.1221316)
 
 ### Motivation
