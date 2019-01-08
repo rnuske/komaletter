@@ -1,5 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.drone\.yml$
 ^\.travis\.yml$
 ^appveyor\.yml$
 ^\.gitattributes$
