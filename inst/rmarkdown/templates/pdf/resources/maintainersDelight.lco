@@ -24,7 +24,7 @@
 \setkomafont{backaddress}{\fontsize{8pt}{10pt}\selectfont}
 \setkomafont{refname}{\fontsize{8pt}{8pt}\selectfont}
 \setkomafont{refvalue}{\fontsize{10pt}{10pt}\selectfont}
-\setkomafont{foldmark}{\color[gray]{0.67}}
+\setkomafont{foldmark}{\color[gray]{0.50}}
 \setkomavar{backaddressseparator}{\textperiodcentered{}}
 
 
@@ -58,7 +58,7 @@
 \setkomavar{firsthead}{%
   \parbox{\useplength{firstheadwidth}}{%
     \raggedleft%
-    \ifkomavarempty{fromname}{}{{\fontsize{24pt}{24pt}\bfseries\color[gray]{0.50}\usekomavar{fromname}}\\\vspace{2mm}}
+    \ifkomavarempty{fromname}{}{{\fontsize{24pt}{24pt}\bfseries\color[gray]{0.33}\usekomavar{fromname}}\\\vspace{2mm}}
     {%
       \fontsize{10pt}{12pt}\selectfont\color[gray]{0.33}%
       \ifkomavarempty{fromaddress}{}{{\def\\{,\nobreakspace\@ogobble}\usekomavar{fromaddress}}~\Letter\\}%
