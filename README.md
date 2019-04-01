@@ -19,7 +19,7 @@ possibility to define your own layout. The *komaletter* package also provides
 it's own default layout loosely based on DIN 5008B.
 
 This package is an adaptation of the
-[linl](https://cran.r-project.org/package=rmarkdown) package
+[linl](https://cran.r-project.org/package=linl) package
 by Dirk Eddelbuettel and Aaron Wolen. Which leans on earlier work by 
 Aaron Wolen in his [pandoc-letter](https://github.com/aaronwolen/pandoc-letter) 
 repository and extends it for use from R via the
