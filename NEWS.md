@@ -1,4 +1,5 @@
 # komaletter 0.3.X
+  * added a section to the intro vignette about non-English letters
   * slightly darker header and foldmarks in default style (maintainersDelight.lco)
   
 # komaletter 0.3
