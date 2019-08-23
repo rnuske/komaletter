@@ -21,4 +21,4 @@ Imports:
 Suggests:
   knitr (>= 1.8)
 VignetteBuilder: knitr
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
