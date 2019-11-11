@@ -189,7 +189,11 @@ $if(dir)$
 \fi
 $endif$
 
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
+% grffile has become a legacy package: https://ctan.org/pkg/grffile
+\IfFileExists{grffile.sty}{%
+\usepackage{grffile}
+}{}
 % set default figure placement to htbp
 \makeatletter
 \def\fps@figure{htbp}
