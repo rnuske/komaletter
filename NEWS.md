@@ -1,3 +1,7 @@
+# komaletter (development version)
+
+  * modify default template to take into account the grffile tex package now a legacy package. Same fix as in pandoc and rmarkdown. 
+
 # komaletter 0.3.1
   * added a section to the intro vignette about non-English letters
   * slightly darker header and foldmarks in default style (maintainersDelight.lco)
