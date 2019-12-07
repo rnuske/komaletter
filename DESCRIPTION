@@ -1,6 +1,6 @@
 Package: komaletter
 Title: Simple yet Flexible Letters via the 'KOMA-Script LaTeX Bundle'
-Version: 0.3.1.9000
+Version: 0.3.2
 Authors@R: c(
     person("Robert", "Nuske", role=c("aut", "cre"), email="robert.nuske@mailbox.org",
            comment=c(ORCID="0000-0001-9773-2061")),
@@ -21,4 +21,4 @@ Imports:
 Suggests:
   knitr (>= 1.8)
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
