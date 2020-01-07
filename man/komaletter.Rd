@@ -43,7 +43,7 @@ Most commonly used variables:
   opening           \tab Text for the salutation.\cr
   closing           \tab Text for the complementary close.\cr
   signature         \tab Typed signature or image placed below closing.\cr
-  signature-before  \tab Allows adjustment of vertical space before signature.
+  signature-before  \tab Adjust vertical space before signature by specifying a length such as 2mm or "0.5\\baselineskip".
 }
 
 

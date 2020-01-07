@@ -64,7 +64,7 @@ subject          | Subject line.
 opening          | Text for the salutation.
 closing          | Text for the complementary close.
 signature        | Typed signature or image placed below closing.
-signature-before | Allows adjustment of vertical space before signature.
+signature-before | Adjust vertical space before signature by specifying a length such as 2mm or "0.5\\baselineskip".
 
 Table: Most commonly used variables.
 
