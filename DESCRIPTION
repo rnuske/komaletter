@@ -21,4 +21,5 @@ Imports:
 Suggests:
   knitr (>= 1.8)
 VignetteBuilder: knitr
+Roxygen: list(markdown=TRUE)
 RoxygenNote: 7.0.2

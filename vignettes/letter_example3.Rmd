@@ -1,12 +1,12 @@
 ---
-author: Max Mustermann
+author: Dr. Robert Nuske
 return-address: 
-  - Musterstr. 12
-  - 34567 Musterstadt
+  - Hauptstr. 31
+  - 30167 Hannover
 address:
   - Änderungsamt
   - Behördenstr. 24
-  - 10557 Berlin
+  - 10557 Bärlin
   
 subject: Brief an eine Verwaltung
 opening: Sehr geehrte Damen und Herren,

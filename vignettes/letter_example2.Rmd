@@ -4,12 +4,13 @@ return-address:
   - Musterstr. 12
   - 34567 Musterstadt
 address:
-  - Dirk Eddelbuettel
-  - 123 Street Rd
-  - Chicago, IL
+  - Robert Nuske
+  - Hauptstr. 31
+  - 30167 Hannover
+  - Germany
   
 subject: Letter in KOMA-Script's US Style
-opening: Dear Dirk,
+opening: Dear Robert,
 closing: Best regards,
 signature: Max Mustermann
 

@@ -62,9 +62,9 @@ address          | Name and address of the recipient; takes a list.
 date             | Custom date; if not specified, current date will be inserted.
 subject          | Subject line.
 opening          | Text for the salutation.
-closing          | Text for the complementary close.
-signature        | Typed signature or image placed below closing.
-signature-before | Adjust vertical space before signature by specifying a length such as 2mm or "0.5\\baselineskip".
+closing          | Text for the complementary close, like: Best regards.
+signature        | Text (e.g. your name) or an image of your signature with `"\\includegraphics{sig.png}"`.
+signature-before | Adjust vertical space between closing and signature by specifying a length such as `2mm` or `"0.5\\baselineskip"`.
 
 Table: Most commonly used variables.
 

@@ -8,5 +8,3 @@ addons:
   apt:
     packages:
     - ghostscript
-
-r_packages: linl

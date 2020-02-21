@@ -7,23 +7,23 @@ return-phone: +49-511-21311212
 return-email: max@musterman.tld
 
 address:
-  - Dirk Eddelbuettel
-  - 123 Street Rd
-  - Chicago, IL
-  - USA
+  - An Herrn
+  - Robert Nuske
+  - Hauptstr. 31
+  - 30167 Hannover
 
 lco: "`r system.file('rmarkdown', 'templates', 'pdf', 'resources', 'maintainersDelight', package='komaletter')`"
 colorlinks: true
 
 date: 2020-12-31
-place: Hanover
+place: Musterstadt
 
 subject: Some Customizations
-opening: Hi Dirk,
+opening: Hi Robert,
 closing: Cheers,
 signature: "\\includegraphics{signature}"
 signature-before: "0.5\\baselineskip"
-cc: Aaron Wolen
+cc: Dirk Eddelbuettel
 ps: P.S. Beware of the copy editor!
 
 output: komaletter::komaletter
@@ -47,7 +47,7 @@ is an almost unorthographic life One day however a small line of blind
 text by the name of Lorem Ipsum decided to leave for the far World of
 Grammar. The Big Oxmox advised her not to do so, because there were
 thousands of bad Commas, wild Question Marks and devious Semikoli, but
-the Little Blind Text didn???t listen.
+the Little Blind Text didn't listen.
 
 She packed her seven versalia, put her initial into the belt and made
 herself on the way. When she reached the first hills of the Italic

@@ -4,20 +4,19 @@
 #' 'scrlttr2'. It provides layouts for many different window envelope types
 #' (German, US, French, Japanese, ...) and the possibility to define your own.
 #'
-#' @inheritParams rmarkdown::pdf_document
-#' @param ... Additional arguments to \code{\link[rmarkdown:pdf_document]{pdf_document}}
+#' @param ... Additional arguments to [rmarkdown::pdf_document()]
 #' @param keep_tex A boolean toggle to select whether intermediate
-#' LaTeX files are to be kept, defaults to \code{FALSE}
+#' LaTeX files are to be kept, defaults to `FALSE`
 #' @return R Markdown output format to pass to
-#' \code{\link[rmarkdown:render]{render}}
+#' [rmarkdown::render()]
 #'
 #' @examples
 #' \dontrun{
-#' rmarkdown::draft("MyLetter.Rmd", template="pdf", package="komaletter")
-#' rmarkdown::render("MyLetter.Rmd")
+#' rmarkdown::draft("my_letter.Rmd", template="pdf", package="komaletter")
+#' rmarkdown::render("my_letter.Rmd")
 #' }
 #'
-#' @section Letter features:
+#' @details # Letter features
 #'
 #' Various aspects of the letter can be customized via the following
 #' variables in the R Markdown document metadata (aka YAML header).
@@ -28,70 +27,57 @@
 #'
 #'
 #' Most commonly used variables:
-#' \tabular{ll}{
-#'   \strong{Variable} \tab \strong{Description}\cr
-#'   author            \tab Writer of the letter.\cr
-#'   return-address    \tab Address of the sender; takes a YAML sequence for a multi-line address.\cr
-#'   address           \tab Name and address of the recipient; takes a YAML sequence.\cr
-#'   date              \tab Custom date; if not specified, current date will be inserted.\cr
-#'   subject           \tab Subject line.\cr
-#'   opening           \tab Text for the salutation.\cr
-#'   closing           \tab Text for the complementary close.\cr
-#'   signature         \tab Typed signature or image placed below closing.\cr
-#'   signature-before  \tab Adjust vertical space before signature by specifying a length such as 2mm or "0.5\\baselineskip".
-#' }
+#'
+#' **Variable**     | **Description**
+#' ---------------- | ------------------------------------------------------------
+#' author           | Writer of the letter.
+#' return-address   | Address of the sender; takes a list for a multi-line address.
+#' address          | Name and address of the recipient; takes a list.
+#' date             | Custom date; if not specified, current date will be inserted.
+#' subject          | Subject line.
+#' opening          | Text for the salutation.
+#' closing          | Text for the complementary close, like: Best regards.
+#' signature        | Text (e.g. your name) or an image of your signature with `"\\includegraphics{sig.png}"`.
+#' signature-before | Adjust vertical space between closing and signature by specifying a length such as `2mm` or `"0.5\\baselineskip"`.
 #'
 #'
 #' All variables understood by `rmarkdown`'s `pdf_document` format may be used
 #' in addition to the `komaletter` variables defined in the following table
 #' to further customize your letter. For modifications of the layout please
-#' refer to the vignette 'Introduction to komaletter'.
+#' refer to the vignette "Introduction to komaletter".
 #'
 #' Further variables defined by komaletter:
-#' \tabular{ll}{
-#'   \strong{Variable} \tab \strong{Description}\cr
-#'   lco          \tab Letter Class Option File. Either name of a standard KOMA-Script LCO (e.g. DIN, SN, ) or path to custom LCO. If not specified, the \code{maintainersDelight.lco} will be used.\cr
-#'   lang         \tab Language code according to \href{https://tools.ietf.org/html/bcp47}{BCP 47} (e.g. \code{en} or \code{en-GB}).\cr
-#'   papersize    \tab Size of paper eg. `a4`, `letter`.\cr
-#'   return-phone \tab Phone number of sender used in letter head.\cr
-#'   return-email \tab Email address of sender used in letter head.\cr
-#'   return-url   \tab Website of sender used in letter head.\cr
-#'   place        \tab Sender’s place used near date.\cr
-#'   yourref      \tab Addressee’s reference as part of reference line.\cr
-#'   yourmail     \tab Date of addressee’s referenced mail as part of reference line.\cr
-#'   myref        \tab Sender’s reference as part of reference line.\cr
-#'   customer     \tab Customer number as part of reference line.\cr
-#'   invoice      \tab Invoice number as part of reference line.\cr
-#'   cc           \tab Recipients to be carbon-copied; can take a list for multiple recipients.\cr
-#'   encl         \tab List of enclosures.\cr
-#'   ps           \tab Text to be added at the end of the letter as a postscript.\cr
-#'   komaoption   \tab Specify further KOMA options; takes a list (see KOMA-Script documentation).\cr
-#'   parskip      \tab Defines how to mark new paragraphs, e.g. false, full, half (see KOMA-Script documentation)
-#' }
+#'
+#' **Variable** | **Description**
+#' ------------ | ----------------------------------------------------------------
+#' lco          | Letter Class Option File. Either name of a standard KOMA-Script LCO (e.g. DIN, SN, ) or path to custom LCO. If not specified, the `maintainersDelight.lco` will be used.
+#' lang         | Language code according to [BCP 47](https://tools.ietf.org/html/bcp47) (e.g. `en` or `en-GB`).
+#' papersize    | Size of paper eg. `a4`, `letter`.
+#' return-phone | Phone number of sender used in letter head.
+#' return-email | Email address of sender used in letter head.
+#' return-url   | Website of sender used in letter head.
+#' place        | Sender’s place used near date.
+#' yourref      | Addressee’s reference as part of reference line.
+#' yourmail     | Date of addressee’s referenced mail as part of reference line.
+#' myref        | Sender’s reference as part of reference line.
+#' customer     | Customer number as part of reference line.
+#' invoice      | Invoice number as part of reference line.
+#' cc           | Recipients to be carbon-copied; can take a list.
+#' encl         | List of enclosures.
+#' ps           | Text to be added at the end of the letter as a postscript.
+#' komaoption   | Specify further KOMA options; takes a list (see [KOMA-Script documentation](https://komascript.de/~mkohm/scrguien.pdf)).
+#' parskip      | Defines how to mark new paragraphs, e.g. full, half, off (see [KOMA-Script documentation](https://komascript.de/~mkohm/scrguien.pdf)).
 #'
 #'
 #' The source of the example letter vignettes show several of these options in use.
 #'
-#' @seealso
-#' \code{\link[linl]{linl}}
 #'
 #' @references
-#' JJ Allaire, R Foundation, Hadley Wickham, Journal of Statistical Software, Yihui Xie, Ramnath
-#' Vaidyanathan, Association for Computing Machinery, Carl Boettiger, Elsevier, Karl Broman,
-#' Kirill Mueller, Bastiaan Quast, Randall Pruim, Ben Marwick, Charlotte Wickham, Oliver Keyes
-#' and Miao Yu (2017). rticles: Article Formats for R Markdown. R package version 0.4.1.
-#' \url{https://cran.r-project.org/package=rticles}
+#' JJ Allaire, Yihui Xie, Jonathan McPherson et al. (2020). rmarkdown: Dynamic Documents for R.
+#' R package version 2.1. <https://cran.r-project.org/package=rmarkdown>
 #'
-#' JJ Allaire, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang, Jeff Allen, Hadley
-#' Wickham, Aron Atkins, Rob Hyndman and Ruben Arslan (2017). rmarkdown: Dynamic Documents for R.
-#' R package version 1.6. \url{https://cran.r-project.org/package=rmarkdown}
-#'
-#' Yihui Xie (2017). knitr: A General-Purpose Package for Dynamic Report Generation in R. R
-#' package version 1.17.
-#'
-#' Aaron Wolen (2017). pandoc-letter. GitHub Repository. \url{https://github.com/aaronwolen/pandoc-letter}.
-#'
-#' Dirk Eddelbuettel and Aaron Wolen (2017). linl: 'linl' is not 'Letter'. R package version 0.0.2. \url{https://cran.r-project.org/package=linl}
+#' Aaron Wolen and Andrew Dunning (2017). pandoc-letter. GitHub Repository.
+#' <https://github.com/aaronwolen/pandoc-letter>
 #'
 #' @export
 komaletter <- function(..., keep_tex=FALSE){
