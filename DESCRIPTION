@@ -1,5 +1,5 @@
 Package: komaletter
-Title: Simple yet Flexible Letters via the 'KOMA-Script LaTeX Bundle'
+Title: Simple yet Flexible PDF Letters from Markdown
 Version: 0.3.2.900
 Authors@R: c(
     person("Robert", "Nuske", role=c("aut", "cre"), email="robert.nuske@mailbox.org",
