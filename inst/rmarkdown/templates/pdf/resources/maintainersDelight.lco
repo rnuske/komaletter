@@ -21,11 +21,17 @@
 \usepackage{marvosym}                      % icons
 \usepackage[dvipsnames]{xcolor}            % custom colors
 
-\setkomafont{backaddress}{\fontsize{8pt}{10pt}\selectfont}
 \setkomafont{refname}{\fontsize{8pt}{8pt}\selectfont}
 \setkomafont{refvalue}{\fontsize{10pt}{10pt}\selectfont}
 \setkomafont{foldmark}{\color[gray]{0.50}}
+
+\setkomafont{backaddress}{\fontsize{8pt}{8pt}\selectfont}
 \setkomavar{backaddressseparator}{\textperiodcentered{}}
+\setkomavar{backaddress}{\parbox[c]{\useplength{toaddrwidth}}{%
+{\def\\{\usekomavar{backaddressseparator}\@ogobble}%
+\usekomavar{fromname}\usekomavar{backaddressseparator}\usekomavar{fromaddress}}%
+\raggedright%
+}}
 
 
 % Layout ----------------------------------------------------------------------
@@ -45,6 +51,7 @@
 \@setplength{toaddrwidth}{75mm}
 \@setplength{toaddrheight}{45mm}
 \@setplength{toaddrindent}{0mm}
+\@setplength{backaddrheight}{16pt}
 
 % Reference line
 \@setplength{refvpos}{94mm}
