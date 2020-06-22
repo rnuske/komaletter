@@ -17,20 +17,22 @@
 \renewcommand{\familydefault}{\sfdefault}  % sans serif font for entire letter
 \usepackage{lmodern}
 
-\usepackage{textcomp}                      % textperiodcentered
 \usepackage{marvosym}                      % icons
 \usepackage[dvipsnames]{xcolor}            % custom colors
+\usepackage{ragged2e}                      % aligned AND correctly hyphenated
 
+\setkomafont{backaddress}{\fontsize{8pt}{8pt}\selectfont}
 \setkomafont{refname}{\fontsize{8pt}{8pt}\selectfont}
 \setkomafont{refvalue}{\fontsize{10pt}{10pt}\selectfont}
 \setkomafont{foldmark}{\color[gray]{0.50}}
 
-\setkomafont{backaddress}{\fontsize{8pt}{8pt}\selectfont}
-\setkomavar{backaddressseparator}{\textperiodcentered{}}
+% with ideas from https://tex.stackexchange.com/a/550095/218581 https://tex.stackexchange.com/a/550178/218581 https://tex.stackexchange.com/a/78919/218581
+\newcommand*{\addverythinspace}{\hskip0.02083em\relax}
+\setkomavar{backaddressseparator}{\addverythinspace\textperiodcentered\addverythinspace}
 \setkomavar{backaddress}{\parbox[c]{\useplength{toaddrwidth}}{%
 {\def\\{\usekomavar{backaddressseparator}\@ogobble}%
 \usekomavar{fromname}\usekomavar{backaddressseparator}\usekomavar{fromaddress}}%
-\raggedright%
+\RaggedRight%
 }}
 
 
