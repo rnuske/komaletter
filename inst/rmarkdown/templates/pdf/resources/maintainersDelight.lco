@@ -28,7 +28,7 @@
 
 % with ideas from https://tex.stackexchange.com/a/550095/218581 https://tex.stackexchange.com/a/550178/218581 https://tex.stackexchange.com/a/78919/218581
 \newcommand*{\addverythinspace}{\hskip0.02083em\relax}
-\setkomavar{backaddressseparator}{\addverythinspace\textperiodcentered\addverythinspace}
+\setkomavar{backaddressseparator}{\nobreak\addverythinspace\textperiodcentered\addverythinspace}
 \setkomavar{backaddress}{\parbox[c]{\useplength{toaddrwidth}}{%
 {\def\\{\usekomavar{backaddressseparator}\@ogobble}%
 \usekomavar{fromname}\usekomavar{backaddressseparator}\usekomavar{fromaddress}}%
