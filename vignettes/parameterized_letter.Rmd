@@ -23,7 +23,7 @@ Mail merge is just a variant of R Markdown's parametrized reports when using `ko
 
   * compile information of recipients
   * write template letter with corresponding parameters
-  * merge template letter and recipient's information
+  * combine template letter and recipient's information
   
 
 ## Basics of Mail Merge with `komaletter`
@@ -88,7 +88,7 @@ params:
 ---
 ```
 
-Since the address and the letter opening are defined in the YAML metadata. The corresponding parameters must be declared and after that put to use within the YAML metadata. Parameter values are accessed in R Code. In the YAML metadata header this means inline code snippets `` `r knitr::inline_expr("expression")` ``. Since backticks `` ` `` are 'reserved indicators' in YAML, the code snippet usually needs to be wrapped in quotes. 
+Since the address and the letter opening are defined in the YAML metadata. The corresponding parameters must be declared and afterwards put to use within the YAML metadata. Parameter values are accessed in R Code. In the YAML metadata header this means inline code snippets `` `r knitr::inline_expr("expression")` ``. Since backticks `` ` `` are 'reserved indicators' in YAML, the code snippet usually needs to be wrapped in quotes. 
 
 ```{r eval=FALSE}
 ---
@@ -109,7 +109,7 @@ Consequently this means that expressions that are supposed to supply an address 
 ## Solution
 Or rather a **hack** found as bycatch at [stackoverflow](https://stackoverflow.com/a/31862074) circumventing the issue at the moment.
 
-As explained above, the address is a YAML sequence and sequences can not be enclosed in quotes. To access the parameter in the main YAML metadata header the inline R Code snippet has to be wrapped in quotes and R expressions wrapped in quotes evaluates to a value enclosed in quotes.
+As explained above, the address is a YAML sequence and sequences can not be enclosed in quotes. To access the parameter in the main YAML metadata header the inline R Code snippet has to be wrapped in quotes and R expressions wrapped in quotes evaluate to a value enclosed in quotes.
 
 Mysteriously, the rule that backticks must be enclosed in quotes is not enforced in a second YAML metadata block. You can use two metadata blocks because Pandoc combines YAML metadata blocks while converting the .md file to the final document. So in a second metadata block the inline R Code snippet can be written without quotes resulting in a correctly formatted YAML sequence.
 

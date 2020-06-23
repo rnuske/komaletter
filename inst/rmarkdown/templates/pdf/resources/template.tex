@@ -256,6 +256,10 @@ $if(return-address)$
 \setkomavar{fromaddress}{$for(return-address)$$return-address$$sep$\\$endfor$}
 $endif$
 
+$if(return-short)$
+\setkomavar{backaddress}{$for(return-short)$$return-short$$sep$\\$endfor$}
+$endif$
+
 \begin{document}
 
 $for(include-before)$

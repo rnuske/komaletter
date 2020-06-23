@@ -21,22 +21,7 @@ A format for LaTeX letters via R Markdown using the KOMA-Script class
 'scrlttr2'. It provides layouts for many different window envelope types
 (German, US, French, Japanese, ...) and the possibility to define your own.
 }
-\examples{
-\dontrun{
-rmarkdown::draft("my_letter.Rmd", template="pdf", package="komaletter")
-rmarkdown::render("my_letter.Rmd")
-}
-
-}
-\references{
-JJ Allaire, Yihui Xie, Jonathan McPherson et al. (2020). rmarkdown: Dynamic Documents for R.
-R package version 2.1. \url{https://cran.r-project.org/package=rmarkdown}
-
-Aaron Wolen and Andrew Dunning (2017). pandoc-letter. GitHub Repository.
-\url{https://github.com/aaronwolen/pandoc-letter}
-}
 \section{Letter features}{
-
 Various aspects of the letter can be customized via the following
 variables in the R Markdown document metadata (aka YAML header).
 
@@ -71,6 +56,7 @@ Further variables defined by komaletter:\tabular{ll}{
    return-phone \tab Phone number of sender used in letter head. \cr
    return-email \tab Email address of sender used in letter head. \cr
    return-url \tab Website of sender used in letter head. \cr
+   return-short \tab Shorter version of the return address only used in address window (see \code{letter_example4}). \cr
    place \tab Sender’s place used near date. \cr
    yourref \tab Addressee’s reference as part of reference line. \cr
    yourmail \tab Date of addressee’s referenced mail as part of reference line. \cr
@@ -86,4 +72,19 @@ Further variables defined by komaletter:\tabular{ll}{
 
 
 The source of the example letter vignettes show several of these options in use.
+}
+
+\examples{
+\dontrun{
+rmarkdown::draft("my_letter.Rmd", template="pdf", package="komaletter")
+rmarkdown::render("my_letter.Rmd")
+}
+
+}
+\references{
+JJ Allaire, Yihui Xie, Jonathan McPherson et al. (2020). rmarkdown: Dynamic Documents for R.
+R package version 2.1. \url{https://cran.r-project.org/package=rmarkdown}
+
+Aaron Wolen and Andrew Dunning (2017). pandoc-letter. GitHub Repository.
+\url{https://github.com/aaronwolen/pandoc-letter}
 }

@@ -83,6 +83,7 @@ papersize    | Size of paper eg. `a4`, `letter`.
 return-phone | Phone number of sender used in letter head.
 return-email | Email address of sender used in letter head.
 return-url   | Website of sender used in letter head.
+return-short | Shorter version of the return address only used in address window (see [letter_example4](letter_example4.pdf)). 
 place        | Sender’s place used near date.
 yourref      | Addressee’s reference as part of reference line.
 yourmail     | Date of addressee’s referenced mail as part of reference line.
@@ -140,6 +141,8 @@ A letter layout fitting for the local window envelope style can be select using 
 
 ## Hints
 * The default papersize of KOMA-Script class *scrlttr2* is DIN A4. If you want to create an US style letter eg. using `lco: UScommercial9`, remember to set the papersize to `letter`.
+
+* If your `return-address` is very long, it might not fit on the one line backaddress in the address window. The letter layout coming with the package komaletter tries hard to craft a pretty two-line version. The other option is using the YAML parameter `return-short` to provide an alternative one line address only used in the address window. `return-short` can be a list such as `return-address` or just one line of text. See also the vignette [letter_example4](letter_example4.pdf).
 
 * Since the figure environment is not defined in the classes `letter` and `scrlltr2`, pandoc has to be told not to wrap the image into `\begin{figure}...\end{figure}`. Which can be achieved by ending the line with a backslash:
 ```

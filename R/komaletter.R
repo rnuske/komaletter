@@ -56,6 +56,7 @@
 #' return-phone | Phone number of sender used in letter head.
 #' return-email | Email address of sender used in letter head.
 #' return-url   | Website of sender used in letter head.
+#' return-short | Shorter version of the return address only used in address window (see `letter_example4`).
 #' place        | Sender’s place used near date.
 #' yourref      | Addressee’s reference as part of reference line.
 #' yourmail     | Date of addressee’s referenced mail as part of reference line.
