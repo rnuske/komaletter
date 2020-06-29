@@ -48,16 +48,15 @@ All of these are driven by simple settings in the `YAML` header as seen on the l
 
 
 ### Installation
-As the package is on CRAN, you can use the standard incantation to install the
-released version. A development version of komaletter can be installed from 
-Github using the package remotes.
+You can install the released version of **komaletter** from [CRAN](https://CRAN.R-project.org/package=komaletter) with:
 
-```r
-# fetch the stable version from CRAN
+``` r
 install.packages("komaletter")
+```
 
-# or get the development version from Github
-# install.packages("remotes")
+Install the development version from [GitHub](https://github.com/rnuske/komaletter) with:
+
+``` r
 remotes::install_github("rnuske/komaletter")
 ```
 
@@ -71,7 +70,7 @@ The document can be compiled to PDF via `rmarkdown::render` or the RStudio Knit 
 # start a new letter using the provided skeleton
 rmarkdown::draft("my_letter.Rmd", template="pdf", package="komaletter", edit=FALSE)
 
-# change myletter.Rmd to your liking
+# change my_letter.Rmd to your liking
 
 # turn Rmd into a beautiful PDF
 rmarkdown::render("my_letter.Rmd")
