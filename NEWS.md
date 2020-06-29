@@ -1,4 +1,4 @@
-# komaletter DEV
+# komaletter 0.4
   * the default layout now also handles two-line return addresses gracefully
   * added YAML parameter `return-short` to define an additional shorter address 
     just for the return address in window  
