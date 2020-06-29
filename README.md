@@ -1,4 +1,4 @@
-## komaletter: Simple yet flexible PDF Letters from Markdown
+## komaletter: Simply Beautiful PDF Letters from Markdown
 
 [![Travis build status](https://travis-ci.org/rnuske/komaletter.svg?branch=master)](https://travis-ci.org/rnuske/komaletter) 
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/rnuske/komaletter?branch=master&svg=true)](https://ci.appveyor.com/project/rnuske/komaletter) 
