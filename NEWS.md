@@ -1,8 +1,8 @@
-# komaletter devel
-  * the default layout now also handles two-line backaddresses gracefully
+# komaletter DEV
+  * the default layout now also handles two-line return addresses gracefully
   * added YAML parameter `return-short` to define an additional shorter address 
     just for the return address in window  
-  * enhanced documentation. roxygen now in markdown
+  * enhanced documentation. roxygen documentation now written in markdown
 
 # komaletter 0.3.2
   * modified pandoc LaTeX template to consider that tex package 'grffile' might not be available. grffile is now a legacy package and was absent from TeX Live for a short time. (thanks @cderv)

@@ -56,7 +56,7 @@ Further variables defined by komaletter:\tabular{ll}{
    return-phone \tab Phone number of sender used in letter head. \cr
    return-email \tab Email address of sender used in letter head. \cr
    return-url \tab Website of sender used in letter head. \cr
-   return-short \tab Shorter version of the return address only used in address window (see \code{letter_example4}). \cr
+   return-short \tab Shorter version of return address only used in window (see vignette \code{letter_example4}). \cr
    place \tab Sender’s place used near date. \cr
    yourref \tab Addressee’s reference as part of reference line. \cr
    yourmail \tab Date of addressee’s referenced mail as part of reference line. \cr

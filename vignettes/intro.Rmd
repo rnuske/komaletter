@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 ```
 
 Letters are fairly standardized products and as such lend themselves to be 
-written in Markdown. This package is heavily based on [linl](https://CRAN.R-project.org/package=linl)
+written in Markdown. This package is inspired by [linl](https://cran.r-project.org/package=linl)
 but it wraps the very configurable KOMA-Script class *scrlttr2* instead of the
 standard LaTeX document class *letter*.
  
@@ -83,7 +83,7 @@ papersize    | Size of paper eg. `a4`, `letter`.
 return-phone | Phone number of sender used in letter head.
 return-email | Email address of sender used in letter head.
 return-url   | Website of sender used in letter head.
-return-short | Shorter version of the return address only used in address window (see [letter_example4](letter_example4.pdf)). 
+return-short | Shorter version of return address only used in window (see vignette [letter_example4](letter_example4.pdf)). 
 place        | Sender’s place used near date.
 yourref      | Addressee’s reference as part of reference line.
 yourmail     | Date of addressee’s referenced mail as part of reference line.
