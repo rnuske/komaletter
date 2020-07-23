@@ -7,6 +7,7 @@
 #' @param ... Additional arguments to [rmarkdown::pdf_document()]
 #' @param keep_tex A boolean toggle to select whether intermediate
 #' LaTeX files are to be kept, defaults to `FALSE`
+#'
 #' @return R Markdown output format to pass to
 #' [rmarkdown::render()]
 #'
@@ -66,6 +67,7 @@
 #' cc           | Recipients to be carbon-copied; can take a list.
 #' encl         | List of enclosures.
 #' ps           | Text to be added at the end of the letter as a postscript.
+#' inline-links | If true, do standard inline hyperlinks rather than footnotes.
 #' komaoption   | Specify further KOMA options; takes a list (see [KOMA-Script documentation](https://komascript.de/~mkohm/scrguien.pdf)).
 #' parskip      | Defines how to mark new paragraphs, e.g. full, half, off (see [KOMA-Script documentation](https://komascript.de/~mkohm/scrguien.pdf)).
 #'
