@@ -147,11 +147,9 @@ $if(graphics)$
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 $endif$
 $if(inline-links)$
-% Make links hotlinks in text and BOLD
-\let\oldhref\href
-\renewcommand{\href}[2]{\oldhref{#1}{\bfseries#2}}
+% let links be hotlinks in text (styling is writer's job)
 $else$
-% Make links footnotes instead of hotlinks
+% make links footnotes instead of hotlinks (default)
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
 $endif$
 $if(strikeout)$

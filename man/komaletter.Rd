@@ -66,7 +66,7 @@ Further variables defined by komaletter:\tabular{ll}{
    cc \tab Recipients to be carbon-copied; can take a list. \cr
    encl \tab List of enclosures. \cr
    ps \tab Text to be added at the end of the letter as a postscript. \cr
-   inline-links \tab If true, do standard inline hyperlinks rather than footnotes. \cr
+   inline-links \tab If true, do standard inline hyperlinks rather than footnotes (styling is author's job, cf. vignette \code{letter_example2}). \cr
    komaoption \tab Specify further KOMA options; takes a list (see \href{https://komascript.de/~mkohm/scrguien.pdf}{KOMA-Script documentation}). \cr
    parskip \tab Defines how to mark new paragraphs, e.g. full, half, off (see \href{https://komascript.de/~mkohm/scrguien.pdf}{KOMA-Script documentation}). \cr
 }

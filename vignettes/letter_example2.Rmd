@@ -33,7 +33,7 @@ enterprise internet communication solution. Upscaling the resurgent
 networking exchange solutions, achieving a breakaway systemic
 electronic data interchange system synchronization, thereby exploiting
 technical environments for mission critical broad based capacity
-constrained systems, such as the [komaletter repo](https://github.com/rnuske/komaletter).
+constrained systems, such as the [**komaletter repo**](https://github.com/rnuske/komaletter).
 
 Fundamentally transforming well designed actionable information whose
 semantic content is virtually null. To more fully clarify the current
