@@ -162,10 +162,10 @@ for(i in 1:nrow(recipients)){
     * [Lesson 6 "Parameters"](https://rmarkdown.rstudio.com/lesson-6.html) in "Get Started"-Course on RStudio's R Markdown website
     
   * YAML 
-    * [YAML Reference card](http://yaml.org/refcard.html) (Scalar indicators, Escape codes, Misc. Indicators for reserved indicators)
-    * [YAML Specification](http://yaml.org/spec/current.html) (Syntax, Indicator Characters: reserved characters, Escape Sequences, Scalar Styles, Sequence Styles)
-    * [YAML block sequence](http://yaml.org/spec/current.html#id2543032)
-    * [YAML flow sequence](http://yaml.org/spec/current.html#id2542413)
+    * [YAML Reference card](https://yaml.org/refcard.html) (Scalar indicators, Escape codes, Misc. Indicators for reserved indicators)
+    * [YAML Specification](https://yaml.org/spec/current.html) (Syntax, Indicator Characters: reserved characters, Escape Sequences, Scalar Styles, Sequence Styles)
+    * [YAML block sequence](https://yaml.org/spec/current.html#id2543032)
+    * [YAML flow sequence](https://yaml.org/spec/current.html#id2542413)
 
 
 ## Hints
