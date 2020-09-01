@@ -31,18 +31,20 @@ repository and extends it for use from R via the
 
 #### Skeleton
 The skeleton provided by `komaletter` creates a very simple letter as a 
-starting point for your own writing. Several formatting defaults for font, 
+starting point for your own writing. Several formatting defaults such as font, 
 fontsize, indentation are in use. See `vignette('intro', 'komaletter')` and 
-`help(komaletter)` for a complete list and default values. The following figure
-shows the `rmarkdown` source on the left and the rendered `pdf` on the right.
+`help(komaletter)` for a complete list and their default values. The following 
+figure shows the `rmarkdown` source on the left and the rendered `pdf` on the
+right.
 
 ![](./man/figures/skeleton.png)
 
 
 #### Vignette
-The vignette examples are a little more featureful and show how to include a
+The vignette examples are a are a bit more detailed and show how to include a
 signature, choose a different layout and a few format settings.
-All of these are driven by simple settings in the `YAML` header as seen on the left.
+All of these are driven by simple settings in the `YAML` header as shown on 
+the left in the following figure.
 
 ![](./man/figures/letter_example1.png)
 
@@ -62,9 +64,11 @@ remotes::install_github("rnuske/komaletter")
 
 
 ### Usage
-To start a new letter one can call the skeleton using `rmarkdown::draft` or 
-the RStudio menu: File > New File > R Markdown... > From Template > komaletter (PDF). 
-The document can be compiled to PDF via `rmarkdown::render` or the RStudio Knit button.
+To start a new letter you can take advantage of the komaletter skeleton via 
+`rmarkdown::draft` or the RStudio menu: File > New File > R Markdown... > 
+From Template > komaletter (PDF). 
+When finished writing your letter the  RMarkdown document can be compiled to PDF
+via `rmarkdown::render` or the RStudio Knit button.
 
 ```r
 # start a new letter using the provided skeleton
@@ -82,9 +86,9 @@ distribution including KOMA-Script is needed. RStudio installs it's own copy of
 `pandoc`, otherwise do what is needed on your OS. For LaTeX look for `texlive`
 which is included in most Linux distributions or `MiKTeX` if you are using
 Windows. KOMA-Script is part of all but the most bare bone LaTeX distributions.
-Something like `sudo apt-get install pandoc pandoc-citeproc texlive` should provide everything needed on Debian/Ubuntu.
+Something like `sudo apt install pandoc pandoc-citeproc texlive` should provide everything needed on Debian/Ubuntu.
 
-If you plan to write non-english letter, make sure you have the necessary 
+If you plan to write non-english letters, make sure you have the necessary 
 language packs, _i.e_ `texlive-lang-german`.
 
 ### Authors
@@ -92,5 +96,4 @@ Robert Nuske, Dirk Eddelbuettel and Aaron Wolen.
 
 
 ### License
-GPL-3 for this package, the work in [pandoc-letter](https://github.com/aaronwolen/pandoc-letter), 
-as well as the underlying Pandoc template.
+GPL-3 for this package, the work in [pandoc-letter](https://github.com/aaronwolen/pandoc-letter), as well as the underlying Pandoc template.
