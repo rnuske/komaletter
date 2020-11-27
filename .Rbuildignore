@@ -5,3 +5,4 @@
 ^appveyor\.yml$
 ^\.gitattributes$
 ^cran-comments\.md$
+^\.github$
