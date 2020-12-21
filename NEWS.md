@@ -1,6 +1,7 @@
 # komaletter DEVEL
   * documented YAML-parameter `inline-links` for creating inline hyperlinks rather than footnotes
   * the default layout signals the PDF viewer to print the document at its actual size,  which is followed by some.
+  * notes on printing in README & vignette
   
 # komaletter 0.4
   * the default layout now also handles two-line return addresses gracefully

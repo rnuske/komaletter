@@ -30,6 +30,8 @@ KOMA-Script's standard styles, the package default style or a user defined style
 Various aspects of the letter can be determined via variables in the R Markdown
 document metadata (aka YAML header), see [Letter settings](#letter-settings).
 
+Pay attention to the [printing](#about-printing) of your letter. A shrunk or scaled-down document might (besides a ruined layout) may result in parts of the address not being visible.
+
 
 ## Usage
 An easy way to start a new *komaletter* is to ask for the skeleton document
@@ -138,6 +140,14 @@ The language can be specified via the two letter code such as `en`, `de`, `fr`, 
 Beware that you need additional LaTeX language packages if you choose a non English language. Make sure you have the necessary LaTeX language packs, _i.e._ `texlive-lang-german` for a German letter (`lang: de`) which should be present if you write LaTeX Documents in that language.
 
 A letter layout fitting for the local window envelope style can be select using the YAML variable `lco`. The various letter layouts are discussed in the previous section. A french letter layout for the window envelope style *DL* would be selected via `lco: NF`.
+
+
+## About Printing
+PDF viewers do not realize that the document already has a blank margin and shrink or scale it for printing. This generally results in smaller fonts, too large margins, destroyed layout and most importantly a shifted address block. In the worst case, parts of the address are not visible in the window of the envelope.
+
+The default layout signals the PDF viewer to print the document at its actual size. Unfortunately, not many PDF viewers heed this hint. 
+
+Thus, before printing the document, you should check that the document is not shrunk or fit to the paper size. **The document must be printed at its actual size / 100%** so that the positions of the elements are correct.
 
 
 ## Hints
