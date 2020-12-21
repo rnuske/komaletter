@@ -63,7 +63,7 @@ $endif$
 }{}
 % \usepackage[margin=1in]{geometry} interfers with the areaset in my lco_default
 %\usepackage[$if(geometry)$$for(geometry)$$geometry$$sep$,$endfor$$else$margin=1in$endif$]{geometry}
-\usepackage[unicode=true]{hyperref}
+\usepackage[unicode=true,pdfversion=1.6]{hyperref} % PrintScaling needs 1.6
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
@@ -86,7 +86,7 @@ $else$
             pdfborder={0 0 0},
 $endif$
             breaklinks=true,
-            pdfprintscaling=None} % signal the PDF viewer "no auto scale"
+            pdfprintscaling=None} % signal the PDF viewer "no auto scale", PDF >= 1.6
 \urlstyle{same}  % don't use monospace font for urls
 $if(lang)$
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
