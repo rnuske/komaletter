@@ -86,11 +86,11 @@ rmarkdown::render("my_letter.Rmd")
 ```
 
 ### About Printing
-PDF viewers do not realize that the document already has a blank margin and shrink or scale it for printing. This generally results in smaller fonts, too large margins, destroyed layout and most importantly a shifted address block. In the worst case, parts of the address are not visible in the window of the envelope.
+Some PDF viewers do not realize that the document already has a blank margin and scale or 'fit to page' for printing. This generally results in smaller fonts, overly large margins, broken layout and most importantly a misplaced address. In the worst case, parts of the address are not visible in the window of the envelope.
 
-The default layout signals the PDF viewer to print the document at its actual size. Unfortunately, not many PDF viewers heed this hint. 
+komaletter's default layout signals the PDF viewer to print the document at its actual size. Unfortunately, not many PDF viewers heed this hint. 
 
-Thus, before printing the document, you should check that the document is not shrunk or fit to the paper size. **The document must be printed at its actual size / 100%** so that the positions of the elements are correct.
+Thus, before printing the document, you should check that the document is not shrunk or 'fit to page'. **The document must be printed at its actual size / 100%** so that the positions of the elements are correct.
 
 
 ### Requirements
