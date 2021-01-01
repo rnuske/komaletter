@@ -55,6 +55,9 @@
 \@setplength{toaddrindent}{0mm}
 \@setplength{backaddrheight}{16pt}
 
+% Foldmarks
+\@setplength{foldmarkhpos}{5mm}
+
 % Reference line
 \@setplength{refvpos}{94mm}
 \@setplength{refaftervskip}{8.46mm}
