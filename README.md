@@ -2,10 +2,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/rnuske/komaletter/workflows/R-CMD-check/badge.svg)](https://github.com/rnuske/komaletter/actions)
-[![Travis build status](https://travis-ci.com/rnuske/komaletter.svg?branch=master)](https://travis-ci.com/rnuske/komaletter) 
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/rnuske/komaletter?branch=master&svg=true)](https://ci.appveyor.com/project/rnuske/komaletter) 
-[![Drone Build Status](https://cloud.drone.io/api/badges/rnuske/komaletter/status.svg)](https://cloud.drone.io/rnuske/komaletter)  
-
+[![Drone Build Status](https://cloud.drone.io/api/badges/rnuske/komaletter/status.svg)](https://cloud.drone.io/rnuske/komaletter)
 [![Package-License](https://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html) 
 [![CRAN](https://www.r-pkg.org/badges/version/komaletter)](https://cran.r-project.org/package=komaletter) 
 [![Dependencies](https://tinyverse.netlify.com/badge/komaletter)](https://cran.r-project.org/package=komaletter) 
