@@ -12,20 +12,19 @@
 
 ### Motivation
 Simple letters tend to look very much alike. They are either determined by a 
-standard eg. window envelope style or writer's preferences. Thus, if the layout
-is fix, they lend themselves to be written in R Markdown.
+standard eg. window envelope style or writer's preferences. Since the layout 
+is fixed, letters can be written perfectly in R Markdown.
 
 The [KOMA-Script LaTeX Bundle](https://www.komascript.de) provides layouts for
 many common window envelope types (German, US, French, Japanese, ...) and the
 possibility to define your own layout. The *komaletter* package also provides
-it's own default layout loosely based on DIN 5008B.
+it's own default letter layout loosely based on DIN 5008B.
 
 This package is an adaptation of the
 [linl](https://cran.r-project.org/package=linl) package
-by Dirk Eddelbuettel and Aaron Wolen for international users. 
-linl itself leans on earlier work by Aaron Wolen in his
+for international writers. linl itself is based on the
 [pandoc-letter](https://github.com/aaronwolen/pandoc-letter) 
-repository and extends it for use from R via the
+template and extends it for use from R via the
 [rmarkdown](https://cran.r-project.org/package=rmarkdown) package.
 
 
@@ -43,34 +42,20 @@ right.
 
 
 #### Vignette
-The vignette examples are a are a bit more detailed and show how to include a
-signature, choose a different layout and a few format settings.
-All of these are driven by simple settings in the `YAML` header as shown on 
-the left in the following figure.
+The vignette examples are a bit more detailed and s demonstrate, for example, 
+how to include a signature, choose a different layout and make some format 
+settings. All of these are driven by simple settings in the `YAML` header as 
+shown in the following figure on the left.
 
 ![](./man/figures/letter_example1.png)
 
 
-### Installation
-You can install the released version of **komaletter** from [CRAN](https://CRAN.R-project.org/package=komaletter) with:
-
-``` r
-install.packages("komaletter")
-```
-
-Install the development version from [GitHub](https://github.com/rnuske/komaletter) with:
-
-``` r
-remotes::install_github("rnuske/komaletter")
-```
-
-
 ### Usage
 To start a new letter you can take advantage of the komaletter skeleton via 
-`rmarkdown::draft` or the RStudio menu: File > New File > R Markdown... > 
+`rmarkdown::draft()` or the RStudio menu: File > New File > R Markdown... > 
 From Template > komaletter (PDF). 
-When finished writing your letter the  RMarkdown document can be compiled to PDF
-via `rmarkdown::render` or the RStudio Knit button.
+When finished writing your letter the  RMarkdown document can be rendered to PDF
+via `rmarkdown::render()` or the RStudio Knit button.
 
 ```r
 # start a new letter using the provided skeleton
@@ -82,6 +67,7 @@ rmarkdown::draft("my_letter.Rmd", template="pdf", package="komaletter", edit=FAL
 rmarkdown::render("my_letter.Rmd")
 ```
 
+
 ### About Printing
 Some PDF viewers do not realize that the document already has a blank margin and scale or 'fit to page' for printing. This generally results in smaller fonts, overly large margins, broken layout and most importantly a misplaced address. In the worst case, parts of the address are not visible in the window of the envelope.
 
@@ -90,16 +76,33 @@ komaletter's default layout signals the PDF viewer to print the document at its 
 Thus, before printing the document, you should check that the document is not shrunk or 'fit to page'. **The document must be printed at its actual size / 100%** so that the positions of the elements are correct.
 
 
+### Installation
+You can install the released version of **komaletter** from [CRAN](https://CRAN.R-project.org/package=komaletter) with
+
+``` r
+install.packages("komaletter")
+```
+
+and the development version from [GitHub](https://github.com/rnuske/komaletter) 
+using the package `remotes`
+
+``` r
+remotes::install_github("rnuske/komaletter")
+```
+
+
 ### Requirements
-Beyond the R package dependencies, a working `pandoc` binary and a LaTeX
-distribution including KOMA-Script is needed. RStudio installs it's own copy of
-`pandoc`, otherwise do what is needed on your OS. For LaTeX look for `texlive`
-which is included in most Linux distributions or `MiKTeX` if you are using
-Windows. KOMA-Script is part of all but the most bare bone LaTeX distributions.
-Something like `sudo apt install pandoc pandoc-citeproc texlive` should provide everything needed on Debian/Ubuntu.
+Beyond the R package dependency `rmarkdown`, a working `pandoc` binary and a
+`LaTeX` distribution including `KOMA-Script` is needed. RStudio installs it's
+own copy of `pandoc`, otherwise do what is needed on your OS. For LaTeX look for
+`texlive` which is included in most Linux distributions or `MiKTeX` if you are
+using Windows. KOMA-Script is part of all but the most bare bone LaTeX
+distributions. Something like `sudo apt install pandoc pandoc-citeproc texlive`
+should provide everything needed on Debian/Ubuntu.
 
 If you plan to write non-english letters, make sure you have the necessary 
 language packs, _i.e_ `texlive-lang-german`.
+
 
 ### Authors
 Robert Nuske, Dirk Eddelbuettel and Aaron Wolen.
