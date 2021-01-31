@@ -2,14 +2,13 @@
 #'
 #' A format for LaTeX letters via R Markdown using the KOMA-Script class
 #' 'scrlttr2'. It provides layouts for many different window envelope types
-#' (German, US, French, Japanese, ...) and the possibility to define your own.
+#' (German, US, French, Japanese, ...) and lets you define customized layouts.
 #'
 #' @param ... Additional arguments to [rmarkdown::pdf_document()]
 #' @param keep_tex A boolean toggle to select whether intermediate
-#' LaTeX files are to be kept, defaults to `FALSE`
+#'   LaTeX files are to be kept, defaults to `FALSE`
 #'
-#' @return R Markdown output format to pass to
-#' [rmarkdown::render()]
+#' @return R Markdown output to pass to [rmarkdown::render()]
 #'
 #' @examples
 #' \dontrun{
@@ -76,11 +75,15 @@
 #'
 #'
 #' @references
-#' JJ Allaire, Yihui Xie, Jonathan McPherson et al. (2020). rmarkdown: Dynamic Documents for R.
-#' R package version 2.1. <https://cran.r-project.org/package=rmarkdown>
+#' JJ Allaire, Yihui Xie, Jonathan McPherson et al. (2020). rmarkdown:
+#' Dynamic Documents for R. R package version 2.6.
+#' <https://cran.r-project.org/package=rmarkdown>
 #'
 #' Aaron Wolen and Andrew Dunning (2017). pandoc-letter. GitHub Repository.
 #' <https://github.com/aaronwolen/pandoc-letter>
+#'
+#' Markus Kohm (2020). KOMA-Script: A versatile LaTeX \eqn{2_\epsilon}{2\epsilon} bundle.
+#' <https://komascript.de/~mkohm/scrguien.pdf>
 #'
 #' @export
 komaletter <- function(..., keep_tex=FALSE){
@@ -96,9 +99,9 @@ komaletter <- function(..., keep_tex=FALSE){
                                pandoc_args=c(paste0("--variable=lco_default:",
                                                     default_lco)))
 
-  base$knitr$opts_chunk$prompt    <- FALSE  # changed from TRUE
-  base$knitr$opts_chunk$comment   <- '# '   # default to one hashmark
-  base$knitr$opts_chunk$highlight <- TRUE   # changed as well
+  base$knitr$opts_chunk$prompt    <- FALSE
+  base$knitr$opts_chunk$comment   <- '# '
+  base$knitr$opts_chunk$highlight <- TRUE
 
   return(base)
 }
