@@ -1,31 +1,26 @@
 
-
 ## Test environments
-* local ubuntu 18.04, R 4.0.2
+* local Ubuntu 20.04, R 4.0.3
 
 * win-builder
-  * R version 4.0.2 (2020-06-22)
-  * R Under development (unstable) (2020-08-10 r79000)
+  * R version 4.0.3 (2020-10-10)
+  * R Under development (unstable) (2021-01-31 r79912)
   * R version 3.6.3 (2020-02-29)
+
+* Continuous Integration Systems
+  * Drone CI: Debian testing, R 4.0.1 (2020-06-06)
+  * Github Actions
+    * Windows Server 2019, R 4.0.3 (2020-10-10)
+    * Mac OS X 10.15.7, R 4.0.3 (2020-10-10)
+    * Ubuntu 20.04.1, R 4.0.3 (2020-10-10)
+    * Ubuntu 20.04.1, R-devel (unstable)  (2021-01-25 r79883)
 
 * R-hub 
   * Windows Server 2008 R2 SP1, R-devel, 32/64 bit
-  * Ubuntu Linux 16.04 LTS, R-release, GCC
-  * Fedora Linux, R-devel, clang, gfortran
-
-* Continuous Integration Systems
-  * Ubuntu 16.04.6 [Travis], 4.0.0 (2020-04-24)
-  * Debian testing [Drone],  4.0.1 (2020-06-06)
-  * Windows Server 2012 R2 x64 [AppVeyor], 4.0.2 Patched (2020-08-13 r79016)
-
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 1 note
 
-
-[
-* R-hub's Windows Server has no GhostScript and can thus not check size of PDFs
-* R-hub's Fedora System was missing one LaTeX package and hence had problems with the vignettes
-]
-
+* Possibly mis-spelled words in DESCRIPTION: customizable (12:34)
+  Oxford Advanced Learner's Dictionary lists this word.
