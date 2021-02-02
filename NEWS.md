@@ -1,4 +1,4 @@
-# komaletter 0.4.900
+# komaletter 0.4.2
   * fixed a redirected URL
   
 # komaletter 0.4.1

@@ -1,6 +1,6 @@
 Package: komaletter
 Title: Simply Beautiful PDF Letters from Markdown
-Version: 0.4.1
+Version: 0.4.2
 Authors@R: c(
     person("Robert", "Nuske", role=c("aut", "cre"), 
            email="robert.nuske@nw-fva.de",
@@ -9,7 +9,7 @@ Authors@R: c(
            comment=c(ORCID="0000-0001-6419-907X")),
     person("Aaron", "Wolen", role="aut",
            comment=c(ORCID="0000-0003-2542-2202")))
-Description: Write beautiful yet customisable letters in R Markdown and
+Description: Write beautiful yet customizable letters in R Markdown and
   directly obtain the finished PDF. Smooth generation of PDFs is realized by
   'rmarkdown', the 'pandoc-letter' template and the 'KOMA-Script' letter class.
   'KOMA-Script' provides enhanced replacements for the standard 'LaTeX' classes
