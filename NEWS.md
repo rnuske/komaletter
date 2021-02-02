@@ -1,3 +1,6 @@
+# komaletter 0.4.900
+  * fixed a redirected URL
+  
 # komaletter 0.4.1
   * documented YAML-parameter `inline-links` for creating inline hyperlinks rather than footnotes
   * the default layout signals the PDF viewer to print the document at its actual size, which is followed by some.

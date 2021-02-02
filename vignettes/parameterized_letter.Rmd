@@ -157,7 +157,6 @@ for(i in 1:nrow(recipients)){
 
 ## Further Information
   * R Markdown
-    * [Article "Parametrized Reports"](https://rmarkdown.rstudio.com/developer_parameterized_reports) on RStudio's R Markdown website
     * [Chapter "Parametrized Reports"](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html) in the book "R Markdown: The Definitive Guide"
     * [Lesson 6 "Parameters"](https://rmarkdown.rstudio.com/lesson-6.html) in "Get Started"-Course on RStudio's R Markdown website
     
