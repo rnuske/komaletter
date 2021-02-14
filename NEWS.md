@@ -1,5 +1,5 @@
 # komaletter 0.4.2.900
-  * ...
+  * added sections to default letter layout, since the employed KOMA-Script letter class `scrlttr2` has no sections. Just use `#`, `##`, `###` in your markdown and if you need section numbers set the YAML option `numbersections: true`.
 
 # komaletter 0.4.2
   * fixed a redirected URL
