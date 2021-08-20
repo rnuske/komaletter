@@ -38,7 +38,7 @@ fontsize, indentation are in use. See `vignette('intro', 'komaletter')` and
 figure shows the `rmarkdown` source on the left and the rendered `pdf` on the
 right.
 
-![](./man/figures/skeleton.png)
+![](man/figures/skeleton.png)
 
 
 #### Vignette
@@ -47,7 +47,7 @@ how to include a signature, choose a different layout and make some format
 settings. All of these are driven by simple settings in the `YAML` header as 
 shown in the following figure on the left.
 
-![](./man/figures/letter_example1.png)
+![](man/figures/letter_example1.png)
 
 
 ### Usage

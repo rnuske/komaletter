@@ -5,3 +5,4 @@
 vignettes/*.R
 vignettes/*.html
 vignettes/letter_example*.pdf
+docs
