@@ -1,0 +1,31 @@
+---
+title: "Example 2"
+output: html_document
+---
+
+In addition to the YAML parameters shown in the first example, this letter displays some more parameters
+
+* `lco` via this parameter you can specify your own letter layout in a **L**etter **C**lass **O**ption file or use one of the layouts predefined by KomaScript (see *Introduction to komaletter*). Here KomaScript's US Letter Style is used.
+* `papersize` to set a paper size other than DIN A4.
+* `inline-links` causes links to be *hot* / active / clickable in the PDF and not implemented as footnote. You are still responsible for the styling of the linked text, here done as bold text.
+
+<br>
+
+### RMarkdown of Letter
+
+```{r show-code, code=readLines('letter_example2.Rmd')[!grepl('ignette', x=readLines('letter_example2.Rmd'))], eval=FALSE, highlight=FALSE}
+
+```
+
+<br>
+
+### Resulting PDF Letter
+
+PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document shown above.
+
+```{r render-pdf, include=FALSE}
+rmarkdown::render("letter_example2.Rmd", output_file="pkgdown_ex2.pdf", output_dir='.')
+
+```
+
+![Here should be a PDF of the letter](pkgdown_ex2.pdf){width=100% height=1000} \

@@ -1,0 +1,35 @@
+---
+title: "Example 3"
+output: html_document
+---
+
+In addition to the YAML parameters shown in the first example, this letter displays some more parameters
+
+
+
+* `yourref`, `yourmail`, `myref` common parts of the reference line (German: Bezugszeichenzeile)
+* image in `signature` to make it look like it was hand signed.
+* `signature-before` is for fine tuning the vertical space between closing and signature.
+* `lang` sets the language of the document influences the labels of the reference line, date etc.. requires the respective latex language pack.
+* `papersize` sets the paper size (default DIN A4).
+
+<br>
+
+### RMarkdown of Letter
+
+```{r show-code, code=readLines('letter_example3.Rmd')[!grepl('ignette', x=readLines('letter_example3.Rmd'))], eval=FALSE, highlight=FALSE}
+
+```
+
+<br>
+
+### Resulting PDF Letter
+
+PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document shown above.
+
+```{r render-pdf, include=FALSE}
+rmarkdown::render("letter_example3.Rmd", output_file="pkgdown_ex3.pdf", output_dir='.')
+
+```
+
+![Here should be a PDF of the letter](pkgdown_ex3.pdf){width=100% height=1000} \

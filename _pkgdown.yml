@@ -1,12 +1,7 @@
 navbar:
   structure:
-    left:
-    - intro
-    - reference
-    - articles
-    - tutorials
-    - news
-    right: github
+    left:  [intro, reference, articles, tutorials, examples, news]
+    right: [github]
   components:
     intro:
       text: Get started
@@ -28,3 +23,16 @@ navbar:
         href: articles/intro.html
       - text: Parameterized Letters for Mass Mailings
         href: articles/parameterized_letter.html
+    examples:
+      text: Examples
+      menu:
+      - text: Example 0
+        href: articles/pkgdown_letter_example0.html
+      - text: Example 1
+        href: articles/pkgdown_letter_example1.html
+      - text: Example 2
+        href: articles/pkgdown_letter_example2.html
+      - text: Example 3
+        href: articles/pkgdown_letter_example3.html
+      - text: Example 4
+        href: articles/pkgdown_letter_example4.html

@@ -26,7 +26,7 @@ vignette: >
 ---
 
 this letter shows the usage of the YAML parameter `return-short`. The parameter
-has been created created to allow for a different possibly shorter address in 
+has been created to allow for a different possibly shorter address to fit in 
 the window. If `return-address` and `return-short` are used, the probably longer
 `return-address` is shown in the letterhead and the hopefully one line 
 `return-short` in the address window. Usually (without using `return-short`) the
@@ -34,7 +34,7 @@ address in the window is assembled from the `author` and the `return-address`
 and therefore identical to the address in the letterhead. 
 
 The `return-short` must contain the entire return address shown in the window
-including the author name. The author is not prepended. The YAML parameter 
+including the author name, since the author is not prepended. The YAML parameter 
 `return-short` maybe either a one line text variable or a YAML sequence also 
 known as list. 
 

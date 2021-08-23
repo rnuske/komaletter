@@ -1,0 +1,30 @@
+---
+title: "Example 0"
+description: "Template or Skeleton of a komaletter with a resonable small set of YAML parameters."
+output: html_document
+---
+
+This example shows the skeleton you get when you run `rmarkdown::draft()` or start a letter from the template via the RStudio menu: File > New File > R Markdown... >  From Template > komaletter (PDF). 
+
+It is intended as a starting point for your own letters and comes with a reasonably small set of settings in the YAML header. Actually, you could omit everything except `output: komaletter::komaletter' and still get a formatted letter. 
+
+<br>
+
+### Source Code of Letter
+
+```{r show-code, code=readLines('letter_example0.Rmd')[!grepl('ignette', x=readLines('letter_example0.Rmd'))], eval=FALSE, highlight=FALSE}
+
+```
+
+<br>
+
+### Resulting PDF Letter
+
+PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document shown above.
+
+```{r render-pdf, include=FALSE}
+rmarkdown::render("letter_example0.Rmd", output_file="pkgdown_ex0.pdf", output_dir='.')
+
+```
+
+![Here should be a PDF of the letter](pkgdown_ex0.pdf){width=100% height=1000} \

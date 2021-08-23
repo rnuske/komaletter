@@ -1,0 +1,32 @@
+---
+title: "Example 4"
+description: "Usage of YAML parameter return-short"
+output: html_document
+---
+
+In addition to the YAML parameters shown in the first example, this example letter includes the parameter `return-short` which allows for a different, possibly shorter sender's address to fit in the window.
+
+<br>
+
+### RMarkdown of Letter
+<!-- This weird setup of the chunk is necessary because the letter contains 
+a ```-chunk which is hard to get around when included in a chunk. -->
+
+````markdown
+```{r cars, results='asis', echo=FALSE}
+cat(paste(readLines('letter_example4.Rmd')[!grepl('ignette', x=readLines('letter_example4.Rmd'))], collapse ='\n'))
+```
+````
+
+<br>
+
+### Resulting PDF Letter
+
+PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document shown above.
+
+```{r render-pdf, include=FALSE}
+
+rmarkdown::render("letter_example4.Rmd", output_file="pkgdown_ex4.pdf", output_dir='.')
+```
+
+![Here should be a PDF of the letter](pkgdown_ex4.pdf){width=100% height=1000} \

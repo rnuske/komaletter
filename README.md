@@ -54,7 +54,7 @@ shown in the following figure on the left.
 To start a new letter you can take advantage of the komaletter skeleton via 
 `rmarkdown::draft()` or the RStudio menu: File > New File > R Markdown... > 
 From Template > komaletter (PDF). 
-When finished writing your letter the  RMarkdown document can be rendered to PDF
+When finished writing your letter the RMarkdown document can be rendered to PDF
 via `rmarkdown::render()` or the RStudio Knit button.
 
 ```r

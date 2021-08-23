@@ -1,0 +1,35 @@
+---
+title: "Example 1"
+desccription: "Setting the styling, include image of signature, supplement sender onfo, ps, cc and colorlinks"
+output: html_document
+---
+
+In addition to the YAML parameters shown in the first example, this letter displays some more parameters
+
+* `lco` via this parameter you can specify your own letter layout in a **L**etter **C**lass **O**ption file or use one of the layouts predefined by KomaScript (see *Introduction to komaletter*). Here the path to the default lco of the komaletter package is given, resulting in the same layout as without this parameter.
+* image in `signature` to make it look like it was hand signed.
+* `signature-before` is for fine tuning the vertical space between closing and signature.
+* `return-phone`, `return-email` to supplement sender information.
+* `ps`, `cc` includes a *post scriptum* and a *carbon copy* address.
+* `colorlinks` causes URLs and the like to be displayed in color.
+
+<br>
+
+### RMarkdown of Letter
+
+```{r show-code, code=readLines('letter_example1.Rmd')[!grepl('ignette', x=readLines('letter_example1.Rmd'))], eval=FALSE, highlight=FALSE}
+
+```
+
+<br>
+
+### Resulting PDF Letter
+
+PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document shown above.
+
+```{r render-pdf, include=FALSE}
+rmarkdown::render("letter_example1.Rmd", output_file="pkgdown_ex1.pdf", output_dir='.')
+
+```
+
+![Here should be a PDF of the letter](pkgdown_ex1.pdf){width=100% height=1000} \
