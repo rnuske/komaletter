@@ -10,6 +10,9 @@
     <loc>/articles/intro.html</loc>
   </url>
   <url>
+    <loc>/articles/letter_example0.html</loc>
+  </url>
+  <url>
     <loc>/articles/letter_example1.html</loc>
   </url>
   <url>
@@ -23,6 +26,21 @@
   </url>
   <url>
     <loc>/articles/parameterized_letter.html</loc>
+  </url>
+  <url>
+    <loc>/articles/pkgdown_letter_example0.html</loc>
+  </url>
+  <url>
+    <loc>/articles/pkgdown_letter_example1.html</loc>
+  </url>
+  <url>
+    <loc>/articles/pkgdown_letter_example2.html</loc>
+  </url>
+  <url>
+    <loc>/articles/pkgdown_letter_example3.html</loc>
+  </url>
+  <url>
+    <loc>/articles/pkgdown_letter_example4.html</loc>
   </url>
   <url>
     <loc>/authors.html</loc>

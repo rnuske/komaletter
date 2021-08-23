@@ -60,6 +60,30 @@
     </li>
   </ul>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Examples
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="../articles/pkgdown_letter_example0.html">Example 0</a>
+    </li>
+    <li>
+      <a href="../articles/pkgdown_letter_example1.html">Example 1</a>
+    </li>
+    <li>
+      <a href="../articles/pkgdown_letter_example2.html">Example 2</a>
+    </li>
+    <li>
+      <a href="../articles/pkgdown_letter_example3.html">Example 3</a>
+    </li>
+    <li>
+      <a href="../articles/pkgdown_letter_example4.html">Example 4</a>
+    </li>
+  </ul>
+</li>
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
@@ -95,8 +119,8 @@
 
     
     
-<p>this letter shows the usage of the YAML parameter <code>return-short</code>. The parameter has been created created to allow for a different possibly shorter address in the window. If <code>return-address</code> and <code>return-short</code> are used, the probably longer <code>return-address</code> is shown in the letterhead and the hopefully one line <code>return-short</code> in the address window. Usually (without using <code>return-short</code>) the address in the window is assembled from the <code>author</code> and the <code>return-address</code> and therefore identical to the address in the letterhead.</p>
-<p>The <code>return-short</code> must contain the entire return address shown in the window including the author name. The author is not prepended. The YAML parameter <code>return-short</code> maybe either a one line text variable or a YAML sequence also known as list.</p>
+<p>this letter shows the usage of the YAML parameter <code>return-short</code>. The parameter has been created to allow for a different possibly shorter address to fit in the window. If <code>return-address</code> and <code>return-short</code> are used, the probably longer <code>return-address</code> is shown in the letterhead and the hopefully one line <code>return-short</code> in the address window. Usually (without using <code>return-short</code>) the address in the window is assembled from the <code>author</code> and the <code>return-address</code> and therefore identical to the address in the letterhead.</p>
+<p>The <code>return-short</code> must contain the entire return address shown in the window including the author name, since the author is not prepended. The YAML parameter <code>return-short</code> maybe either a one line text variable or a YAML sequence also known as list.</p>
 <pre><code>return-short: Müller-Lüdenscheidt, Vicco-von-Bülow-Str. 3, 10623 Berlin
 
 return-short:
