@@ -10,7 +10,7 @@ It is intended as a starting point for your own letters and comes with a reasona
 
 <br>
 
-### Source Code of Letter
+### RMarkdown of Letter
 
 ```{r show-code, code=readLines('letter_example0.Rmd')[!grepl('ignette', x=readLines('letter_example0.Rmd'))], eval=FALSE, highlight=FALSE}
 
