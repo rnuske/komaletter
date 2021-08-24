@@ -14,5 +14,8 @@ articles:
   pkgdown_letter_example2: pkgdown_letter_example2.html
   pkgdown_letter_example3: pkgdown_letter_example3.html
   pkgdown_letter_example4: pkgdown_letter_example4.html
-last_built: 2021-08-23T11:07Z
+last_built: 2021-08-24T14:07Z
+urls:
+  reference: https://rnuske.github.io/komaletter/reference
+  article: https://rnuske.github.io/komaletter/articles
 
