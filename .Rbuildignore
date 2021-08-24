@@ -8,4 +8,4 @@
 ^docs$
 ^pkgdown$
 ^vignettes/pkgdown_
-^vignettes/intermediate.Rmd
+^vignettes/intermediate.Rmd$

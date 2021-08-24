@@ -25,11 +25,11 @@ In addition to the YAML parameters shown in the first example, this letter displ
 
 ### Resulting PDF Letter
 
-PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document shown above.
+PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document above.
 
 ```{r render-pdf, include=FALSE}
 rmarkdown::render("letter_example1.Rmd", output_file="pkgdown_ex1.pdf", output_dir='.')
-
+pdftools::pdf_convert(pdf='pkgdown_ex1.pdf', dpi=150, format="jpeg", pages=1, filenames="pkgdown_ex1.jpg")
 ```
 
-![Here should be a PDF of the letter](pkgdown_ex1.pdf){width=100% height=1000} \
+<img src="pkgdown_ex1.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;">
