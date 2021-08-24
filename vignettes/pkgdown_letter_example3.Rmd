@@ -1,5 +1,6 @@
 ---
 title: "Example 3"
+description: "reference line and language parameter"
 output: html_document
 ---
 
@@ -10,8 +11,8 @@ In addition to the YAML parameters shown in the first example, this letter displ
 * `yourref`, `yourmail`, `myref` common parts of the reference line (German: Bezugszeichenzeile)
 * image in `signature` to make it look like it was hand signed.
 * `signature-before` is for fine tuning the vertical space between closing and signature.
-* `lang` sets the language of the document influences the labels of the reference line, date etc.. requires the respective latex language pack.
-* `papersize` sets the paper size (default DIN A4).
+* `lang` sets the language of the document which influences the labels of the reference line, date etc.. requires the respective latex language pack.
+* `papersize` sets the paper size (default: DIN A4).
 
 <br>
 
