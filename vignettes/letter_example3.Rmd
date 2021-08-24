@@ -19,7 +19,8 @@ yourmail: 23.02.2018
 myref: Äamt 2018-02
 date: 01.04.2018
 
-lang: de
+# no german language pack on CRAN => check fails
+# lang: de
 papersize: a4
 
 output: komaletter::komaletter

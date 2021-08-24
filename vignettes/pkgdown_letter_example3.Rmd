@@ -17,8 +17,23 @@ In addition to the YAML parameters shown in the first example, this letter displ
 <br>
 
 ### RMarkdown of Letter
+```{r manip_example, include=FALSE}
+ex <- readLines('letter_example3.Rmd')
 
-```{r show-code, code=readLines('letter_example3.Rmd')[!grepl('ignette', x=readLines('letter_example3.Rmd'))], eval=FALSE, highlight=FALSE}
+# drop vignette lines
+ex <- ex[!grepl('ignette', x=ex)]
+
+# replace language line and kill comment above
+idx <- grep("lang:", ex)
+ex[idx] <- "lang: de"
+ex <- ex[-(idx-1)]
+
+# write to file for rmarkdown::render()
+writeLines(ex, con="intermediate.Rmd")
+```
+
+
+```{r show-rmarkdown, code=ex, eval=FALSE, highlight=FALSE}
 
 ```
 
@@ -29,7 +44,7 @@ In addition to the YAML parameters shown in the first example, this letter displ
 PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document shown above.
 
 ```{r render-pdf, include=FALSE}
-rmarkdown::render("letter_example3.Rmd", output_file="pkgdown_ex3.pdf", output_dir='.')
+rmarkdown::render("intermediate.Rmd", output_file="pkgdown_ex3.pdf", output_dir='.')
 
 ```
 

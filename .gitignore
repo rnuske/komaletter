@@ -4,6 +4,7 @@
 .Ruserdata
 vignettes/*.R
 vignettes/*.html
+vignettes/intermediate.Rmd
 vignettes/letter_example*.pdf
 vignettes/pkgdown_*.pdf
 docs
