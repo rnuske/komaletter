@@ -1,3 +1,5 @@
+url: https://rnuske.github.io/komaletter
+
 navbar:
   structure:
     left:  [intro, reference, articles, tutorials, examples, news]
