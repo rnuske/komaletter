@@ -38,3 +38,9 @@ navbar:
         href: articles/pkgdown_letter_example3.html
       - text: Example 4
         href: articles/pkgdown_letter_example4.html
+
+template:
+  params:
+    docsearch:
+      api_key: df518bb30edd87e714ad472b1d77680f
+      index_name: komaletter
