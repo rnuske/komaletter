@@ -244,6 +244,7 @@ $if(return-url)$
 \setkomavar{fromurl}{$return-url$}
 $endif$
 
+
 $if(date)$\setkomavar{date}{$date$}$endif$
 $if(yourref)$\setkomavar{yourref}{$yourref$}$endif$
 $if(yourmail)$\setkomavar{yourmail}{$yourmail$}$endif$
@@ -253,6 +254,12 @@ $if(invoice)$\setkomavar{invoice}{$invoice$}$endif$
 $if(place)$\setkomavar{place}{$place$}$endif$
 $if(subject)$\setkomavar{subject}{$subject$}$endif$
 $if(author)$\setkomavar{fromname}{$author$}$endif$
+
+
+$if(bank)$
+\setkomavar{frombank}{$for(bank)$$bank$$sep$\\$endfor$}
+$endif$
+
 $if(return-address)$
 \setkomavar{fromaddress}{$for(return-address)$$return-address$$sep$\\$endfor$}
 $endif$

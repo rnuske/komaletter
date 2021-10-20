@@ -1,0 +1,32 @@
+---
+title: "Example 5"
+description: "Invoice"
+output: html_document
+---
+
+Generate an invoice with bank details.
+
+<br>
+
+### RMarkdown of Letter
+<!-- This weird setup of the chunk is necessary because the letter contains 
+a ```-chunk which is hard to get around when included in a chunk. -->
+
+````markdown
+```{r cars, results='asis', echo=FALSE}
+cat(paste(readLines('letter_example5.Rmd')[!grepl('ignette', x=readLines('letter_example5.Rmd'))], collapse ='\n'))
+```
+````
+
+<br>
+
+### Resulting PDF Letter
+
+PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document above.
+
+```{r render-pdf, include=FALSE}
+rmarkdown::render("letter_example5.Rmd", output_file="pkgdown_ex5.pdf", output_dir='.')
+pdftools::pdf_convert(pdf='pkgdown_ex5.pdf', dpi=150, format="jpeg", pages=1, filenames="pkgdown_ex5.jpg")
+```
+
+<img src="pkgdown_ex5.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;">

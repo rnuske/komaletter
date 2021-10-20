@@ -1,0 +1,79 @@
+---
+author: Winkel van Sinkel
+address:
+- Fancy Work
+- Vleutensebaan 435
+- 7009 ZZ Haarlem
+- Netherlands
+- NL1093se44
+subject: FACTUUR
+customer: '060101'
+invoice: '000003'
+lang: nl
+bank:
+- 'KVK: 12345678'
+- 'Btw-id: NL123456789B01'
+- 'IBAN: NL99ABCD0123456789'
+- 'BIC: AAAABBCCDD'
+params:
+  bank_num: 'IBAN: NL99ABCD0123456789'
+  invoice_num: '000001'
+  customer_num: '060101'
+return-address:
+- Modelstraat 12
+- 3017 KH Amsterdam
+- Netherlands
+return-email: somebody@gmail.com
+return-phone: '03012345'
+return-url: https
+date: '`r format(Sys.Date(), "%d %B, %Y")`'
+
+output: komaletter::komaletter
+
+vignette: >
+  %\VignetteIndexEntry{komaletter example letter 5}
+  %\VignetteKeywords{komaletter,vignette}
+  %\VignettePackage{komaletter}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+**Geleverd op `r format(as.Date("2021-09-08"), "%d %B, %Y")`:**
+
+
+```{r bill}
+# initiate bill
+bill <- bookkeeper::add_bill_entry(
+  c(
+    "Tekstproductie (80 uur à € 70)",
+    "Ontwerp (vaste prijs)",
+    "10 foto’s à € 150",
+    "Vormgeving (30 uur à € 60)",
+    "1 kg Suiker"
+  ),
+  c(21, 21, 21, 21, 9),
+  "€",
+  c(5600, 1250, 1500, 1800, 3),
+  .save = FALSE
+)
+bill <- bookkeeper::make_bill(lang = "nl", .save = FALSE, .bill = bill)
+```
+
+
+```{r kbl}
+# kable output bill
+bookkeeper::kable_bill(bill)
+```
+
+
+\vspace{3em}
+
+
+Betaling graag binnen 14 dagen na factuurdatum op `r params$bank_num` onder vermelding van het factuurnummer: `r params$invoice_num` en het klantnummer: `r params$customer_num`.
+

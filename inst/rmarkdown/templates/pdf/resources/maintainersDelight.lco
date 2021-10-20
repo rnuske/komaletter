@@ -6,7 +6,7 @@
 % Options  --------------------------------------------------------------------
 \KOMAoptions{%
   parskip=half,              % half line skip between paragraphs
-  firstfoot=false,           % no footer
+  firstfoot=true,           % no footer
   enlargefirstpage,          % longer first page works well with no footer
   refline=narrow,            % adjust refline with text body
   backaddress=plain          % do not underline backaddress in address window
@@ -65,6 +65,8 @@
 % Signature
 \let\raggedsignature\raggedright
 
+% Footer
+\@setplength{firstfoothpos}{30mm}
 
 % Custom Letter Head ----------------------------------------------------------
 \setkomavar{firsthead}{%
@@ -79,4 +81,14 @@
       \ifkomavarempty{fromurl}{}{\usekomavar{fromurl}~\Mundus\\}%
     }
   }
+}
+
+% Custom Footer ----------------------------------------------------------
+% Taken from https://gitlab.com/yuvallanger/worg/-/blob/b0ac61fb701135a77c8b5fad13c788010bbb2acb/exporters/koma-letter-export.org
+% Banking information in the footer
+\setkomavar{firstfoot}{%
+  \footnotesize
+  \parbox[b]{\linewidth}{%
+    \centering\def\\{ \textbullet{} }\ifkomavarempty{frombank}{}{{\def\\{,\nobreakspace\@ogobble}\usekomavar{frombank}}\\}%
+  }%
 }
