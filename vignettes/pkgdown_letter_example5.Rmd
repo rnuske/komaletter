@@ -14,7 +14,9 @@ a ```-chunk which is hard to get around when included in a chunk. -->
 
 ````markdown
 ```{r cars, results='asis', echo=FALSE}
-cat(paste(readLines('letter_example5.Rmd')[!grepl('ignette', x=readLines('letter_example5.Rmd'))], collapse ='\n'))
+md <- readLines('letter_example5.Rmd')[!grepl('\\\\|vignette', x=readLines('letter_example5.Rmd'))]
+md <- sub('r, eval=FALSE', 'r', x = md)
+cat(paste(md, collapse ='\n'))
 ```
 ````
 
