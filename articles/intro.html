@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">komaletter</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.2.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.4.2.900</span>
       </span>
     </div>
 
@@ -119,9 +119,9 @@
       <h1 data-toc-skip>Introduction to komaletter</h1>
                         <h4 data-toc-skip class="author">Robert Nuske</h4>
             
-            <h4 data-toc-skip class="date">2021-08-30</h4>
+            <h4 data-toc-skip class="date">2021-10-27</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/rnuske/komaletter/blob/master/vignettes/intro.Rmd" class="external-link"><code>vignettes/intro.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/rnuske/komaletter/blob/HEAD/vignettes/intro.Rmd" class="external-link"><code>vignettes/intro.Rmd</code></a></small>
       <div class="hidden name"><code>intro.Rmd</code></div>
 
     </div>
@@ -132,16 +132,16 @@
 <p><em>komaletter</em> strives to turn a simple R Markdown document together with a layout definition into a beautiful letter (PDF). Layout definitions can be one of KOMA-Script’s standard styles, the package default style or a user defined style. For more details refer to the section <a href="#letter-layouts">Letter Layouts</a>.</p>
 <p>Various aspects of the letter can be determined via variables in the R Markdown document metadata (aka YAML header), see <a href="#letter-settings">Letter settings</a>.</p>
 <p>Pay attention to the <a href="#about-printing">printing</a> of your letter. A shrunk or scaled-down document might (besides a ruined layout) may result in parts of the address not being visible.</p>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor" aria-hidden="true"></a>Usage</h2>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
 <p>An easy way to start a new <em>komaletter</em> is to ask for the skeleton document in RStudio via <em>New File &gt; R Markdown &gt; From Template &gt; komaletter</em> or <code>rmarkdown::draft("myletter.Rmd", template="pdf", package="komaletter")</code>. To turn the markown in a beautiful PDF use the Knit Button in RStudio or <code>rmarkdown::render("myletter.Rmd")</code>.</p>
 <p>The skeleton creates a very simple letter as a starting point for your own writing. Several formatting defaults for font, fontsize, indentation are in use. The following figure shows the complete source on the left and the rendered PDF on the right.</p>
-<p><img src="../man/figures/skeleton.png"></p>
+<p><img src="../reference/figures/skeleton.png"></p>
 </div>
-<div id="letter-settings" class="section level2">
-<h2 class="hasAnchor">
-<a href="#letter-settings" class="anchor" aria-hidden="true"></a>Letter Settings</h2>
+<div class="section level2">
+<h2 id="letter-settings">Letter Settings<a class="anchor" aria-label="anchor" href="#letter-settings"></a>
+</h2>
 <p>Various aspects of the letter can be customized via the following variables in the R Markdown document metadata (aka YAML header).</p>
 <p>Although it rarely makes sense to write a letter without sender and recipient, a komaletter can be constructed by merely specifying the output format. All other variables are optional.</p>
 <table class="table">
@@ -284,9 +284,9 @@
 </tbody>
 </table>
 </div>
-<div id="letter-layouts" class="section level2">
-<h2 class="hasAnchor">
-<a href="#letter-layouts" class="anchor" aria-hidden="true"></a>Letter Layouts</h2>
+<div class="section level2">
+<h2 id="letter-layouts">Letter Layouts<a class="anchor" aria-label="anchor" href="#letter-layouts"></a>
+</h2>
 <p>The layout of letters is defined in so-called <strong>Letter Class Option</strong> files. KOMA-Script provides a number of standard styles (see following table). The package comes with a default style defined in <em>maintainersDelight.lco</em>. Users may as well define there own layout.</p>
 <p>Styles can be selected via the variable <code>lco</code> in the YAML header of the rmarkdown document. Provide either the name of one of the standard styles listed below or the path to a self defined style without file extension. If LaTeX can not find the <strong>lco</strong> file, it uses KOMA-Script’s default: <strong>DIN</strong>. Common errors besides typos are paths <em>with</em> extension, underscores in paths mangeled by pandoc.</p>
 <p>Custom <em>lco’s</em> may be constructed either based on one of the standard lco-files or by defining all aspects such as position of the recpients address, foldmarks etc.. For a comprehensive description refer to the <a href="https://komascript.de/~mkohm/scrguien.pdf" class="external-link">KOMA-Script Guide</a>.</p>
@@ -338,24 +338,24 @@
 </tbody>
 </table>
 </div>
-<div id="internationalisation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#internationalisation" class="anchor" aria-hidden="true"></a>Internationalisation</h2>
+<div class="section level2">
+<h2 id="internationalisation">Internationalisation<a class="anchor" aria-label="anchor" href="#internationalisation"></a>
+</h2>
 <p>It is easy to write letters in non English languages. The necessary <em>language</em> and <em>layout</em> settings can be achieved with the YAML variables <code>lang</code> and <code>lco</code>. <code>komaletter</code> passes these on to the LaTeX template and the nicely internationalized KOMA-Script letter class.</p>
 <p>The language can be specified via the two letter code such as <code>en</code>, <code>de</code>, <code>fr</code>, <code>es</code>. Or if you want to be more precise by adding a country <code>en-US</code> for American English or <code>de-CH</code> for Swiss German. KOMA-Script then generates e.g. the date according to language and country conventions.</p>
 <p>Beware that you need additional LaTeX language packages if you choose a non English language. Make sure you have the necessary LaTeX language packs, <em>i.e.</em> <code>texlive-lang-german</code> for a German letter (<code>lang: de</code>) which should be present if you write LaTeX Documents in that language.</p>
 <p>A letter layout fitting for the local window envelope style can be select using the YAML variable <code>lco</code>. The various letter layouts are discussed in the previous section. A french letter layout for the window envelope style <em>DL</em> would be selected via <code>lco: NF</code>.</p>
 </div>
-<div id="about-printing" class="section level2">
-<h2 class="hasAnchor">
-<a href="#about-printing" class="anchor" aria-hidden="true"></a>About Printing</h2>
+<div class="section level2">
+<h2 id="about-printing">About Printing<a class="anchor" aria-label="anchor" href="#about-printing"></a>
+</h2>
 <p>Some PDF viewers do not realize that the document already has a blank margin and scale or ‘fit to page’ for printing. This generally results in smaller fonts, overly large margins, broken layout and most importantly a misplaced address. In the worst case, parts of the address are not visible in the window of the envelope.</p>
 <p>komaletter’s default layout signals the PDF viewer to print the document at its actual size. Unfortunately, not many PDF viewers heed this hint.</p>
 <p>Thus, before printing the document, you should check that the document is not shrunk or ‘fit to page’. <strong>The document must be printed at its actual size / 100%</strong> so that the positions of the elements are correct (not possible in Okular &lt; 1.7 (Applications 19.04), e.g. part of Kubuntu 18.04).</p>
 </div>
-<div id="hints" class="section level2">
-<h2 class="hasAnchor">
-<a href="#hints" class="anchor" aria-hidden="true"></a>Hints</h2>
+<div class="section level2">
+<h2 id="hints">Hints<a class="anchor" aria-label="anchor" href="#hints"></a>
+</h2>
 <ul>
 <li><p>The default papersize of KOMA-Script class <em>scrlttr2</em> is DIN A4. If you want to create an US style letter eg. using <code>lco: UScommercial9</code>, remember to set the papersize to <code>letter</code>.</p></li>
 <li><p>If your <code>return-address</code> is very long, it might not fit on the one line backaddress in the address window. The letter layout coming with the package komaletter tries hard to craft a pretty two-line version. The other option is using the YAML parameter <code>return-short</code> to provide an alternative one line address only used in the address window. <code>return-short</code> can be a list such as <code>return-address</code> or just one line of text. See also the vignette <a href="letter_example4.pdf">letter_example4</a>.</p></li>
@@ -384,7 +384,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.6.1.9001.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
 </div>
 
       </footer>

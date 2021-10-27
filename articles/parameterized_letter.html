@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">komaletter</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.2.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.4.2.900</span>
       </span>
     </div>
 
@@ -119,9 +119,9 @@
       <h1 data-toc-skip>Parameterized Letters for Mass Mailings</h1>
                         <h4 data-toc-skip class="author">Robert Nuske</h4>
             
-            <h4 data-toc-skip class="date">2021-08-30</h4>
+            <h4 data-toc-skip class="date">2021-10-27</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/rnuske/komaletter/blob/master/vignettes/parameterized_letter.Rmd" class="external-link"><code>vignettes/parameterized_letter.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/rnuske/komaletter/blob/HEAD/vignettes/parameterized_letter.Rmd" class="external-link"><code>vignettes/parameterized_letter.Rmd</code></a></small>
       <div class="hidden name"><code>parameterized_letter.Rmd</code></div>
 
     </div>
@@ -134,14 +134,13 @@
 <li>write template letter with corresponding parameters</li>
 <li>combine template letter and recipient’s information</li>
 </ul>
-<div id="basics-of-mail-merge-with-komaletter" class="section level2">
-<h2 class="hasAnchor">
-<a href="#basics-of-mail-merge-with-komaletter" class="anchor" aria-hidden="true"></a>Basics of Mail Merge with <code>komaletter</code>
+<div class="section level2">
+<h2 id="basics-of-mail-merge-with-komaletter">Basics of Mail Merge with <code>komaletter</code><a class="anchor" aria-label="anchor" href="#basics-of-mail-merge-with-komaletter"></a>
 </h2>
 <p>To personalize letters for mass mailings, you can include one or more parameters in a <code>komaletter</code>. These parameters need to be declared and put to use later in the document. You can assign various values to the parameters when you render the report.</p>
-<div id="declaring-parameters" class="section level3">
-<h3 class="hasAnchor">
-<a href="#declaring-parameters" class="anchor" aria-hidden="true"></a>Declaring Parameters</h3>
+<div class="section level3">
+<h3 id="declaring-parameters">Declaring Parameters<a class="anchor" aria-label="anchor" href="#declaring-parameters"></a>
+</h3>
 <p>Parameters are declared using the <code>params</code> field within the YAML metadata header. You can specify one or more parameters with each item on a new line.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">---</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>params<span class="op">:</span></span>
@@ -151,9 +150,9 @@
 <span id="cb1-6"><a href="#cb1-6"></a>output<span class="op">:</span><span class="st"> </span>komaletter<span class="op">::</span>komaletter</span>
 <span id="cb1-7"><a href="#cb1-7"></a><span class="op">---</span></span></code></pre></div>
 </div>
-<div id="using-parameters" class="section level3">
-<h3 class="hasAnchor">
-<a href="#using-parameters" class="anchor" aria-hidden="true"></a>Using Parameters</h3>
+<div class="section level3">
+<h3 id="using-parameters">Using Parameters<a class="anchor" aria-label="anchor" href="#using-parameters"></a>
+</h3>
 <p>The declared parameters are automatically made available within the knit environment as components of the read-only list <code>params</code>. For example, the values of the above parameters can be accessed with the following R Code:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">params</span><span class="op">$</span><span class="va">name</span>
@@ -169,17 +168,16 @@
 <span id="cb3-8"><a href="#cb3-8"></a>output<span class="op">:</span><span class="st"> </span>komaletter<span class="op">::</span>komaletter</span>
 <span id="cb3-9"><a href="#cb3-9"></a><span class="op">---</span></span></code></pre></div>
 </div>
-<div id="setting-parameter-values" class="section level3">
-<h3 class="hasAnchor">
-<a href="#setting-parameter-values" class="anchor" aria-hidden="true"></a>Setting Parameter values</h3>
+<div class="section level3">
+<h3 id="setting-parameter-values">Setting Parameter values<a class="anchor" aria-label="anchor" href="#setting-parameter-values"></a>
+</h3>
 <p>To set the parameter values, you can add the <code>params</code> argument to <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">rmarkdown::render</a></code>. If a parameter does not get a value, the default defined during parameter declaration is used (eg. <code>John</code>, <code>candlestick</code>).</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"example.Rmd"</span>, params<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>name<span class="op">=</span><span class="st">"Jane"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
-<div id="challenges-of-mail-merge-with-komaletter" class="section level2">
-<h2 class="hasAnchor">
-<a href="#challenges-of-mail-merge-with-komaletter" class="anchor" aria-hidden="true"></a>Challenges of Mail Merge with <code>komaletter</code>
+<div class="section level2">
+<h2 id="challenges-of-mail-merge-with-komaletter">Challenges of Mail Merge with <code>komaletter</code><a class="anchor" aria-label="anchor" href="#challenges-of-mail-merge-with-komaletter"></a>
 </h2>
 <p>R Markdown and thus <code>komaletter</code> combines R Code, YAML and Markdown. R Markdown documents are processed by <code>knitr</code> to pure YAML and Markdown which in turn is send to pandoc for conversion to the final document type (pdf in this case). A parametrized letter has to obey the restrictions of all parts involved.</p>
 <p>The most common personalization are the address of the recipient and the salutation or opening. <code>komaletter</code> expects the address to be a YAML sequence within the YAML metadata header. YAML sequences can be written in flow or block style. Both need quotation marks to protect the square brackets or to enable the escape code <code>\n</code> during parameter declaration in the YAML metadata.</p>
@@ -204,9 +202,9 @@
 <p>The result of the quoted R expression <code>"`r expression`"</code> is a value enclosed in double quotes, i.e. <code>"value"</code>, which is not harmful if the result is of R type character corresponding to a YAML scalar. YAML scalars can be enclosed in single or double quotes or not wrapped at all. But everything in quotes is a scalar to YAML.</p>
 <p>Consequently this means that expressions that are supposed to supply an address and thus a YAML sequence, must not be enclosed in quotes! Which poses a main problem since we learned above inline code snippets need to be enclosed in quotes in the main YAML metadata header.</p>
 </div>
-<div id="solution" class="section level2">
-<h2 class="hasAnchor">
-<a href="#solution" class="anchor" aria-hidden="true"></a>Solution</h2>
+<div class="section level2">
+<h2 id="solution">Solution<a class="anchor" aria-label="anchor" href="#solution"></a>
+</h2>
 <p>Or rather a <strong>hack</strong> found as bycatch at <a href="https://stackoverflow.com/a/31862074" class="external-link">stackoverflow</a> circumventing the issue at the moment.</p>
 <p>As explained above, the address is a YAML sequence and sequences can not be enclosed in quotes. To access the parameter in the main YAML metadata header the inline R Code snippet has to be wrapped in quotes and R expressions wrapped in quotes evaluate to a value enclosed in quotes.</p>
 <p>Mysteriously, the rule that backticks must be enclosed in quotes is not enforced in a second YAML metadata block. You can use two metadata blocks because Pandoc combines YAML metadata blocks while converting the .md file to the final document. So in a second metadata block the inline R Code snippet can be written without quotes resulting in a correctly formatted YAML sequence.</p>
@@ -244,9 +242,9 @@
                     output_file<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"letter_"</span>, <span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">'name'</span><span class="op">]</span>, <span class="st">".pdf"</span><span class="op">)</span><span class="op">)</span>
 <span class="op">}</span></code></pre></div>
 </div>
-<div id="further-information" class="section level2">
-<h2 class="hasAnchor">
-<a href="#further-information" class="anchor" aria-hidden="true"></a>Further Information</h2>
+<div class="section level2">
+<h2 id="further-information">Further Information<a class="anchor" aria-label="anchor" href="#further-information"></a>
+</h2>
 <ul>
 <li>R Markdown
 <ul>
@@ -268,9 +266,9 @@
 </li>
 </ul>
 </div>
-<div id="hints" class="section level2">
-<h2 class="hasAnchor">
-<a href="#hints" class="anchor" aria-hidden="true"></a>Hints</h2>
+<div class="section level2">
+<h2 id="hints">Hints<a class="anchor" aria-label="anchor" href="#hints"></a>
+</h2>
 <p>Since parameters are evaluated roughly speaking during document knitting (conversion from <code>.Rmd</code> to <code>.md</code>), it is helpful to look at the intermediate <code>.md</code> files to hunt down issues in parameterized letters.</p>
 <p><code>komaletter</code> is based on the R Markdown output format <code>pdf_document</code> which in contrast to other formats (html_document, word_document, odt_document) has no argument to keep the intermediate <code>.md</code> files created by <code>knitr</code>.</p>
 <p>But <code>rmarkdown::render(..., clean=FALSE)</code> causes the intermediate .md files to remain available.</p>
@@ -294,7 +292,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.6.1.9001.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
 </div>
 
       </footer>

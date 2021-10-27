@@ -43,7 +43,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">komaletter</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.2.900</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.4.2.900</span>
       </span>
     </div>
 
@@ -100,7 +100,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/rnuske/komaletter/">
+  <a href="https://github.com/rnuske/komaletter/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -123,37 +123,37 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="komaletter-simply-beautiful-pdf-letters-from-markdown" class="section level2">
-<h2 class="hasAnchor">
-<a href="#komaletter-simply-beautiful-pdf-letters-from-markdown" class="anchor" aria-hidden="true"></a>komaletter: Simply Beautiful PDF Letters from Markdown</h2>
+<div class="section level2">
+<h2 id="komaletter-simply-beautiful-pdf-letters-from-markdown">komaletter: Simply Beautiful PDF Letters from Markdown<a class="anchor" aria-label="anchor" href="#komaletter-simply-beautiful-pdf-letters-from-markdown"></a>
+</h2>
 <!-- badges: start -->
 
-<div id="motivation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#motivation" class="anchor" aria-hidden="true"></a>Motivation</h3>
+<div class="section level3">
+<h3 id="motivation">Motivation<a class="anchor" aria-label="anchor" href="#motivation"></a>
+</h3>
 <p>Simple letters tend to look very much alike. They are either determined by a standard eg. window envelope style or writer’s preferences. Since the layout is fixed, letters can be written perfectly in R Markdown.</p>
 <p>The <a href="https://www.komascript.de" class="external-link">KOMA-Script LaTeX Bundle</a> provides layouts for many common window envelope types (German, US, French, Japanese, …) and the possibility to define your own layout. The <em>komaletter</em> package also provides it’s own default letter layout loosely based on DIN 5008B.</p>
 <p>This package is an adaptation of the <a href="https://cran.r-project.org/package=linl" class="external-link">linl</a> package for international writers. linl itself is based on the <a href="https://github.com/aaronwolen/pandoc-letter" class="external-link">pandoc-letter</a> template and extends it for use from R via the <a href="https://cran.r-project.org/package=rmarkdown" class="external-link">rmarkdown</a> package.</p>
 </div>
-<div id="examples" class="section level3">
-<h3 class="hasAnchor">
-<a href="#examples" class="anchor" aria-hidden="true"></a>Examples</h3>
-<div id="skeleton" class="section level4">
-<h4 class="hasAnchor">
-<a href="#skeleton" class="anchor" aria-hidden="true"></a>Skeleton</h4>
+<div class="section level3">
+<h3 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+</h3>
+<div class="section level4">
+<h4 id="skeleton">Skeleton<a class="anchor" aria-label="anchor" href="#skeleton"></a>
+</h4>
 <p>The skeleton provided by <code>komaletter</code> creates a very simple letter as a starting point for your own writing. Several formatting defaults such as font, fontsize, indentation are in use. See <code><a href="articles/intro.html">vignette('intro', 'komaletter')</a></code> and <code><a href="reference/komaletter.html">help(komaletter)</a></code> for a complete list and their default values. The following figure shows the <code>rmarkdown</code> source on the left and the rendered <code>pdf</code> on the right.</p>
 <p><img src="reference/figures/skeleton.png"></p>
 </div>
-<div id="vignette" class="section level4">
-<h4 class="hasAnchor">
-<a href="#vignette" class="anchor" aria-hidden="true"></a>Vignette</h4>
+<div class="section level4">
+<h4 id="vignette">Vignette<a class="anchor" aria-label="anchor" href="#vignette"></a>
+</h4>
 <p>The vignette examples are a bit more detailed and s demonstrate, for example, how to include a signature, choose a different layout and make some format settings. All of these are driven by simple settings in the <code>YAML</code> header as shown in the following figure on the left.</p>
 <p><img src="reference/figures/letter_example1.png"></p>
 </div>
 </div>
-<div id="usage" class="section level3">
-<h3 class="hasAnchor">
-<a href="#usage" class="anchor" aria-hidden="true"></a>Usage</h3>
+<div class="section level3">
+<h3 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h3>
 <p>To start a new letter you can take advantage of the komaletter skeleton via <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/draft.html" class="external-link">rmarkdown::draft()</a></code> or the RStudio menu: File &gt; New File &gt; R Markdown… &gt; From Template &gt; komaletter (PDF). When finished writing your letter the RMarkdown document can be rendered to PDF via <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">rmarkdown::render()</a></code> or the RStudio Knit button.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># start a new letter using the provided skeleton</span>
@@ -164,16 +164,16 @@
 <span class="co"># turn Rmd into a beautiful PDF</span>
 <span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"my_letter.Rmd"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="about-printing" class="section level3">
-<h3 class="hasAnchor">
-<a href="#about-printing" class="anchor" aria-hidden="true"></a>About Printing</h3>
+<div class="section level3">
+<h3 id="about-printing">About Printing<a class="anchor" aria-label="anchor" href="#about-printing"></a>
+</h3>
 <p>Some PDF viewers do not realize that the document already has a blank margin and scale or ‘fit to page’ for printing. This generally results in smaller fonts, overly large margins, broken layout and most importantly a misplaced address. In the worst case, parts of the address are not visible in the window of the envelope.</p>
 <p>komaletter’s default layout signals the PDF viewer to print the document at its actual size. Unfortunately, not many PDF viewers heed this hint.</p>
 <p>Thus, before printing the document, you should check that the document is not shrunk or ‘fit to page’. <strong>The document must be printed at its actual size / 100%</strong> so that the positions of the elements are correct.</p>
 </div>
-<div id="installation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h3>
+<div class="section level3">
+<h3 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h3>
 <p>You can install the released version of <strong>komaletter</strong> from <a href="https://CRAN.R-project.org/package=komaletter" class="external-link">CRAN</a> with</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"komaletter"</span><span class="op">)</span></code></pre></div>
@@ -181,20 +181,20 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rnuske/komaletter"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="requirements" class="section level3">
-<h3 class="hasAnchor">
-<a href="#requirements" class="anchor" aria-hidden="true"></a>Requirements</h3>
+<div class="section level3">
+<h3 id="requirements">Requirements<a class="anchor" aria-label="anchor" href="#requirements"></a>
+</h3>
 <p>Beyond the R package dependency <code>rmarkdown</code>, a working <code>pandoc</code> binary and a <code>LaTeX</code> distribution including <code>KOMA-Script</code> is needed. RStudio installs it’s own copy of <code>pandoc</code>, otherwise do what is needed on your OS. For LaTeX look for <code>texlive</code> which is included in most Linux distributions or <code>MiKTeX</code> if you are using Windows. KOMA-Script is part of all but the most bare bone LaTeX distributions. Something like <code>sudo apt install pandoc pandoc-citeproc texlive</code> should provide everything needed on Debian/Ubuntu.</p>
 <p>If you plan to write non-english letters, make sure you have the necessary language packs, <em>i.e</em> <code>texlive-lang-german</code>.</p>
 </div>
-<div id="authors" class="section level3">
-<h3 class="hasAnchor">
-<a href="#authors" class="anchor" aria-hidden="true"></a>Authors</h3>
+<div class="section level3">
+<h3 id="authors">Authors<a class="anchor" aria-label="anchor" href="#authors"></a>
+</h3>
 <p>Robert Nuske, Dirk Eddelbuettel and Aaron Wolen.</p>
 </div>
-<div id="license" class="section level3">
-<h3 class="hasAnchor">
-<a href="#license" class="anchor" aria-hidden="true"></a>License</h3>
+<div class="section level3">
+<h3 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
+</h3>
 <p>GPL-3 for this package, the work in <a href="https://github.com/aaronwolen/pandoc-letter" class="external-link">pandoc-letter</a>, as well as the underlying Pandoc template.</p>
 </div>
 </div>
@@ -204,19 +204,16 @@
     <div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=komaletter">https://​cloud.r-project.org/​package=komaletter</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/rnuske/komaletter/">https://​github.com/​rnuske/​komaletter/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/rnuske/komaletter/issues">https://​github.com/​rnuske/​komaletter/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=komaletter" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/rnuske/komaletter/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/rnuske/komaletter/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
 <div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></li>
+<li><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a></li>
 </ul>
 </div>
 
@@ -224,9 +221,9 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Robert Nuske <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-9773-2061" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Dirk Eddelbuettel <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-6419-907X" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Aaron Wolen <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0003-2542-2202" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Robert Nuske <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-9773-2061" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Dirk Eddelbuettel <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-6419-907X" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Aaron Wolen <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0003-2542-2202" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
@@ -253,7 +250,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
 </div>
 
       </footer>
