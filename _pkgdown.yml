@@ -38,6 +38,8 @@ navbar:
         href: articles/pkgdown_letter_example3.html
       - text: Example 4
         href: articles/pkgdown_letter_example4.html
+      - text: Example 5
+        href: articles/pkgdown_letter_example5.html
 
 template:
   params:
