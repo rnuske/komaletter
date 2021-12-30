@@ -195,7 +195,7 @@
 </tr>
 <tr class="odd">
 <td>return-short</td>
-<td>Shorter version of return address only used in window (see vignette <a href="letter_example4.pdf">letter_example4</a>).</td>
+<td>Shorter version of return address only used in window (see vignette <code>letter_example4</code>).</td>
 </tr>
 <tr class="even">
 <td>place</td>
@@ -322,7 +322,7 @@
 </h2>
 <ul>
 <li><p>The default papersize of KOMA-Script class <em>scrlttr2</em> is DIN A4. If you want to create an US style letter eg. using <code>lco: UScommercial9</code>, remember to set the papersize to <code>letter</code>.</p></li>
-<li><p>If your <code>return-address</code> is very long, it might not fit on the one line backaddress in the address window. The letter layout coming with the package komaletter tries hard to craft a pretty two-line version. The other option is using the YAML parameter <code>return-short</code> to provide an alternative one line address only used in the address window. <code>return-short</code> can be a list such as <code>return-address</code> or just one line of text. See also the vignette <a href="letter_example4.pdf">letter_example4</a>.</p></li>
+<li><p>If your <code>return-address</code> is very long, it might not fit on the one line backaddress in the address window. The letter layout coming with the package komaletter tries hard to craft a pretty two-line version. The other option is using the YAML parameter <code>return-short</code> to provide an alternative one line address only used in the address window. <code>return-short</code> can be a list such as <code>return-address</code> or just one line of text. See also the vignette <code>letter_example4</code>.</p></li>
 <li><p>Since the figure environment is not defined in the classes <code>letter</code> and <code>scrlltr2</code>, pandoc has to be told not to wrap the image into <code>\begin{figure}...\end{figure}</code>. Which can be achieved by ending the line with a backslash:</p></li>
 </ul>
 <pre><code>![Alt text](image.png)\ </code></pre>
