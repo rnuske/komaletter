@@ -12,7 +12,7 @@ address:
   
 subject: Usage of YAML parameter `return-short`
 opening: Dear Dr. Klöbner,
-closing: Sincerely
+closing: Sincerely,
 signature: Karl-Heinz Müller-Lüdenscheidt
 
 output: komaletter::komaletter
@@ -47,7 +47,7 @@ return-short:
   - 10623 Berlin
 ```
 
-In the case of the one line text variable the writer specifies the address 
+In the case of the one line text form the writer specifies the address 
 separator, a comma in the above example. If `return-short` is given as a 
 sequence / list, the address separator is defined in the relevant layout 
 (`lco`-file).  

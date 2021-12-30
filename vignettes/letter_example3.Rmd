@@ -10,7 +10,7 @@ address:
   
 subject: Brief an eine Verwaltung
 opening: Sehr geehrte Damen und Herren,
-closing: Mit freundlichen Grüßen,
+closing: Mit freundlichen Grüßen
 signature: "\\includegraphics{signature}"
 signature-before: 2mm
 
