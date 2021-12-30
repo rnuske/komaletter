@@ -34,11 +34,10 @@ jobs:
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
       - name: Install dependencies
-        # install.packages("pkgdown", type = "binary") instead of dev version if pkgdown > v1.6.1
         run: |
+          install.packages("pkgdown", type = "binary")
           install.packages("pdftools", type = "binary")
           remotes::install_deps(dependencies = TRUE)
-          remotes::install_dev("pkgdown")
         shell: Rscript {0}
 
       - name: Install package

@@ -4,14 +4,12 @@ description: "reference line and language parameter"
 output: html_document
 ---
 
-In addition to the YAML parameters shown in the first example, this letter displays some more parameters
-
-
+In addition to the YAML parameters shown in the previous examples, this letter displays some  additions needed for example when communicating with German administrations or agencies.
 
 * `yourref`, `yourmail`, `myref` common parts of the reference line (German: Bezugszeichenzeile)
 * image in `signature` to make it look like it was hand signed.
 * `signature-before` is for fine tuning the vertical space between closing and signature.
-* `lang` sets the language of the document which influences the labels of the reference line, date etc.. requires the respective latex language pack.
+* `lang` sets the language of the document which influences the labels of the reference line, date etc.. Requires the respective latex language pack (i.e texlive-lang-german).
 * `papersize` sets the paper size (default: DIN A4).
 
 <br>
@@ -41,11 +39,11 @@ writeLines(ex, con="intermediate.Rmd")
 
 ### Resulting PDF Letter
 
-PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document above.
+PDF rendered from the RMarkdown document above via `rmarkdown::render()` or RStudio Knit button.
 
 ```{r render-pdf, include=FALSE}
 rmarkdown::render("intermediate.Rmd", output_file="pkgdown_ex3.pdf", output_dir='.')
-pdftools::pdf_convert(pdf='pkgdown_ex3.pdf', dpi=150, format="jpeg", pages=1, filenames="pkgdown_ex3.jpg")
+pdftools::pdf_convert(pdf='pkgdown_ex3.pdf', dpi=200, format="jpeg", pages=1, filenames="pkgdown_ex3.jpg")
 ```
 
-<img src="pkgdown_ex3.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;">
+<a href="pkgdown_ex3.pdf"><img src="pkgdown_ex3.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;"></a>

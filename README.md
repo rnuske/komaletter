@@ -94,14 +94,15 @@ remotes::install_github("rnuske/komaletter")
 ### Requirements
 Beyond the R package dependency `rmarkdown`, a working `pandoc` binary and a
 `LaTeX` distribution including `KOMA-Script` is needed. RStudio installs it's
-own copy of `pandoc`, otherwise do what is needed on your OS. For LaTeX look for
-`texlive` which is included in most Linux distributions or `MiKTeX` if you are
-using Windows. KOMA-Script is part of all but the most bare bone LaTeX
-distributions. Something like `sudo apt install pandoc pandoc-citeproc texlive`
-should provide everything needed on Debian/Ubuntu.
+own copy of `pandoc`, otherwise do what is needed on your OS. As for LaTeX look
+for `texlive` which is included in most Linux distributions. KOMA-Script is
+part of all but the most bare bone LaTeX distributions. Something like 
+`sudo apt install pandoc pandoc-citeproc texlive` should provide everything 
+needed on Debian/Ubuntu. To get a working LaTeX on Windows it is recommended 
+to use the service of the R package `tinytex`.
 
 If you plan to write non-english letters, make sure you have the necessary 
-language packs, _i.e_ `texlive-lang-german`.
+language packs, _i.e._ `texlive-lang-german`.
 
 
 ### Authors

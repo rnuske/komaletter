@@ -4,7 +4,7 @@ description: "Usage of YAML parameter return-short"
 output: html_document
 ---
 
-In addition to the YAML parameters shown in the first example, this example letter includes the parameter `return-short` which allows for a different, possibly shorter sender's address to fit in the window.
+In addition to the YAML parameters shown in the first example, this example letter includes the parameter `return-short` which allows for a different, possibly shorter sender's address to fit in the envelope's window.
 
 <br>
 
@@ -22,11 +22,11 @@ cat(paste(readLines('letter_example4.Rmd')[!grepl('ignette', x=readLines('letter
 
 ### Resulting PDF Letter
 
-PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document above.
+PDF rendered from the RMarkdown document above via `rmarkdown::render()` or RStudio Knit button.
 
 ```{r render-pdf, include=FALSE}
 rmarkdown::render("letter_example4.Rmd", output_file="pkgdown_ex4.pdf", output_dir='.')
-pdftools::pdf_convert(pdf='pkgdown_ex4.pdf', dpi=150, format="jpeg", pages=1, filenames="pkgdown_ex4.jpg")
+pdftools::pdf_convert(pdf='pkgdown_ex4.pdf', dpi=200, format="jpeg", pages=1, filenames="pkgdown_ex4.jpg")
 ```
 
-<img src="pkgdown_ex4.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;">
+<a href="pkgdown_ex4.pdf"><img src="pkgdown_ex4.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;"></a>

@@ -4,10 +4,10 @@ description: "clickable links"
 output: html_document
 ---
 
-In addition to the YAML parameters shown in the first example, this letter displays some more parameters
+In addition to the YAML parameters shown in the first example, this letter displays some more parameters:
 
-* `lco` via this parameter you can specify your own letter layout in a **L**etter **C**lass **O**ption file or use one of the layouts predefined by KomaScript (see *Introduction to komaletter*). Here KomaScript's US Letter Style is used.
-* `papersize` to set a paper size other than DIN A4.
+* `lco` via this parameter you can specify your own letter layout in a **L**etter **C**lass **O**ption file or use one of the layouts predefined by KomaScript (see [Introduction to komaletter](./intro.html)). Here KomaScript's US Letter Style is used.
+* `papersize` to set a paper size other than DIN A4, here the US `letter`.
 * `inline-links` causes links to be *hot* / active / clickable in the PDF and not implemented as footnote. You are still responsible for the styling of the linked text, here done as bold text.
 
 <br>
@@ -22,11 +22,11 @@ In addition to the YAML parameters shown in the first example, this letter displ
 
 ### Resulting PDF Letter
 
-PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document above.
+PDF rendered from the RMarkdown document above via `rmarkdown::render()` or RStudio Knit button.
 
 ```{r render-pdf, include=FALSE}
 rmarkdown::render("letter_example2.Rmd", output_file="pkgdown_ex2.pdf", output_dir='.')
-pdftools::pdf_convert(pdf='pkgdown_ex2.pdf', dpi=150, format="jpeg", pages=1, filenames="pkgdown_ex2.jpg")
+pdftools::pdf_convert(pdf='pkgdown_ex2.pdf', dpi=200, format="jpeg", pages=1, filenames="pkgdown_ex2.jpg")
 ```
 
-<img src="pkgdown_ex2.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;">
+<a href="pkgdown_ex2.pdf"><img src="pkgdown_ex2.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;"></a>

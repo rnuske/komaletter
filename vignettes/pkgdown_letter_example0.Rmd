@@ -6,7 +6,7 @@ output: html_document
 
 This example shows the skeleton you get when you run `rmarkdown::draft()` or start a letter from the template via the RStudio menu: File > New File > R Markdown... >  From Template > komaletter (PDF). 
 
-It is intended as a starting point for your own letters and comes with a reasonably small set of settings in the YAML header. Actually, you could omit everything except `output: komaletter::komaletter' and still get a formatted letter. 
+It is intended as a starting point for your own letters and comes with a reasonably small set of settings in the YAML header. Actually, you could omit everything except `output: komaletter::komaletter` and still get a formatted letter. 
 
 <br>
 
@@ -20,11 +20,11 @@ It is intended as a starting point for your own letters and comes with a reasona
 
 ### Resulting PDF Letter
 
-PDF rendered via `rmarkdown::render()` or the RStudio Knit button from RMarkdown document above.
+PDF rendered from the RMarkdown document above via `rmarkdown::render()` or RStudio Knit button.
 
 ```{r render-pdf, include=FALSE}
 rmarkdown::render("letter_example0.Rmd", output_file="pkgdown_ex0.pdf", output_dir='.')
-pdftools::pdf_convert(pdf='pkgdown_ex0.pdf', dpi=150, format="jpeg", pages=1, filenames="pkgdown_ex0.jpg")
+pdftools::pdf_convert(pdf='pkgdown_ex0.pdf', dpi=200, format="jpeg", pages=1, filenames="pkgdown_ex0.jpg")
 ```
 
-<img src="pkgdown_ex0.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;">
+<a href="pkgdown_ex0.pdf"><img src="pkgdown_ex0.jpg" alt="Here should be an image of the PDF letter" width="100%" style="border: 1px solid #ccc;"></a>
