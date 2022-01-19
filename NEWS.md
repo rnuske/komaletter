@@ -1,5 +1,5 @@
 # komaletter 0.4.2.900
-  * ...
+  * enable References. If a bibliography is included in the YAML header and a citekey is used, a paragraph with a reference list gets added to the end of the text. 
 
 # komaletter 0.4.2
   * fixed a redirected URL
