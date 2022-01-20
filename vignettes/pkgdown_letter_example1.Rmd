@@ -2,6 +2,7 @@
 title: "Example 1"
 desccription: "Setting the styling, include image of signature, supplement sender onfo, ps, cc and colorlinks"
 output: html_document
+resource_files: [pkgdown_ex1.pdf]
 ---
 
 In addition to the YAML parameters shown in the first example, this letter displays some more parameters

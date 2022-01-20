@@ -2,6 +2,7 @@
 title: "Example 4"
 description: "Usage of YAML parameter return-short"
 output: html_document
+resource_files: [pkgdown_ex4.pdf]
 ---
 
 In addition to the YAML parameters shown in the first example, this example letter includes the parameter `return-short` which allows for a different, possibly shorter sender's address to fit in the envelope's window.

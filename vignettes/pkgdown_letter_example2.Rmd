@@ -2,6 +2,7 @@
 title: "Example 2"
 description: "clickable links"
 output: html_document
+resource_files: [pkgdown_ex2.pdf]
 ---
 
 In addition to the YAML parameters shown in the first example, this letter displays some more parameters:

@@ -2,6 +2,7 @@
 title: "Example 3"
 description: "reference line and language parameter"
 output: html_document
+resource_files: [pkgdown_ex3.pdf]
 ---
 
 In addition to the YAML parameters shown in the previous examples, this letter displays some  additions needed for example when communicating with German administrations or agencies.

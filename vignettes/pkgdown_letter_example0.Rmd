@@ -2,6 +2,7 @@
 title: "Example 0"
 description: "Template or Skeleton of a komaletter with a resonable small set of YAML parameters."
 output: html_document
+resource_files: [pkgdown_ex0.pdf]
 ---
 
 This example shows the skeleton you get when you run `rmarkdown::draft()` or start a letter from the template via the RStudio menu: File > New File > R Markdown... >  From Template > komaletter (PDF). 
