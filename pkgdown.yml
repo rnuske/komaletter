@@ -1,7 +1,8 @@
-pandoc: 2.7.3
-pkgdown: 2.0.2
+pandoc: 2.11.4
+pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
+  intermediate: intermediate.html
   intro: intro.html
   letter_example0: letter_example0.html
   letter_example1: letter_example1.html
@@ -14,7 +15,7 @@ articles:
   pkgdown_letter_example2: pkgdown_letter_example2.html
   pkgdown_letter_example3: pkgdown_letter_example3.html
   pkgdown_letter_example4: pkgdown_letter_example4.html
-last_built: 2022-01-21T15:16Z
+last_built: 2022-01-25T08:50Z
 urls:
   reference: https://rnuske.github.io/komaletter/reference
   article: https://rnuske.github.io/komaletter/articles
