@@ -16,8 +16,8 @@
   with a default letter layout based on DIN 5008B.">
 <title>Simply Beautiful PDF Letters from Markdown • komaletter</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Simply Beautiful PDF Letters from Markdown">
 <meta property="og:description" content="Write beautiful yet customizable letters in R Markdown and
@@ -100,7 +100,6 @@
 <h2 id="komaletter-simply-beautiful-pdf-letters-from-markdown">komaletter: Simply Beautiful PDF Letters from Markdown<a class="anchor" aria-label="anchor" href="#komaletter-simply-beautiful-pdf-letters-from-markdown"></a>
 </h2>
 <!-- badges: start -->
-
 <div class="section level3">
 <h3 id="motivation">Motivation<a class="anchor" aria-label="anchor" href="#motivation"></a>
 </h3>
@@ -129,13 +128,13 @@
 </h3>
 <p>To start a new letter you can take advantage of the komaletter skeleton via <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/draft.html" class="external-link">rmarkdown::draft()</a></code> or the RStudio menu: File &gt; New File &gt; R Markdown… &gt; From Template &gt; komaletter (PDF). When finished writing your letter the RMarkdown document can be rendered to PDF via <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">rmarkdown::render()</a></code> or the RStudio Knit button.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># start a new letter using the provided skeleton</span>
-<span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/draft.html" class="external-link">draft</a></span><span class="op">(</span><span class="st">"my_letter.Rmd"</span>, template<span class="op">=</span><span class="st">"pdf"</span>, package<span class="op">=</span><span class="st">"komaletter"</span>, edit<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span>
-
-<span class="co"># change my_letter.Rmd to your liking</span>
-
-<span class="co"># turn Rmd into a beautiful PDF</span>
-<span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"my_letter.Rmd"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># start a new letter using the provided skeleton</span></span>
+<span><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/draft.html" class="external-link">draft</a></span><span class="op">(</span><span class="st">"my_letter.Rmd"</span>, template<span class="op">=</span><span class="st">"pdf"</span>, package<span class="op">=</span><span class="st">"komaletter"</span>, edit<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># change my_letter.Rmd to your liking</span></span>
+<span></span>
+<span><span class="co"># turn Rmd into a beautiful PDF</span></span>
+<span><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"my_letter.Rmd"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="about-printing">About Printing<a class="anchor" aria-label="anchor" href="#about-printing"></a>
@@ -149,10 +148,10 @@
 </h3>
 <p>You can install the released version of <strong>komaletter</strong> from <a href="https://CRAN.R-project.org/package=komaletter" class="external-link">CRAN</a> with</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"komaletter"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"komaletter"</span><span class="op">)</span></span></code></pre></div>
 <p>and the development version from <a href="https://github.com/rnuske/komaletter" class="external-link">GitHub</a> using the package <code>remotes</code></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rnuske/komaletter"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rnuske/komaletter"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="requirements">Requirements<a class="anchor" aria-label="anchor" href="#requirements"></a>
@@ -227,7 +226,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer>

@@ -8,8 +8,8 @@
 <meta name="description" content="komaletter">
 <title>Parameterized Letters for Mass Mailings • komaletter</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Parameterized Letters for Mass Mailings">
 <meta property="og:description" content="komaletter">
@@ -83,11 +83,11 @@
 
 
 <script src="parameterized_letter_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <main id="main"><div class="page-header">
+  <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Parameterized Letters for Mass Mailings</h1>
                         <h4 data-toc-skip class="author">Robert Nuske</h4>
             
-            <h4 data-toc-skip class="date">2022-01-25</h4>
+            <h4 data-toc-skip class="date">2022-09-14</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/rnuske/komaletter/blob/HEAD/vignettes/parameterized_letter.Rmd" class="external-link"><code>vignettes/parameterized_letter.Rmd</code></a></small>
       <div class="d-none name"><code>parameterized_letter.Rmd</code></div>
@@ -126,21 +126,21 @@
 <span id="cb1-19"><a href="#cb1-19"></a>thank you very much <span class="cf">for</span> the beautiful <span class="st">`</span><span class="dt">r params$gift</span><span class="st">`</span>. It was a pleasure to have you.</span></code></pre></div>
 <p>Collect data about recipients in data.frame <code>recipients</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">recipients</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>name<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Bob"</span>, <span class="st">"Megan"</span>, <span class="st">"Alex"</span><span class="op">)</span>,
-                         gift<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"painting"</span>, <span class="st">"candlestick"</span>, <span class="st">"book"</span><span class="op">)</span>,
-                         address<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"[Robert Pitts, 5543 Aliquet St, Fort Dodge GA 20783]"</span>,
-                                   <span class="st">"[Megan Smith, 4156 Tincidunt Ave, Green Bay IN 19759]"</span>,
-                                   <span class="st">"[Alexander Fitzgerald, 869 Laurel Ave, St Paul MN 55104]"</span><span class="op">)</span>,
-                         stringsAsFactors<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">recipients</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>name<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Bob"</span>, <span class="st">"Megan"</span>, <span class="st">"Alex"</span><span class="op">)</span>,</span>
+<span>                         gift<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"painting"</span>, <span class="st">"candlestick"</span>, <span class="st">"book"</span><span class="op">)</span>,</span>
+<span>                         address<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"[Robert Pitts, 5543 Aliquet St, Fort Dodge GA 20783]"</span>,</span>
+<span>                                   <span class="st">"[Megan Smith, 4156 Tincidunt Ave, Green Bay IN 19759]"</span>,</span>
+<span>                                   <span class="st">"[Alexander Fitzgerald, 869 Laurel Ave, St Paul MN 55104]"</span><span class="op">)</span>,</span>
+<span>                         stringsAsFactors<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Combine template letter with recipients’ data and create lots of PDFs:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">recipients</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
-  <span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"template_letter.Rmd"</span>, 
-                    params<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>name<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"name"</span><span class="op">]</span>, 
-                                gift<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"gift"</span><span class="op">]</span>, 
-                                address<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"address"</span><span class="op">]</span><span class="op">)</span>,
-                    output_file<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"letter_"</span>, <span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">'name'</span><span class="op">]</span>, <span class="st">".pdf"</span><span class="op">)</span><span class="op">)</span>
-<span class="op">}</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">recipients</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"template_letter.Rmd"</span>, </span>
+<span>                    params<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>name<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"name"</span><span class="op">]</span>, </span>
+<span>                                gift<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"gift"</span><span class="op">]</span>, </span>
+<span>                                address<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"address"</span><span class="op">]</span><span class="op">)</span>,</span>
+<span>                    output_file<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"letter_"</span>, <span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">'name'</span><span class="op">]</span>, <span class="st">".pdf"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="basics-of-mail-merge-with-komaletter">Basics of Mail Merge with <code>komaletter</code><a class="anchor" aria-label="anchor" href="#basics-of-mail-merge-with-komaletter"></a>
@@ -163,8 +163,8 @@
 </h3>
 <p>The declared parameters are automatically made available within the knit environment as components of the read-only list <code>params</code>. For example, the values of the above parameters can be accessed with the following R Code:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">params</span><span class="op">$</span><span class="va">name</span>
-<span class="va">params</span><span class="op">$</span><span class="va">gift</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">params</span><span class="op">$</span><span class="va">name</span></span>
+<span><span class="va">params</span><span class="op">$</span><span class="va">gift</span></span></code></pre></div>
 <p>If the value of a parameter shall be used in the YAML metadata header, the parameter must be declared previously. Since the backtick ` is a reserved character in YAML, the inline R Code snippet has to be wrapped in quotes.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">---</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>params<span class="op">:</span></span>
@@ -181,7 +181,7 @@
 </h3>
 <p>To set the parameter values, you can add the <code>params</code> argument to <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">rmarkdown::render</a></code>. If a parameter does not get a value, the default defined during parameter declaration is used (eg. <code>John</code>, <code>candlestick</code>).</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"example.Rmd"</span>, params<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>name<span class="op">=</span><span class="st">"Jane"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"example.Rmd"</span>, params<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>name<span class="op">=</span><span class="st">"Jane"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
@@ -237,21 +237,21 @@
 <span id="cb10-19"><a href="#cb10-19"></a>thank you very much <span class="cf">for</span> the beautiful <span class="st">`</span><span class="dt">r params$gift</span><span class="st">`</span>. It was a pleasure to have you.</span></code></pre></div>
 <p>The template letter above can then be called with various values</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">recipients</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>name<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Bob"</span>, <span class="st">"Megan"</span>, <span class="st">"Alex"</span><span class="op">)</span>,
-                         gift<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"painting"</span>, <span class="st">"candlestick"</span>, <span class="st">"book"</span><span class="op">)</span>,
-                         address<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"[Robert Pitts, 5543 Aliquet St, Fort Dodge GA 20783]"</span>,
-                                   <span class="st">"[Megan Smith, 4156 Tincidunt Ave, Green Bay IN 19759]"</span>,
-                                   <span class="st">"[Alexander Fitzgerald, 869 Laurel Ave, St Paul MN 55104]"</span><span class="op">)</span>,
-                         stringsAsFactors<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span>
-
-
-<span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">recipients</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
-  <span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"template_letter.Rmd"</span>, 
-                    params<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>name<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"name"</span><span class="op">]</span>, 
-                                gift<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"gift"</span><span class="op">]</span>, 
-                                address<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"address"</span><span class="op">]</span><span class="op">)</span>,
-                    output_file<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"letter_"</span>, <span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">'name'</span><span class="op">]</span>, <span class="st">".pdf"</span><span class="op">)</span><span class="op">)</span>
-<span class="op">}</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">recipients</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>name<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Bob"</span>, <span class="st">"Megan"</span>, <span class="st">"Alex"</span><span class="op">)</span>,</span>
+<span>                         gift<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"painting"</span>, <span class="st">"candlestick"</span>, <span class="st">"book"</span><span class="op">)</span>,</span>
+<span>                         address<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"[Robert Pitts, 5543 Aliquet St, Fort Dodge GA 20783]"</span>,</span>
+<span>                                   <span class="st">"[Megan Smith, 4156 Tincidunt Ave, Green Bay IN 19759]"</span>,</span>
+<span>                                   <span class="st">"[Alexander Fitzgerald, 869 Laurel Ave, St Paul MN 55104]"</span><span class="op">)</span>,</span>
+<span>                         stringsAsFactors<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">recipients</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/render.html" class="external-link">render</a></span><span class="op">(</span><span class="st">"template_letter.Rmd"</span>, </span>
+<span>                    params<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>name<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"name"</span><span class="op">]</span>, </span>
+<span>                                gift<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"gift"</span><span class="op">]</span>, </span>
+<span>                                address<span class="op">=</span><span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">"address"</span><span class="op">]</span><span class="op">)</span>,</span>
+<span>                    output_file<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"letter_"</span>, <span class="va">recipients</span><span class="op">[</span><span class="va">i</span>, <span class="st">'name'</span><span class="op">]</span>, <span class="st">".pdf"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="further-information">Further Information<a class="anchor" aria-label="anchor" href="#further-information"></a>
@@ -296,7 +296,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer>
