@@ -3,7 +3,7 @@ Title: Simply Beautiful PDF Letters from Markdown
 Version: 0.4.2.901
 Authors@R: c(
     person("Robert", "Nuske", role=c("aut", "cre"), 
-           email="robert.nuske@nw-fva.de",
+           email="robert.nuske@mailbox.org",
            comment=c(ORCID="0000-0001-9773-2061")),
     person("Dirk", "Eddelbuettel", role="aut",
            comment=c(ORCID="0000-0001-6419-907X")),
