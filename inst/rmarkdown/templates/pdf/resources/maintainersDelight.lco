@@ -80,3 +80,55 @@
     }
   }
 }
+
+
+
+% Hack to provide sections ----------------------------------------------------
+% The class scrlttr2 has no sections!
+% Inspired by deprecated `sections.lco` https://komascript.de/sections.lco
+% Markus Kohm now recommends to use class `scrartcl` with package `scrletter`.
+% Example: https://tex.stackexchange.com/a/464722
+
+% Counter
+\newcounter{section}
+\renewcommand*{\thesection}{\@arabic\c@section}
+\newcommand*\sectionmarkformat{\thesection\autodot\enskip}
+\newcounter{subsection}[section]
+\renewcommand*{\thesubsection}{\thesection.\@arabic\c@subsection}
+\newcommand*\subsectionmarkformat{\thesubsection\autodot\enskip}
+\newcounter{subsubsection}[subsection]
+\renewcommand*{\thesubsubsection}{\thesubsection.\@arabic\c@subsubsection}
+\setcounter{secnumdepth}{3}
+
+% Sections
+% \@startsection{name}{level}{indent}{beforeskip}{afterskip}{style}
+% beforeskip and afterskip are parskip + given length
+\newcommand\section{\@startsection{section}{1}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -0.2ex}%
+  {0.5ex \@plus .1ex \@minus .1ex}%
+  {\normalcolor\sffamily\bfseries\normalsize}}
+\newcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-1.5ex \@plus -0.1ex \@minus -0.1ex}%
+  {1sp}% smallest possible length almost zero => results in one parskip
+  {\normalcolor\sffamily\bfseries\normalsize}}
+\newcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {-1.0ex \@plus -0.1ex \@minus -0.1ex}%
+  {0.1ex}%
+  {\normalcolor\sffamily\bfseries\normalsize}}
+
+% hack to get rid of parskip after subsubsection line
+% https://tex.stackexchange.com/a/324346/218581
+\let\origsubsubsection\subsubsection
+\renewcommand\subsubsection[2][\relax]{%
+  \ifx\relax#1\origsubsubsection{#2}\else\origsubsubsection[#1]{#2}\fi%
+  \vspace{-\parskip}}
+
+% Alternatives:
+% https://tex.stackexchange.com/a/318005/218581
+% not chosen because of version dependency and dependency on another package
+% 1) runin
+%  KOMA-Script >= 3.26 (on CTAN since 2019-01-04) provides option runin to
+%  \DeclareSectionCommand etc. allowing for negative length in afterskip
+% 2) xpatch
+%  \usepackage{xpatch}
+%  \xapptocmd\sectionlinesformat{\vspace*{-\parskip}}{}{\PatchFailed}
