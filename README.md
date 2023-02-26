@@ -1,4 +1,4 @@
-## komaletter: Simply Beautiful PDF Letters from Markdown
+# komaletter: Simply Beautiful PDF Letters from Markdown  <a href="https://rnuske.github.io/komaletter/"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/rnuske/komaletter/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rnuske/komaletter/actions/workflows/R-CMD-check.yaml)
