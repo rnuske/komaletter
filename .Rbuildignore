@@ -4,3 +4,8 @@
 ^\.gitattributes$
 ^cran-comments\.md$
 ^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^vignettes/pkgdown_
+^vignettes/intermediate.Rmd$

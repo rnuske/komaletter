@@ -1,9 +1,9 @@
 Package: komaletter
 Title: Simply Beautiful PDF Letters from Markdown
-Version: 0.4.2.900
+Version: 0.4.2.901
 Authors@R: c(
     person("Robert", "Nuske", role=c("aut", "cre"), 
-           email="robert.nuske@nw-fva.de",
+           email="robert.nuske@mailbox.org",
            comment=c(ORCID="0000-0001-9773-2061")),
     person("Dirk", "Eddelbuettel", role="aut",
            comment=c(ORCID="0000-0001-6419-907X")),
@@ -19,12 +19,12 @@ Description: Write beautiful yet customizable letters in R Markdown and
   French, Japanese) and lets you define your own layouts. The package comes 
   with a default letter layout based on 'DIN 5008B'.
 License: GPL-3
-URL: https://github.com/rnuske/komaletter
+URL: https://rnuske.github.io/komaletter/, https://github.com/rnuske/komaletter
 BugReports: https://github.com/rnuske/komaletter/issues
 Encoding: UTF-8
-Depends:  R (>= 3.0)
-Imports:  rmarkdown (>= 0.6)
+Depends: R (>= 3.0)
+Imports: rmarkdown (>= 0.6)
 Suggests: knitr (>= 1.8)
 VignetteBuilder: knitr
 Roxygen: list(markdown=TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1

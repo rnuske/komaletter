@@ -2,6 +2,11 @@
 .Rhistory
 .RData
 .Ruserdata
+docs
 vignettes/*.R
 vignettes/*.html
+vignettes/*.log
+vignettes/intermediate.Rmd
 vignettes/letter_example*.pdf
+vignettes/pkgdown_*.pdf
+vignettes/pkgdown_*.jpg

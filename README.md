@@ -38,7 +38,7 @@ fontsize, indentation are in use. See `vignette('intro', 'komaletter')` and
 figure shows the `rmarkdown` source on the left and the rendered `pdf` on the
 right.
 
-![](./man/figures/skeleton.png)
+![](man/figures/skeleton.png)
 
 
 #### Vignette
@@ -47,14 +47,14 @@ how to include a signature, choose a different layout and make some format
 settings. All of these are driven by simple settings in the `YAML` header as 
 shown in the following figure on the left.
 
-![](./man/figures/letter_example1.png)
+![](man/figures/letter_example1.png)
 
 
 ### Usage
 To start a new letter you can take advantage of the komaletter skeleton via 
 `rmarkdown::draft()` or the RStudio menu: File > New File > R Markdown... > 
 From Template > komaletter (PDF). 
-When finished writing your letter the  RMarkdown document can be rendered to PDF
+When finished writing your letter the RMarkdown document can be rendered to PDF
 via `rmarkdown::render()` or the RStudio Knit button.
 
 ```r
@@ -94,14 +94,15 @@ remotes::install_github("rnuske/komaletter")
 ### Requirements
 Beyond the R package dependency `rmarkdown`, a working `pandoc` binary and a
 `LaTeX` distribution including `KOMA-Script` is needed. RStudio installs it's
-own copy of `pandoc`, otherwise do what is needed on your OS. For LaTeX look for
-`texlive` which is included in most Linux distributions or `MiKTeX` if you are
-using Windows. KOMA-Script is part of all but the most bare bone LaTeX
-distributions. Something like `sudo apt install pandoc pandoc-citeproc texlive`
-should provide everything needed on Debian/Ubuntu.
+own copy of `pandoc`, otherwise do what is needed on your OS. As for LaTeX look
+for `texlive` which is included in most Linux distributions. KOMA-Script is
+part of all but the most bare bone LaTeX distributions. Something like 
+`sudo apt install pandoc pandoc-citeproc texlive` should provide everything 
+needed on Debian/Ubuntu. To get a working LaTeX on Windows it is recommended 
+to use the service of the R package `tinytex`.
 
 If you plan to write non-english letters, make sure you have the necessary 
-language packs, _i.e_ `texlive-lang-german`.
+language packs, _i.e._ `texlive-lang-german`.
 
 
 ### Authors

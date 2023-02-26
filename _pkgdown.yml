@@ -1,0 +1,32 @@
+url: https://rnuske.github.io/komaletter
+
+template:
+  bootstrap: 5
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, examples, news]
+  components:
+    intro:
+      text: Get started
+      href: articles/intro.html
+    articles:
+      text: Articles
+      menu:
+      - text: Introduction to komaletter
+        href: articles/intro.html
+      - text: Parameterized Letters for Mass Mailings
+        href: articles/parameterized_letter.html
+    examples:
+      text: Examples
+      menu:
+      - text: Example 0
+        href: articles/pkgdown_letter_example0.html
+      - text: Example 1
+        href: articles/pkgdown_letter_example1.html
+      - text: Example 2
+        href: articles/pkgdown_letter_example2.html
+      - text: Example 3
+        href: articles/pkgdown_letter_example3.html
+      - text: Example 4
+        href: articles/pkgdown_letter_example4.html

@@ -1,5 +1,7 @@
 # komaletter 0.4.2.900
   * added sections to default letter layout, since the employed KOMA-Script letter class `scrlttr2` has no sections. Just use `#`, `##`, `###` in your markdown and if you need section numbers set the YAML option `numbersections: true`.
+  * enable References. If a bibliography is included in the YAML header and a citekey is used, a paragraph with a reference list gets added to the end of the text. 
+  * removed polyglossia from template.tex since newer pandoc does not support it anymore.
 
 # komaletter 0.4.2
   * fixed a redirected URL

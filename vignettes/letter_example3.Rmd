@@ -10,7 +10,7 @@ address:
   
 subject: Brief an eine Verwaltung
 opening: Sehr geehrte Damen und Herren,
-closing: Mit freundlichen Grüßen,
+closing: Mit freundlichen Grüßen
 signature: "\\includegraphics{signature}"
 signature-before: 2mm
 
@@ -18,7 +18,6 @@ yourref: IK 08/15 - 2
 yourmail: 23.02.2018
 myref: Äamt 2018-02
 date: 01.04.2018
-
 
 # no german language pack on CRAN => check fails
 # lang: de
