@@ -6,5 +6,6 @@
 ^\.github$
 ^docs$
 ^pkgdown$
+^_pkgdown\.yml$
 ^vignettes/pkgdown_
 ^vignettes/intermediate.Rmd$

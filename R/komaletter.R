@@ -51,7 +51,7 @@
 #' **Variable** | **Description**
 #' ------------ | ----------------------------------------------------------------
 #' lco          | Letter Class Option File. Either name of a standard KOMA-Script LCO (e.g. DIN, SN, ) or path to custom LCO. If not specified, the `maintainersDelight.lco` will be used.
-#' lang         | Language code according to [BCP 47](https://tools.ietf.org/html/bcp47) (e.g. `en` or `en-GB`).
+#' lang         | Language code according to [BCP 47](https://www.rfc-editor.org/rfc/rfc5646.html) (e.g. `en` or `en-GB`).
 #' papersize    | Size of paper eg. `a4`, `letter`.
 #' return-phone | Phone number of sender used in letter head.
 #' return-email | Email address of sender used in letter head.

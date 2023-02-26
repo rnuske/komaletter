@@ -80,7 +80,7 @@ refer to [Letter Layouts](#letter-layouts).
 Variable     | Description
 ------------ | ----------------------------------------------------------------
 lco          | Letter Class Option File (cf. [Letter Layouts](#letter-layouts)).
-lang         | Language code according to [BCP 47](https://tools.ietf.org/html/bcp47) (e.g. `en` or `en-GB`).
+lang         | Language code according to [BCP 47](https://www.rfc-editor.org/rfc/rfc5646.html) (e.g. `en` or `en-GB`).
 papersize    | Size of paper eg. `a4`, `letter`.
 return-phone | Phone number of sender used in letter head.
 return-email | Email address of sender used in letter head.

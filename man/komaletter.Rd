@@ -50,7 +50,7 @@ refer to the vignette "Introduction to komaletter".
 Further variables defined by komaletter:\tabular{ll}{
    \strong{Variable} \tab \strong{Description} \cr
    lco \tab Letter Class Option File. Either name of a standard KOMA-Script LCO (e.g. DIN, SN, ) or path to custom LCO. If not specified, the \code{maintainersDelight.lco} will be used. \cr
-   lang \tab Language code according to \href{https://tools.ietf.org/html/bcp47}{BCP 47} (e.g. \code{en} or \code{en-GB}). \cr
+   lang \tab Language code according to \href{https://www.rfc-editor.org/rfc/rfc5646.html}{BCP 47} (e.g. \code{en} or \code{en-GB}). \cr
    papersize \tab Size of paper eg. \code{a4}, \code{letter}. \cr
    return-phone \tab Phone number of sender used in letter head. \cr
    return-email \tab Email address of sender used in letter head. \cr
