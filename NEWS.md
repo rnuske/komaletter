@@ -1,5 +1,5 @@
 # komaletter 0.5.1
-  * update in templates due to KOMA-Script deprecation of \@setplength
+  * update in templates due to KOMA-Script deprecation of \@setplength and \ifkomavarempty in v 3.49 (\Ifkomavarempty available since v3.28 in year 2020)
   * longtables in pandoc > 2.11 needed updates in template.tex (mainly latex packages array and calc).
 
 # komaletter 0.5.0

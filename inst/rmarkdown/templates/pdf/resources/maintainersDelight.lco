@@ -70,13 +70,13 @@
 \setkomavar{firsthead}{%
   \parbox{\useplength{firstheadwidth}}{%
     \raggedleft%
-    \ifkomavarempty{fromname}{}{{\fontsize{24pt}{24pt}\bfseries\color[gray]{0.33}\usekomavar{fromname}}\\\vspace{2mm}}
+    \Ifkomavarempty{fromname}{}{{\fontsize{24pt}{24pt}\bfseries\color[gray]{0.33}\usekomavar{fromname}}\\\vspace{2mm}}
     {%
       \fontsize{10pt}{12pt}\selectfont\color[gray]{0.33}%
-      \ifkomavarempty{fromaddress}{}{{\def\\{,\nobreakspace\@ogobble}\usekomavar{fromaddress}}~\Letter\\}%
-      \ifkomavarempty{fromemail}{}{\usekomavar{fromemail}~\MVAt\\}%
-      \ifkomavarempty{fromphone}{}{\usekomavar{fromphone}~\Telefon\\}%
-      \ifkomavarempty{fromurl}{}{\usekomavar{fromurl}~\Mundus\\}%
+      \Ifkomavarempty{fromaddress}{}{{\def\\{,\nobreakspace\@ogobble}\usekomavar{fromaddress}}~\Letter\\}%
+      \Ifkomavarempty{fromemail}{}{\usekomavar{fromemail}~\MVAt\\}%
+      \Ifkomavarempty{fromphone}{}{\usekomavar{fromphone}~\Telefon\\}%
+      \Ifkomavarempty{fromurl}{}{\usekomavar{fromurl}~\Mundus\\}%
     }
   }
 }

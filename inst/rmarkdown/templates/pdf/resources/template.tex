@@ -1,4 +1,4 @@
-\documentclass[version=last,$if(fontsize)$$fontsize$$else$12pt$endif$,{"$if(lco)$$lco$$else$$lco_default$$endif$"},$if(lang)$$babel-lang$,$endif$$if(address)$$else$addrfield=false,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{scrlttr2}
+\documentclass[version=last,$if(fontsize)$$fontsize$$else$12pt$endif$,{"$if(lco)$$lco$$else$$lco_default$$endif$"},$if(lang)$$babel-lang$,$endif$$if(address)$$else$addrfield=false,$endif$$if(papersize)$paper=$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{scrlttr2}
 
 % For Debuging the Layout  ----------------------------------------------------
 % \LoadLetterOption{visualize}
@@ -17,7 +17,7 @@ $if(linestretch)$
 $endif$
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
+\usepackage{fixltx2e} % provides \textsubscript | empty package since 2025
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
   \usepackage[utf8]{inputenc}
