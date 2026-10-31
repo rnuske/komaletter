@@ -66,7 +66,7 @@ jobs:
             apt-get update && apt-get install -y pandoc texlive-latex-base \
               texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
           elif command -v dnf >/dev/null; then
-            dnf install -y pandoc texlive-scheme-basic
+            dnf install -y pandoc texlive-scheme-medium
           fi
       - uses: r-hub/actions/setup-deps@v1
         with:
