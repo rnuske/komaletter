@@ -66,8 +66,8 @@ Further variables defined by komaletter:\tabular{ll}{
    encl \tab List of enclosures. \cr
    ps \tab Text to be added at the end of the letter as a postscript. \cr
    inline-links \tab If true, do standard inline hyperlinks rather than footnotes (styling is author's job, cf. vignette \code{letter_example2}). \cr
-   komaoption \tab Specify further KOMA options; takes a list (see \href{https://komascript.de/~mkohm/scrguien.pdf}{KOMA-Script documentation}). \cr
-   parskip \tab Defines how to mark new paragraphs, e.g. full, half, off (see \href{https://komascript.de/~mkohm/scrguien.pdf}{KOMA-Script documentation}). \cr
+   komaoption \tab Specify further KOMA options; takes a list (see \href{https://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf}{KOMA-Script documentation}). \cr
+   parskip \tab Defines how to mark new paragraphs, e.g. full, half, off (see \href{https://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf}{KOMA-Script documentation}). \cr
 }
 
 
@@ -89,6 +89,6 @@ Dynamic Documents for R. R package version 2.6.
 Aaron Wolen and Andrew Dunning (2017). pandoc-letter. GitHub Repository.
 \url{https://github.com/aaronwolen/pandoc-letter}
 
-Markus Kohm (2020). KOMA-Script: A versatile LaTeX \eqn{2_\epsilon}{2\epsilon} bundle.
-\url{https://komascript.de/~mkohm/scrguien.pdf}
+Markus Kohm (2026). KOMA-Script: A versatile LaTeX \eqn{2_\epsilon}{2\epsilon} bundle.
+\url{https://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf}
 }

@@ -67,8 +67,8 @@
 #' encl         | List of enclosures.
 #' ps           | Text to be added at the end of the letter as a postscript.
 #' inline-links | If true, do standard inline hyperlinks rather than footnotes (styling is author's job, cf. vignette `letter_example2`).
-#' komaoption   | Specify further KOMA options; takes a list (see [KOMA-Script documentation](https://komascript.de/~mkohm/scrguien.pdf)).
-#' parskip      | Defines how to mark new paragraphs, e.g. full, half, off (see [KOMA-Script documentation](https://komascript.de/~mkohm/scrguien.pdf)).
+#' komaoption   | Specify further KOMA options; takes a list (see [KOMA-Script documentation](https://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf)).
+#' parskip      | Defines how to mark new paragraphs, e.g. full, half, off (see [KOMA-Script documentation](https://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf)).
 #'
 #'
 #' The source of the example letter vignettes show several of these options in use.
@@ -82,8 +82,8 @@
 #' Aaron Wolen and Andrew Dunning (2017). pandoc-letter. GitHub Repository.
 #' <https://github.com/aaronwolen/pandoc-letter>
 #'
-#' Markus Kohm (2020). KOMA-Script: A versatile LaTeX \eqn{2_\epsilon}{2\epsilon} bundle.
-#' <https://komascript.de/~mkohm/scrguien.pdf>
+#' Markus Kohm (2026). KOMA-Script: A versatile LaTeX \eqn{2_\epsilon}{2\epsilon} bundle.
+#' <https://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf>
 #'
 #' @export
 komaletter <- function(..., keep_tex=FALSE){
