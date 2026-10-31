@@ -251,15 +251,15 @@ $if(signature)$
 % set default figure placement to htbp
 \def\fps@figure{htbp}
 $if(signature-before)$
-\@setplength{sigbeforevskip}{$signature-before$}
+\setplength{sigbeforevskip}{$signature-before$}
 $endif$
 \setkomavar{signature}{$signature$}
 $else$
 % suppress signature
 $if(signature-before)$
-\@setplength{sigbeforevskip}{$signature-before$}
+\setplength{sigbeforevskip}{$signature-before$}
 $else$
-\@setplength{sigbeforevskip}{0mm}
+\setplength{sigbeforevskip}{0mm}
 $endif$
 \setkomavar{signature}{}
 $endif$

@@ -1,4 +1,5 @@
-# komaletter 0.5.900
+# komaletter 0.5.1
+  * update in templates due to KOMA-Script deprecation of \@setplength
   * longtables in pandoc > 2.11 needed updates in template.tex (mainly latex packages array and calc).
 
 # komaletter 0.5.0

@@ -43,24 +43,24 @@
 \setlength{\evensidemargin}{\dimexpr 20mm-1in}   % right margin 20mm
 
 % Letter Head
-\@setplength{firstheadhpos}{30mm}
-\@setplength{firstheadvpos}{17mm}
-\@setplength{firstheadwidth}{\textwidth}
+\setplength{firstheadhpos}{30mm}
+\setplength{firstheadvpos}{17mm}
+\setplength{firstheadwidth}{\textwidth}
 
 % Address Window
-\@setplength{toaddrhpos}{30mm}
-\@setplength{toaddrvpos}{45mm}
-\@setplength{toaddrwidth}{75mm}
-\@setplength{toaddrheight}{45mm}
-\@setplength{toaddrindent}{0mm}
-\@setplength{backaddrheight}{16pt}
+\setplength{toaddrhpos}{30mm}
+\setplength{toaddrvpos}{45mm}
+\setplength{toaddrwidth}{75mm}
+\setplength{toaddrheight}{45mm}
+\setplength{toaddrindent}{0mm}
+\setplength{backaddrheight}{16pt}
 
 % Foldmarks
-\@setplength{foldmarkhpos}{5mm}
+\setplength{foldmarkhpos}{5mm}
 
 % Reference line
-\@setplength{refvpos}{94mm}
-\@setplength{refaftervskip}{8.46mm}
+\setplength{refvpos}{94mm}
+\setplength{refaftervskip}{8.46mm}
 
 % Signature
 \let\raggedsignature\raggedright
