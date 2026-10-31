@@ -14,7 +14,7 @@ Simple letters tend to look very much alike. They are either determined by a
 standard eg. window envelope style or writer's preferences. Since the layout 
 is fixed, letters can be written perfectly in R Markdown.
 
-The [KOMA-Script LaTeX Bundle](https://www.komascript.de) provides layouts for
+The [KOMA-Script LaTeX Bundle](https://komascript.de) provides layouts for
 many common window envelope types (German, US, French, Japanese, ...) and the
 possibility to define your own layout. The *komaletter* package also provides
 it's own default letter layout loosely based on DIN 5008B.

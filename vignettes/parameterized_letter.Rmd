@@ -159,7 +159,7 @@ Consequently this means that expressions that are supposed to supply an address 
 
 
 ## Solution
-Or rather a **hack** found as bycatch at [stackoverflow](https://stackoverflow.com/a/31862074) circumventing the issue at the moment.
+Or rather a **hack** found as bycatch at [stackoverflow](https://stackoverflow.com/questions/31861569/setting-document-title-in-rmarkdown-from-parameters/31862074#31862074) circumventing the issue at the moment.
 
 As explained above, the address is a YAML sequence and sequences can not be enclosed in quotes. To access the parameter in the main YAML metadata header the inline R Code snippet has to be wrapped in quotes and R expressions wrapped in quotes evaluate to a value enclosed in quotes.
 
@@ -211,14 +211,15 @@ for(i in 1:nrow(recipients)){
 
 ## Further Information
   * R Markdown
-    * [Chapter "Parametrized Reports"](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html) in the book "R Markdown: The Definitive Guide"
+    * [Chapter "Parametrized Reports"](https://pkg.yihui.org/rmarkdown-book/parameterized-reports) in the book "R Markdown: The Definitive Guide"
     * [Lesson 6 "Parameters"](https://rmarkdown.rstudio.com/lesson-6.html) in "Get Started"-Course on RStudio's R Markdown website
     
   * YAML 
-    * [YAML Reference card](https://yaml.org/refcard.html) (Scalar indicators, Escape codes, Misc. Indicators for reserved indicators)
     * [YAML Specification](https://yaml.org/spec/current.html) (Syntax, Indicator Characters: reserved characters, Escape Sequences, Scalar Styles, Sequence Styles)
     * [YAML block sequence](https://yaml.org/spec/current.html#id2543032)
     * [YAML flow sequence](https://yaml.org/spec/current.html#id2542413)
+    * [YAML Cheatsheet](https://quickref.me/yaml.html) (Scalar indicators, Escape codes, Misc. Indicators for reserved indicators)
+    
 
 
 ## Hints

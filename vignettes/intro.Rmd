@@ -97,7 +97,7 @@ encl         | List of enclosures.
 ps           | Text to be added at the end of the letter as a postscript.
 inline-links | If true, do standard inline hyperlinks rather than footnotes (styling is author's job, cf. vignette `letter_example2`).
 komaoption   | Specify further KOMA options; takes a list (see [KOMA-Script documentation](https://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf)).
-parskip      | Defines how to mark new paragraphs, e.g. full, half, off (see [KOMA-Script documentation](https://komascript.de/~mkohm/scrguien.pdf)).
+parskip      | Defines how to mark new paragraphs, e.g. full, half, off (see [KOMA-Script documentation](https://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf)).
 
 Table: Further komaletter variables.
 
@@ -117,7 +117,7 @@ mangeled by pandoc.
 Custom *lco's* may be constructed either based on one of the standard lco-files
 or by defining all aspects such as position of the recpients address, 
 foldmarks etc.. For a comprehensive description refer to the 
-[KOMA-Script Guide](https://komascript.de/~mkohm/scrguien.pdf).
+[KOMA-Script Guide](https://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide-en.pdf).
 
 
 
