@@ -60,6 +60,14 @@ jobs:
         with:
           token: ${{ secrets.RHUB_TOKEN }}
           job-config: ${{ matrix.config.job-config }}
+      - name: Install LaTeX and pandoc
+        run: |
+          if command -v apt-get >/dev/null; then
+            apt-get update && apt-get install -y pandoc texlive-latex-base \
+              texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
+          elif command -v dnf >/dev/null; then
+            dnf install -y pandoc texlive-scheme-basic
+          fi
       - uses: r-hub/actions/setup-deps@v1
         with:
           token: ${{ secrets.RHUB_TOKEN }}
