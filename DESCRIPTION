@@ -1,6 +1,6 @@
 Package: komaletter
 Title: Simply Beautiful PDF Letters from Markdown
-Version: 0.5.902
+Version: 0.5.1
 Authors@R: c(
     person("Robert", "Nuske", role=c("aut", "cre"), 
            email="robert.nuske@mailbox.org",
