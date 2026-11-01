@@ -9,3 +9,4 @@
 ^_pkgdown\.yml$
 ^vignettes/pkgdown_
 ^vignettes/intermediate.Rmd$
+^CITATION\.cff$

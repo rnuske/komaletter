@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+title: 'komaletter: Simply Beautiful PDF Letters from Markdown'
+message: 'To cite package "komaletter" in publications use:'
+type: software
+version: 0.5.1
+date-released: '2026-11-01'
+license: GPL-3.0-only
+authors:
+  - family-names: Nuske
+    given-names: Robert
+    orcid: 'https://orcid.org/0000-0001-9773-2061'
+  - family-names: Eddelbuettel
+    given-names: Dirk
+    orcid: 'https://orcid.org/0000-0001-6419-907X'
+  - family-names: Wolen
+    given-names: Aaron
+    orcid: 'https://orcid.org/0000-0003-2542-2202'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.1221316
+    description: "Concept DOI representing all versions"
+repository-code: 'https://github.com/rnuske/komaletter'
+url: 'https://CRAN.R-project.org/package=komaletter'
+repository: 'https://CRAN.R-project.org/package=komaletter'
+abstract: >-
+  Write beautiful yet customizable letters in R Markdown and directly obtain the
+  finished PDF. Smooth generation of PDFs is realized by 'rmarkdown', the
+  'pandoc-letter' template and the 'KOMA-Script' letter class. 'KOMA-Script'
+  provides enhanced replacements for the standard 'LaTeX' classes with emphasis
+  on typography and versatility. 'KOMA-Script' is particularly useful for
+  international writers as it handles various paper formats well, provides
+  layouts for many common window envelope types (e.g. German, US, French,
+  Japanese) and lets you define your own layouts. The package comes with a
+  default letter layout based on 'DIN 5008B'.
+keywords:
+  - koma-script
+  - latex
+  - letter
+  - markdown
+  - pandoc
+  - pandoc-letter
+  - pdf
+  - r
+  - r-package
+contact:
+  - family-names: Nuske
+    given-names: Robert
+    orcid: 'https://orcid.org/0000-0001-9773-2061'
